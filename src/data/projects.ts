@@ -5,7 +5,7 @@ export const projects: Project[] = [
   {
     id: 'mes',
     name: 'MES 製造執行系統',
-    description: '濾網再生工廠 MES，工單管理、派工報工、倉儲調撥、品質管理，涵蓋 8 個製程站點完整追蹤',
+    description: '工廠級 MES，工單管理、派工報工、倉儲調撥、品質管理，涵蓋 8 個製程站點完整追蹤',
     category: 'manufacturing',
     tags: ['angular', 'primeng', 'typescript', 'fastapi', 'neon', 'clerk', 'render'],
     year: 2025,
@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     id: 'msw',
     name: 'MSW 製程管理系統',
-    description: 'MES + SPC + WMS 整合系統，50 個 AI 模組戰情儀表板、RFID 再生次數追蹤、能源監控、完整簽核流程',
+    description: 'MES + SPC + WMS 整合系統，50 個 AI 模組戰情儀表板、RFID 生產追蹤、能源監控、完整簽核流程',
     category: 'manufacturing',
     tags: ['vite', 'javascript', 'chartjs', 'plotly'],
     year: 2024,
@@ -99,7 +99,7 @@ export const projects: Project[] = [
   {
     id: 'mcs',
     name: 'MCS 智慧物料搬運控制',
-    description: '示範工廠工廠 自動移動設備調度，A* 路徑規劃、27 段通道統計、LiDAR 視覺化、GHG 碳排計算',
+    description: '工廠 自動移動設備調度模擬，A* 路徑規劃、27 段通道統計、LiDAR 視覺化、GHG 碳排計算',
     category: 'warehouse',
     tags: ['vite', 'javascript', 'shoelace', 'vercel'],
     year: 2024,
@@ -157,7 +157,7 @@ export const projects: Project[] = [
   {
     id: 'archived-ghg',
     name: 'GHG 碳盤查 (前端版)',
-    description: '範例企業碳盤查系統前端原型，儀表板、數據盤查、排放係數庫，後演化為 Dash-GHG 全端版本',
+    description: '碳盤查系統前端原型，儀表板、數據盤查、排放係數庫，後演化為 Dash-GHG 全端版本',
     category: 'esg',
     tags: ['vite', 'javascript', 'shoelace', 'vercel'],
     year: 2024,
@@ -186,7 +186,7 @@ export const projects: Project[] = [
   {
     id: 'spc',
     name: 'SPC 統計製程管制整合',
-    description: '台達 DIASPC 系統整合規劃，AMC 濾網再生製程參數監控、品質管制圖、COA 報表、OCAP 流程',
+    description: '外部 SPC 系統整合規劃，製程參數監控、品質管制圖、COA 報表、OCAP 流程',
     category: 'quality',
     tags: ['python'],
     year: 2024,
