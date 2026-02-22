@@ -23,6 +23,9 @@ const stats = [
           <span class="stats__label">{{ s.label }}</span>
         </div>
       </div>
+      <p class="stats__notice">
+        Enterprise projects are protected under NDA and information security policies. Live demos available on request.
+      </p>
     </div>
   </section>
 </template>
@@ -59,6 +62,14 @@ const stats = [
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.stats__notice {
+  margin-top: var(--sp-6);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
 }
 
 @media (max-width: 768px) {
