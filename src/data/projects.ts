@@ -13,10 +13,10 @@ export const projects: Project[] = [
   },
   {
     id: 'msw',
-    name: 'MSW 模治具管理系統',
-    description: '模治具全生命週期管理，含借還紀錄、保養排程、庫存追蹤，前端 Vue 3 + PrimeVue',
+    name: 'MSW 製程管理系統',
+    description: 'MES + SPC + WMS 整合系統，涵蓋工單派工報工、品質管制圖分析、倉儲 Pallet 追蹤，含能源監控與 AI 戰情儀表板',
     category: 'manufacturing',
-    tags: ['vue3', 'primevue', 'typescript', 'gas', 'sheets'],
+    tags: ['vue3', 'primevue', 'typescript', 'vite'],
     year: 2024,
     scale: 'production'
   },
@@ -306,8 +306,7 @@ export const projects: Project[] = [
     category: 'personal',
     tags: ['vue3', 'primevue', 'fastapi', 'neon', 'vercel', 'render'],
     year: 2025,
-    scale: 'production',
-    url: 'https://sukuyodo.vercel.app'
+    scale: 'production'
   },
   {
     id: 'job-crawler',
@@ -396,8 +395,7 @@ export const projects: Project[] = [
     category: 'personal',
     tags: ['vue3', 'primevue', 'typescript', 'vite', 'vercel'],
     year: 2025,
-    scale: 'personal',
-    url: 'https://dashai.dev'
+    scale: 'personal'
   },
   {
     id: 'gas-apps',
