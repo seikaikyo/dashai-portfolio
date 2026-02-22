@@ -4,46 +4,55 @@ export const projects: Project[] = [
   // === 製造執行系統 (manufacturing) ===
   {
     id: 'mes',
-    name: 'MES 製造執行系統',
-    description: 'Angular 21 + PrimeNG 企業級製造執行系統，涵蓋工單管理、製程追蹤、產能分析、品質記錄等完整功能',
+    name: 'DEMO-APP 製造執行系統',
+    description: '濾網再生工廠 MES，工單管理、派工報工、倉儲調撥、品質管理，涵蓋 8 個製程站點完整追蹤',
     category: 'manufacturing',
-    tags: ['angular', 'primeng', 'typescript', 'fastapi', 'neon'],
+    tags: ['angular', 'primeng', 'typescript', 'fastapi', 'neon', 'clerk', 'render'],
     year: 2025,
     scale: 'enterprise'
   },
   {
     id: 'msw',
     name: 'MSW 製程管理系統',
-    description: 'MES + SPC + WMS 整合系統，涵蓋工單派工報工、品質管制圖分析、倉儲 Pallet 追蹤，含能源監控與 AI 戰情儀表板',
+    description: 'MES + SPC + WMS 整合系統，50 個 AI 模組戰情儀表板、RFID 再生次數追蹤、能源監控、完整簽核流程',
     category: 'manufacturing',
-    tags: ['vue3', 'primevue', 'typescript', 'vite'],
+    tags: ['vite', 'javascript', 'chartjs', 'plotly'],
     year: 2024,
     scale: 'production'
   },
   {
     id: 'eap',
-    name: 'EAP 設備自動化程式',
-    description: '半導體設備自動化控制介面，設備參數監控、配方管理、SECS/GEM 通訊整合',
+    name: 'EAP 設備自動程式系統',
+    description: '機台程式管理與 ECU 自動下放，Modbus TCP 通訊、參數可視化編輯、版本控制、7 個產業模組',
     category: 'manufacturing',
-    tags: ['vue3', 'primevue', 'typescript', 'csharp', 'dotnet'],
+    tags: ['vite', 'javascript'],
     year: 2024,
     scale: 'enterprise'
   },
   {
     id: 'bpm',
-    name: 'BPM 流程管理系統',
-    description: '企業流程自動化引擎，支援簽核流程、表單設計、權限控管、流程追蹤',
+    name: 'BPM 簽核流程管理系統',
+    description: '拖拽式表單建置器 + 視覺化流程設計器，支援並簽串簽、條件分支、11 種運算子、PDF 報表匯出',
     category: 'manufacturing',
-    tags: ['vue3', 'primevue', 'typescript'],
+    tags: ['vite', 'javascript'],
     year: 2024,
     scale: 'enterprise'
   },
   {
     id: 'rms',
     name: 'RMS 配方管理系統',
-    description: '製程配方版本控管、參數比對、下載派送，確保產線一致性',
+    description: '配方版本控管、Golden Recipe 自動評分、SPC 製程能力分析、差異比對回滾、自動化測試系統',
     category: 'manufacturing',
-    tags: ['vue3', 'primevue', 'typescript'],
+    tags: ['vite', 'javascript', 'chartjs'],
+    year: 2024,
+    scale: 'production'
+  },
+  {
+    id: 'gas-mes',
+    name: 'GAS MES 備援系統',
+    description: '主系統故障時切換的輕量備援 MES，工單派工報工、AOI 品檢、點檢表、倉儲管理，資料同步回 Sheets',
+    category: 'manufacturing',
+    tags: ['gas', 'sheets', 'vue3'],
     year: 2024,
     scale: 'production'
   },
@@ -51,66 +60,66 @@ export const projects: Project[] = [
   // === AI 視覺系統 (ai-vision) ===
   {
     id: 'visionai',
-    name: 'VisionAI 視覺檢測平台',
-    description: 'AI 瑕疵檢測平台，整合 YOLO 模型訓練、影像標註、即時推論，支援多產線部署',
+    name: 'VisionAI 智慧廠區監控',
+    description: 'VLM + LLM 視覺辨識平台，Watch Dogs 風格廠區平面圖、12 攝影機 PTZ 掃描、入侵偵測、保全派遣',
     category: 'ai-vision',
-    tags: ['vue3', 'primevue', 'python', 'yolo', 'opencv'],
+    tags: ['vite', 'javascript', 'shoelace', 'yolo', 'clerk'],
     year: 2024,
     scale: 'enterprise'
   },
   {
     id: 'dash-amc-ai',
-    name: 'AMC AI 環境監測',
-    description: 'AI 驅動的空氣分子汙染監測，即時分析潔淨室環境數據，異常預警',
+    name: 'AMC AI 智能監控系統',
+    description: '晶圓良率 AMC 防線，TOTP 雙重驗證、3D 即時視覺化、統計分析、智能測試數據生成器',
     category: 'ai-vision',
-    tags: ['vue3', 'primevue', 'python', 'tensorflow'],
+    tags: ['react', 'typescript', 'vite', 'plotly'],
     year: 2024,
     scale: 'production'
   },
   {
     id: 'demo-vision',
-    name: '製程視覺監控',
-    description: '製程影像即時監控系統，結合 OpenCV 影像處理與深度學習模型',
+    name: 'Process Vision 製程分析',
+    description: 'YOLO11 製程影片自動分段、週期時間計算、時間軸視覺化編輯、改善前後比對、Cloudinary 影片管理',
     category: 'ai-vision',
-    tags: ['vue3', 'primevue', 'python', 'opencv', 'yolo'],
+    tags: ['vue3', 'fastapi', 'neon', 'yolo', 'gemini', 'vercel', 'render'],
     year: 2024,
     scale: 'production'
   },
   {
     id: 'facematch',
-    name: 'FaceMatch 人臉辨識',
-    description: '人臉辨識比對系統，用於門禁與身分驗證場景',
+    name: 'FaceMatch Log 異常分析',
+    description: '人臉辨識系統 log 分析工具，設備離線偵測、Session 異常監控、MQTT 追蹤，零依賴純 Bash 實作',
     category: 'ai-vision',
-    tags: ['python', 'opencv', 'tensorflow'],
+    tags: ['bash'],
     year: 2023,
-    scale: 'prototype'
+    scale: 'internal'
   },
 
   // === 倉儲物流 (warehouse) ===
   {
     id: 'mcs',
-    name: 'MCS 物料控制系統',
-    description: '自動倉儲物料搬運控制，AGV 派車、路徑規劃、即時庫位追蹤',
+    name: 'MCS 智慧物料搬運控制',
+    description: '示範工廠工廠 自動移動設備調度，A* 路徑規劃、27 段通道統計、LiDAR 視覺化、GHG 碳排計算',
     category: 'warehouse',
-    tags: ['vue3', 'primevue', 'typescript', 'csharp'],
+    tags: ['vite', 'javascript', 'shoelace', 'vercel'],
     year: 2024,
     scale: 'enterprise'
   },
   {
     id: 'mids',
-    name: 'MIDS 物料識別系統',
-    description: '物料進出識別與追蹤，結合條碼掃描與影像辨識',
+    name: 'MIDS 材料追蹤系統',
+    description: '產品 RFID 追蹤，TAG 註冊查詢列印、生命週期追蹤、標籤樣板視覺化編輯器、批次匯出',
     category: 'warehouse',
-    tags: ['vue3', 'primevue', 'typescript'],
+    tags: ['vite', 'javascript', 'shoelace', 'vercel'],
     year: 2024,
     scale: 'production'
   },
   {
     id: 'rfid',
-    name: 'RFID 資產追蹤系統',
-    description: 'RFID 標籤管理與資產定位，支援批量盤點、即時追蹤、異常告警',
+    name: 'RFID 智慧倉儲讀取展示',
+    description: '三種讀取模式互動展示（隧道雙門/單門/門口直讀），移動設備棧板動畫、RSSI 訊號波形、播放速度控制',
     category: 'warehouse',
-    tags: ['vue3', 'primevue', 'typescript'],
+    tags: ['vite', 'javascript', 'shoelace', 'vercel'],
     year: 2024,
     scale: 'production'
   },
@@ -118,19 +127,19 @@ export const projects: Project[] = [
   // === 交易金融 (trading) ===
   {
     id: 'sinoauto',
-    name: 'SinoAuto 汽車銷售系統',
-    description: 'Vue 3 + FastAPI 全端汽車銷售管理，含庫存管理、訂單追蹤、客戶 CRM',
+    name: 'SinoAuto 台股自動交易',
+    description: '永豐 Shioaji API 整合 Claude AI 決策引擎，整張交易、自動學習反思、策略調整、績效追蹤',
     category: 'trading',
-    tags: ['vue3', 'primevue', 'fastapi', 'neon', 'vercel'],
+    tags: ['vue3', 'primevue', 'fastapi', 'shioaji', 'claude', 'vercel', 'render'],
     year: 2025,
     scale: 'production'
   },
   {
     id: 'dashtrade',
-    name: 'DashTrade 量化交易',
-    description: '美股量化交易策略平台，整合 Finnhub 即時數據、技術指標分析、回測引擎',
+    name: 'DashTrade AI 技術分析',
+    description: '台股美股日股多市場支援，RSI/KD/MACD/布林通道、雙引擎分析、每日自動預測 80 支股票並隔日驗證',
     category: 'trading',
-    tags: ['python', 'finnhub', 'neon'],
+    tags: ['vue3', 'shoelace', 'fastapi', 'sqlmodel', 'neon', 'vercel', 'render'],
     year: 2025,
     scale: 'personal'
   },
@@ -138,39 +147,48 @@ export const projects: Project[] = [
   // === 環保合規 (esg) ===
   {
     id: 'dash-ghg',
-    name: 'Dash-GHG 碳盤查系統',
-    description: 'ISO 14064 碳盤查管理，排放源鑑別、活動數據登錄、排放量計算、報告產出',
+    name: 'Dash-GHG 溫室氣體盤查',
+    description: 'ISO 14064-1 盤查管理，範疇一二三排放計算、距離計算器、排放係數庫、Google Maps 截圖稽核',
     category: 'esg',
-    tags: ['vue3', 'primevue', 'fastapi', 'neon', 'vercel'],
+    tags: ['vue3', 'typescript', 'shoelace', 'chartjs', 'fastapi', 'neon', 'vercel', 'render'],
     year: 2025,
     scale: 'production'
+  },
+  {
+    id: 'archived-ghg',
+    name: 'GHG 碳盤查 (前端版)',
+    description: '範例企業碳盤查系統前端原型，儀表板、數據盤查、排放係數庫，後演化為 Dash-GHG 全端版本',
+    category: 'esg',
+    tags: ['vite', 'javascript', 'shoelace', 'vercel'],
+    year: 2024,
+    scale: 'prototype'
   },
 
   // === 品質管理 (quality) ===
   {
     id: 'aoi-8d',
-    name: 'AOI-8D 品質異常管理',
-    description: 'AOI 檢測異常的 8D 改善流程，從問題描述到預防措施的完整追蹤',
+    name: 'AOI-8D 製程影片分析',
+    description: 'YOLO11 影片物件偵測、週期時間計算、自訂動作標註學習、Word 報告自動生成、8D 流程 AI 輔助填寫',
     category: 'quality',
-    tags: ['vue3', 'primevue', 'typescript'],
+    tags: ['streamlit', 'python', 'yolo', 'opencv'],
     year: 2024,
     scale: 'production'
   },
   {
     id: 'demo-8d',
-    name: 'DEMO 8D 報告系統',
-    description: '通用 8D 問題解決報告平台，支援跨部門協作與改善追蹤',
+    name: 'DEMO 8D 問題解決系統',
+    description: 'ISO 27001 合規 8D 管理，D0-D8 完整流程、智慧提示與範例指引、AES 加密、PDF/Excel 匯出',
     category: 'quality',
-    tags: ['vue3', 'primevue', 'typescript'],
+    tags: ['vite', 'javascript', 'shoelace'],
     year: 2024,
     scale: 'production'
   },
   {
     id: 'spc',
-    name: 'SPC 統計製程管制',
-    description: '即時管制圖監控、CPK/PPK 計算、異常規則判定、改善趨勢分析',
+    name: 'SPC 統計製程管制整合',
+    description: '台達 DIASPC 系統整合規劃，AMC 濾網再生製程參數監控、品質管制圖、COA 報表、OCAP 流程',
     category: 'quality',
-    tags: ['vue3', 'primevue', 'typescript'],
+    tags: ['python'],
     year: 2024,
     scale: 'enterprise'
   },
@@ -178,75 +196,66 @@ export const projects: Project[] = [
   // === 人資/門禁 (hr-security) ===
   {
     id: 'sso',
-    name: 'SSO 單一登入系統',
-    description: '企業 SSO 身分驗證中心，整合 LDAP/AD，支援 RBAC 權限管理',
+    name: 'SSO 統一身份認證平台',
+    description: 'DEMO 集中式認證，130+ 權限項目、AD/LDAP 同步、MFA 管理、稽核日誌、IP 封鎖、跨應用會話管理',
     category: 'hr-security',
-    tags: ['vue3', 'primevue', 'typescript'],
+    tags: ['vite', 'javascript', 'shoelace', 'clerk', 'vercel'],
     year: 2024,
     scale: 'enterprise'
   },
   {
     id: 'vac',
-    name: 'VAC 門禁管制系統',
-    description: '訪客與員工門禁管理，刷卡記錄、區域權限、即時監控儀表板',
+    name: 'VAC 承攬商門禁管理',
+    description: 'ISO 27001 承攬商管理，雙層有效期模型、安全衛生教育追蹤、施工單時段管理、稽核 CSV 匯出',
     category: 'hr-security',
-    tags: ['vue3', 'primevue', 'typescript'],
+    tags: ['javascript', 'shoelace', 'prisma', 'neon', 'vercel'],
     year: 2024,
     scale: 'enterprise'
-  },
-  {
-    id: 'shift-schedule',
-    name: '排班管理系統',
-    description: '工廠輪班排程自動化，含班表產生、人力平衡、加班計算',
-    category: 'hr-security',
-    tags: ['python', 'gas', 'sheets'],
-    year: 2023,
-    scale: 'internal'
   },
 
   // === 平台基礎建設 (platform) ===
   {
     id: 'api-center',
-    name: 'API Center 服務閘道',
-    description: 'API 統一管理中心，含路由分發、認證授權、流量控制、日誌記錄',
+    name: 'API Center 統一管理中心',
+    description: '標準化 API 入口，OpenAPI 3.0 線上文件、JWT 認證、Vercel Serverless Functions、安全控制',
     category: 'platform',
-    tags: ['vue3', 'primevue', 'typescript'],
+    tags: ['vite', 'shoelace', 'vercel', 'prisma'],
     year: 2024,
     scale: 'enterprise'
   },
   {
     id: 'demo-mcp',
-    name: 'MCP Server 管理中心',
-    description: 'Model Context Protocol 伺服器管理，AI 工具串接、上下文管理',
+    name: 'MCP 統一 API 閘道',
+    description: 'FastAPI + FastMCP 架構，整合 MES/MIDS/VAC/GHG/SSO 多系統、Neon DB 對接、Clerk OAuth',
     category: 'platform',
-    tags: ['vue3', 'primevue', 'typescript', 'mcp', 'claude'],
+    tags: ['fastapi', 'fastmcp', 'neon', 'clerk', 'docker', 'render'],
     year: 2025,
     scale: 'internal'
   },
   {
     id: 'demo-ui',
     name: 'DEMO UI 元件庫',
-    description: '企業統一 UI 元件庫，封裝常用表單、表格、圖表元件，確保跨系統一致性',
+    description: '企業統一 UI 元件庫，可複用元件封裝、npm link 支援跨系統引用',
     category: 'platform',
-    tags: ['vue3', 'primevue', 'typescript'],
+    tags: ['javascript'],
     year: 2024,
     scale: 'internal'
   },
   {
     id: 'documentation',
-    name: '技術文件中心',
-    description: '企業技術文件統一管理，含 API 文件、架構圖、開發規範',
+    name: '技術文件產生器',
+    description: '自動化產生 9 個系統 17 種技術文件（技術/維運/測試/管理/訓練），排程釋出管理',
     category: 'platform',
-    tags: ['vue3', 'primevue', 'typescript'],
+    tags: ['python'],
     year: 2024,
     scale: 'internal'
   },
   {
     id: 'ssl',
-    name: 'SSL 憑證管理',
-    description: 'HTTPS 憑證申請、更新、部署自動化管理',
+    name: 'SSL 憑證管理工具',
+    description: 'SSH 連線遠端 Linux 伺服器，憑證上傳備份更新、到期檢查、批次操作，GUI + CLI 雙介面',
     category: 'platform',
-    tags: ['bash', 'docker'],
+    tags: ['python'],
     year: 2023,
     scale: 'internal'
   },
@@ -255,7 +264,7 @@ export const projects: Project[] = [
     name: 'SEO 分析工具',
     description: '網站 SEO 健檢與優化建議產生器',
     category: 'platform',
-    tags: ['vue3', 'primevue', 'typescript'],
+    tags: ['vite', 'javascript', 'shoelace'],
     year: 2024,
     scale: 'internal'
   },
@@ -264,25 +273,25 @@ export const projects: Project[] = [
   {
     id: 'dash-devtools',
     name: 'DashAI DevTools',
-    description: 'Python CLI 開發工具集，含專案驗證、安全掃描、程式碼品質檢查',
+    description: '開發工具集：E2E 測試、Gemini AI 視覺分析、程式碼品質檢查、OpenSpec 規格驅動、專案健康評分',
     category: 'devtools',
-    tags: ['python', 'bash'],
+    tags: ['python', 'gemini', 'bash'],
     year: 2025,
     scale: 'personal'
   },
   {
     id: 'dash-skills',
     name: 'Claude Code Skills',
-    description: 'Claude Code 自訂技能集，含 OpenSpec、FastAPI、Angular 等開發模板',
+    description: '自建 6 + 外部收錄 17 個 Claude Code 技能，涵蓋 OpenSpec、FastAPI、Angular、UI/UX 設計等模板',
     category: 'devtools',
-    tags: ['claude', 'mcp', 'bash'],
+    tags: ['claude', 'bash'],
     year: 2025,
     scale: 'personal'
   },
   {
     id: 'git-security-hooks',
     name: 'Git Security Hooks',
-    description: 'Git pre-commit hooks，防止 API Key、密碼、Token 等機敏資料提交',
+    description: 'gitleaks pre-commit hook，自動掃描 API Key / Token / 密碼，阻擋提交、支援全域設定',
     category: 'devtools',
     tags: ['bash', 'git'],
     year: 2025,
@@ -290,10 +299,19 @@ export const projects: Project[] = [
   },
   {
     id: 'demo-backup',
-    name: '資料庫備份工具',
-    description: '自動化 PostgreSQL 備份、壓縮、上傳、保留策略管理',
+    name: 'Neon 資料庫自動備份',
+    description: 'GitHub Actions 每日自動備份 Neon PostgreSQL，30 天保留策略、手動觸發、自動還原',
     category: 'devtools',
-    tags: ['python', 'bash', 'neon'],
+    tags: ['neon', 'github-actions'],
+    year: 2024,
+    scale: 'internal'
+  },
+  {
+    id: 'gas-apps',
+    name: 'GAS 自動化工具集',
+    description: 'Google Apps Script 企業自動化：排程通知、報表產生、跨系統資料同步',
+    category: 'devtools',
+    tags: ['gas', 'sheets'],
     year: 2024,
     scale: 'internal'
   },
@@ -302,7 +320,7 @@ export const projects: Project[] = [
   {
     id: 'sukuyodo',
     name: '宿曜道 運勢系統',
-    description: 'Vue 3 + FastAPI 全端宿曜占星系統，27 宿分析、九曜流年、相性診斷，經六輪驗證通過',
+    description: '日本真言宗宿曜占星術，27 宿分析、九曜流年、雙人相性診斷、吉日查詢，經六輪驗證通過',
     category: 'personal',
     tags: ['vue3', 'primevue', 'fastapi', 'neon', 'vercel', 'render'],
     year: 2025,
@@ -310,28 +328,28 @@ export const projects: Project[] = [
   },
   {
     id: 'job-crawler',
-    name: '求職爬蟲系統',
-    description: '104/1111 職缺自動爬取、薪資分析、條件篩選、趨勢追蹤',
+    name: '外包平台職缺爬蟲',
+    description: '日本 Lancers/CrowdWorks/Coconala + 美國 Upwork/Freelancer 多平台爬取，Claude API 雙語翻譯',
     category: 'personal',
-    tags: ['python', 'vue3', 'primevue'],
+    tags: ['vue3', 'shoelace', 'fastapi', 'neon', 'claude'],
     year: 2025,
     scale: 'personal'
   },
   {
     id: 'jinkochino',
-    name: '人口知能 資料視覺化',
-    description: '日本人口數據視覺化分析，縣市比較、趨勢預測、互動圖表',
+    name: '人工知能公司官網',
+    description: 'Jinkochino Ltd. 官方網站，正體中文/English/日本語三語切換、深色淺色主題、響應式設計',
     category: 'personal',
-    tags: ['vue3', 'primevue', 'typescript'],
+    tags: ['vite', 'shoelace', 'vercel'],
     year: 2024,
     scale: 'personal'
   },
   {
     id: 'wind',
-    name: 'Wind 風力資料分析',
-    description: '風力發電數據分析與視覺化，風速分布、發電量預測',
+    name: 'Wind CFD 風場模擬',
+    description: '90 度彎管 CFD 模擬動畫，Navier-Stokes 計算、粒子流動、LIC 紋理、即時速度偏差顯示',
     category: 'personal',
-    tags: ['python'],
+    tags: ['python', 'javascript'],
     year: 2023,
     scale: 'prototype'
   },
@@ -344,12 +362,21 @@ export const projects: Project[] = [
     year: 2025,
     scale: 'personal'
   },
+  {
+    id: 'dashai-portfolio',
+    name: 'DashAI Portfolio',
+    description: '本作品集網站，Vue 3 + PrimeVue Aura 暗色主題，42 專案分類篩選與技術棧統計',
+    category: 'personal',
+    tags: ['vue3', 'primevue', 'typescript', 'vite', 'vercel'],
+    year: 2025,
+    scale: 'personal'
+  },
 
   // === 學習專案 (learning) ===
   {
     id: 'jlpt-n1-learner',
     name: 'JLPT N1 學習系統',
-    description: 'Vue 3 + FastAPI 日語 N1 學習平台，含語彙、文法、讀解練習與錯題追蹤',
+    description: '日語 N1 學習平台，語彙、文法、讀解練習與錯題追蹤',
     category: 'learning',
     tags: ['vue3', 'primevue', 'fastapi', 'neon', 'vercel'],
     year: 2025,
@@ -360,49 +387,9 @@ export const projects: Project[] = [
   {
     id: 'demo-recruit',
     name: '技術面試測驗平台',
-    description: '線上技術測驗系統，含題庫管理、計時作答、自動評分、成績報告',
+    description: '線上技術測驗系統，題庫管理、計時作答、自動評分、成績報告',
     category: 'recruit',
-    tags: ['vue3', 'primevue', 'typescript'],
-    year: 2024,
-    scale: 'internal'
-  },
-
-  // === GAS 系列 (分散在各類別) ===
-  {
-    id: 'gas-mes',
-    name: 'GAS MES 輕量版',
-    description: 'Google Apps Script 實作的輕量 MES，使用 Sheets 作為資料庫，適合小型產線',
-    category: 'manufacturing',
-    tags: ['gas', 'sheets'],
-    year: 2024,
-    scale: 'production'
-  },
-  {
-    id: 'archived-ghg',
-    name: 'GHG 碳盤查 (前端版)',
-    description: '碳盤查系統前端原型，後演化為 Dash-GHG 全端版本',
-    category: 'esg',
-    tags: ['vue3', 'typescript'],
-    year: 2024,
-    scale: 'prototype'
-  },
-
-  // === 額外 ===
-  {
-    id: 'dashai-portfolio',
-    name: 'DashAI Portfolio',
-    description: '本作品集網站，Vue 3 + PrimeVue 暗色主題靜態站，展示 42 個專案與技術棧統計',
-    category: 'personal',
-    tags: ['vue3', 'primevue', 'typescript', 'vite', 'vercel'],
-    year: 2025,
-    scale: 'personal'
-  },
-  {
-    id: 'gas-apps',
-    name: 'GAS 自動化工具集',
-    description: 'Google Apps Script 企業自動化：排程通知、報表產生、跨系統資料同步',
-    category: 'devtools',
-    tags: ['gas', 'sheets'],
+    tags: ['vite', 'javascript', 'shoelace'],
     year: 2024,
     scale: 'internal'
   }

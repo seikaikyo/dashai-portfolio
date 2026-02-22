@@ -1,9 +1,16 @@
 <script setup lang="ts">
+import { projects } from '../data/projects'
+import { categories } from '../data/categories'
+import { techTags } from '../data/tech-tags'
+
+const usedTags = new Set(projects.flatMap(p => p.tags))
+const frameworkCount = techTags.filter(t => usedTags.has(t.id)).length
+
 const stats = [
-  { value: '42', label: 'Projects' },
+  { value: String(projects.length), label: 'Projects' },
   { value: '888K+', label: 'Lines of Code' },
-  { value: '12', label: 'Categories' },
-  { value: '15+', label: 'Frameworks' }
+  { value: String(categories.length), label: 'Categories' },
+  { value: `${frameworkCount}+`, label: 'Tech Stacks' }
 ]
 </script>
 
