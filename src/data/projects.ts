@@ -355,10 +355,10 @@ export const projects: Project[] = [
   },
   {
     id: 'dashastro',
-    name: 'DashAstro 占星系統',
-    description: '西洋占星術計算引擎，星盤繪製、行星相位、宮位分析',
+    name: 'DashAstro 占星工具平台',
+    description: '融合宿曜道、西方占星、塔羅、日本吉日曆，Skyfield 行星計算 + Claude AI 解讀，9 組 API 路由',
     category: 'personal',
-    tags: ['vue3', 'vite', 'fastapi', 'python'],
+    tags: ['vue3', 'shoelace', 'fastapi', 'sqlmodel', 'neon', 'claude', 'vercel', 'render'],
     year: 2025,
     scale: 'personal'
   },
@@ -376,9 +376,9 @@ export const projects: Project[] = [
   {
     id: 'jlpt-n1-learner',
     name: 'JLPT N1 學習系統',
-    description: '日語 N1 學習平台，語彙、文法、讀解練習與錯題追蹤',
+    description: 'Claude AI 自適應學習，25+ 個 N1 文法點弱項追蹤、讀解練習、聽解男女聲切換、語速調整',
     category: 'learning',
-    tags: ['vue3', 'primevue', 'fastapi', 'neon', 'vercel'],
+    tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'claude'],
     year: 2025,
     scale: 'personal'
   },
@@ -386,10 +386,10 @@ export const projects: Project[] = [
   // === 招募測試 (recruit) ===
   {
     id: 'demo-recruit',
-    name: '技術面試測驗平台',
-    description: '線上技術測驗系統，題庫管理、計時作答、自動評分、成績報告',
+    name: 'AI 技術人才測驗系統',
+    description: 'Claude 動態出題 + 行為分析，7 種職位、難度自適應、人格四維度分析、PGlite 離線優先架構',
     category: 'recruit',
-    tags: ['vite', 'javascript', 'shoelace'],
+    tags: ['vue3', 'javascript', 'claude', 'vercel'],
     year: 2024,
     scale: 'internal'
   }
