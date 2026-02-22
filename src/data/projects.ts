@@ -4,7 +4,7 @@ export const projects: Project[] = [
   // === 製造執行系統 (manufacturing) ===
   {
     id: 'mes',
-    name: 'DEMO-APP 製造執行系統',
+    name: 'MES 製造執行系統',
     description: '濾網再生工廠 MES，工單管理、派工報工、倉儲調撥、品質管理，涵蓋 8 個製程站點完整追蹤',
     category: 'manufacturing',
     tags: ['angular', 'primeng', 'typescript', 'fastapi', 'neon', 'clerk', 'render'],
@@ -176,7 +176,7 @@ export const projects: Project[] = [
   },
   {
     id: 'demo-8d',
-    name: 'DEMO 8D 問題解決系統',
+    name: '8D 問題解決系統',
     description: 'ISO 27001 合規 8D 管理，D0-D8 完整流程、智慧提示與範例指引、AES 加密、PDF/Excel 匯出',
     category: 'quality',
     tags: ['vite', 'javascript', 'shoelace'],
@@ -197,7 +197,7 @@ export const projects: Project[] = [
   {
     id: 'sso',
     name: 'SSO 統一身份認證平台',
-    description: 'DEMO 集中式認證，130+ 權限項目、AD/LDAP 同步、MFA 管理、稽核日誌、IP 封鎖、跨應用會話管理',
+    description: '企業集中式認證，130+ 權限項目、AD/LDAP 同步、MFA 管理、稽核日誌、IP 封鎖、跨應用會話管理',
     category: 'hr-security',
     tags: ['vite', 'javascript', 'shoelace', 'clerk', 'vercel'],
     year: 2024,
@@ -234,7 +234,7 @@ export const projects: Project[] = [
   },
   {
     id: 'demo-ui',
-    name: 'DEMO UI 元件庫',
+    name: '企業 UI 元件庫',
     description: '企業統一 UI 元件庫，可複用元件封裝、npm link 支援跨系統引用',
     category: 'platform',
     tags: ['javascript'],
