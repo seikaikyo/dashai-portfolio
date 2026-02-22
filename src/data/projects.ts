@@ -386,5 +386,26 @@ export const projects: Project[] = [
     tags: ['vue3', 'typescript'],
     year: 2024,
     scale: 'prototype'
+  },
+
+  // === 額外 ===
+  {
+    id: 'dashai-portfolio',
+    name: 'DashAI Portfolio',
+    description: '本作品集網站，Vue 3 + PrimeVue 暗色主題靜態站，展示 42 個專案與技術棧統計',
+    category: 'personal',
+    tags: ['vue3', 'primevue', 'typescript', 'vite', 'vercel'],
+    year: 2025,
+    scale: 'personal',
+    url: 'https://dashai.dev'
+  },
+  {
+    id: 'gas-apps',
+    name: 'GAS 自動化工具集',
+    description: 'Google Apps Script 企業自動化：排程通知、報表產生、跨系統資料同步',
+    category: 'devtools',
+    tags: ['gas', 'sheets'],
+    year: 2024,
+    scale: 'internal'
   }
 ]
