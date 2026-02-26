@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import type { Project } from '../types'
 import ProjectCard from './ProjectCard.vue'
+import { useI18n } from '../composables/useI18n'
+
+const { t } = useI18n()
 
 defineProps<{
   projects: Project[]
@@ -11,7 +14,7 @@ defineProps<{
   <section class="grid-section">
     <div class="container">
       <p v-if="projects.length === 0" class="grid-section__empty">
-        No projects match the current filter.
+        {{ t('filter.noResults') }}
       </p>
       <div v-else class="grid-section__grid">
         <ProjectCard

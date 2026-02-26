@@ -1,7 +1,11 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import Select from 'primevue/select'
 import InputText from 'primevue/inputtext'
 import { categories } from '../data/categories'
+import { useI18n } from '../composables/useI18n'
+
+const { locale, t } = useI18n()
 
 const props = defineProps<{
   selectedCategory: string | null
@@ -13,10 +17,10 @@ const emit = defineEmits<{
   'update:searchQuery': [value: string]
 }>()
 
-const categoryOptions = [
-  { id: null, label: 'All Categories' },
-  ...categories
-]
+const categoryOptions = computed(() => [
+  { id: null, label: t('filter.allCategories') },
+  ...categories.map(c => ({ id: c.id, label: c.label[locale.value] }))
+])
 </script>
 
 <template>
@@ -29,13 +33,13 @@ const categoryOptions = [
           :options="categoryOptions"
           optionLabel="label"
           optionValue="id"
-          placeholder="All Categories"
+          :placeholder="t('filter.allCategories')"
           class="filter__select"
         />
         <InputText
           :modelValue="props.searchQuery"
           @update:modelValue="emit('update:searchQuery', $event ?? '')"
-          placeholder="Search projects..."
+          :placeholder="t('filter.searchPlaceholder')"
           class="filter__search"
         />
       </div>

@@ -3,6 +3,9 @@ import Tag from 'primevue/tag'
 import { computed } from 'vue'
 import { projects } from '../data/projects'
 import { techTags } from '../data/tech-tags'
+import { useI18n } from '../composables/useI18n'
+
+const { t } = useI18n()
 
 const techUsage = computed(() => {
   const counts: Record<string, number> = {}
@@ -21,15 +24,15 @@ const techUsage = computed(() => {
 <template>
   <section class="tech">
     <div class="container">
-      <h2 class="tech__title">Tech Stack</h2>
+      <h2 class="tech__title">{{ t('tech.title') }}</h2>
       <div class="tech__grid">
         <div
-          v-for="t in techUsage"
-          :key="t.id"
+          v-for="item in techUsage"
+          :key="item.id"
           class="tech__item"
         >
-          <Tag :value="t.label" severity="secondary" />
-          <span class="tech__count">{{ t.count }}</span>
+          <Tag :value="item.label" severity="secondary" />
+          <span class="tech__count">{{ item.count }}</span>
         </div>
       </div>
     </div>
