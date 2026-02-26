@@ -4,9 +4,13 @@ export interface TechTag {
   color?: string
 }
 
+export type Locale = 'zh-TW' | 'en' | 'ja'
+
+export type LocalizedString = Record<Locale, string>
+
 export interface Category {
   id: string
-  label: string
+  label: LocalizedString
   color: string
   icon: string
 }
@@ -15,8 +19,8 @@ export type ProjectScale = 'enterprise' | 'production' | 'internal' | 'personal'
 
 export interface Project {
   id: string
-  name: string
-  description: string
+  name: LocalizedString
+  description: LocalizedString
   category: string
   tags: string[]
   year: number

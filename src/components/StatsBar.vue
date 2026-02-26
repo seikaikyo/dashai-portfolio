@@ -1,17 +1,20 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { projects } from '../data/projects'
 import { categories } from '../data/categories'
 import { techTags } from '../data/tech-tags'
+import { useI18n } from '../composables/useI18n'
+
+const { t } = useI18n()
 
 const usedTags = new Set(projects.flatMap(p => p.tags))
 const frameworkCount = techTags.filter(t => usedTags.has(t.id)).length
 
-const stats = [
-  { value: String(projects.length), label: 'Projects' },
-  { value: '888K+', label: 'Lines of Code' },
-  { value: String(categories.length), label: 'Categories' },
-  { value: `${frameworkCount}+`, label: 'Tech Stacks' }
-]
+const stats = computed(() => [
+  { value: String(projects.length), label: t('stats.projects') },
+  { value: String(categories.length), label: t('stats.categories') },
+  { value: `${frameworkCount}+`, label: t('stats.techStacks') }
+])
 </script>
 
 <template>
@@ -23,9 +26,7 @@ const stats = [
           <span class="stats__label">{{ s.label }}</span>
         </div>
       </div>
-      <p class="stats__notice">
-        Enterprise projects are protected under NDA and information security policies. Live demos available on request.
-      </p>
+      <p class="stats__notice">{{ t('stats.nda') }}</p>
     </div>
   </section>
 </template>
@@ -39,7 +40,7 @@ const stats = [
 
 .stats__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--sp-6);
   text-align: center;
 }

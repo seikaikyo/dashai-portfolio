@@ -3,20 +3,15 @@ import Tag from 'primevue/tag'
 import type { Project } from '../types'
 import { categoryMap } from '../data/categories'
 import { techTagMap } from '../data/tech-tags'
+import { useI18n } from '../composables/useI18n'
+
+const { locale, t } = useI18n()
 
 const props = defineProps<{
   project: Project
 }>()
 
 const category = categoryMap[props.project.category]
-
-const scaleLabels: Record<string, string> = {
-  enterprise: 'Enterprise',
-  production: 'Production',
-  internal: 'Internal',
-  personal: 'Personal',
-  prototype: 'Prototype'
-}
 </script>
 
 <template>
@@ -25,17 +20,17 @@ const scaleLabels: Record<string, string> = {
     :style="{ '--cat-color': category?.color }"
   >
     <div class="card__header">
-      <span class="card__category">{{ category?.label }}</span>
+      <span class="card__category">{{ category?.label[locale] }}</span>
     </div>
 
     <h3 class="card__title">
       <a v-if="project.url" :href="project.url" target="_blank" rel="noopener">
-        {{ project.name }}
+        {{ project.name[locale] }}
       </a>
-      <span v-else>{{ project.name }}</span>
+      <span v-else>{{ project.name[locale] }}</span>
     </h3>
 
-    <p class="card__desc">{{ project.description }}</p>
+    <p class="card__desc">{{ project.description[locale] }}</p>
 
     <div class="card__tags">
       <Tag
@@ -49,7 +44,7 @@ const scaleLabels: Record<string, string> = {
     <div class="card__footer">
       <span class="card__year">{{ project.year }}</span>
       <span class="card__dot"></span>
-      <span class="card__scale">{{ scaleLabels[project.scale] }}</span>
+      <span class="card__scale">{{ t(`scale.${project.scale}`) }}</span>
     </div>
   </article>
 </template>
