@@ -177,6 +177,24 @@ export const projects: Project[] = [
     scale: 'personal'
   },
 
+  {
+    id: 'ai-red-team',
+    name: {
+      'zh-TW': 'AI Red Team Toolkit',
+      en: 'AI Red Team Toolkit',
+      ja: 'AI Red Team Toolkit'
+    },
+    description: {
+      'zh-TW': 'LLM 對抗性安全測試工具，96 個攻擊模板涵蓋 prompt injection、jailbreak、偏見偵測，支援三語介面與 OpenAI-compatible API 自架模型測試',
+      en: 'LLM adversarial safety testing toolkit: 96 attack templates across prompt injection, jailbreak, bias detection, trilingual UI (EN/ZH/JA), OpenAI-compatible API for self-hosted model testing',
+      ja: 'LLM敵対的安全テストツール、96攻撃テンプレート（プロンプトインジェクション・脱獄・バイアス検出）、三言語UI（EN/ZH/JA）、OpenAI互換API自己ホストモデルテスト対応'
+    },
+    category: 'devtools',
+    tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'claude'],
+    year: 2026,
+    scale: 'personal'
+  },
+
   // === 個人作品 (personal) ===
   {
     id: 'sukuyodo',
