@@ -269,14 +269,14 @@ export const projects: Project[] = [
   {
     id: 'jlpt-n1-learner',
     name: {
-      'zh-TW': 'JLPT N1 學習系統',
-      en: 'JLPT N1 Learning System',
-      ja: 'JLPT N1 学習システム'
+      'zh-TW': 'JLPT 學習系統',
+      en: 'JLPT Learning System',
+      ja: 'JLPT 学習システム'
     },
     description: {
-      'zh-TW': 'Claude AI 自適應學習，25+ 個 N1 文法點弱項追蹤、讀解練習、聽解男女聲切換、語速調整',
-      en: 'Claude AI adaptive learning: 25+ N1 grammar weak point tracking, reading comprehension, listening practice with male/female voice toggle, speed adjustment',
-      ja: 'Claude AI適応学習、25+ N1文法弱点追跡、読解練習、聴解男女音声切替、速度調整'
+      'zh-TW': 'Claude AI 自適應學習，N5-N1 全級別支援、文法弱項追蹤、讀解練習、聽解男女聲切換、語速調整',
+      en: 'Claude AI adaptive learning: N5-N1 full level support, grammar weak point tracking, reading comprehension, listening with male/female voice toggle, speed adjustment',
+      ja: 'Claude AI適応学習、N5-N1全レベル対応、文法弱点追跡、読解練習、聴解男女音声切替、速度調整'
     },
     category: 'learning',
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'claude'],
