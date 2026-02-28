@@ -195,6 +195,41 @@ export const projects: Project[] = [
     scale: 'personal'
   },
 
+  {
+    id: 'git-security-tools',
+    name: {
+      'zh-TW': 'Git 安全工具集',
+      en: 'Git Security Tools',
+      ja: 'Gitセキュリティツール'
+    },
+    description: {
+      'zh-TW': 'Git 倉庫安全管理三件套：GitLab/GitHub 雙平台同步、GitGuardian 整合機敏資料掃描、Git 歷史記錄清理，支援自架 GitLab 與 GUI 介面',
+      en: 'Git repo security management suite: GitLab/GitHub dual-platform sync, GitGuardian-integrated secret scanning, Git history cleanup for leaked credentials, self-hosted GitLab support with GUI',
+      ja: 'Gitリポジトリセキュリティ管理三点セット：GitLab/GitHubデュアルプラットフォーム同期、GitGuardian統合機密スキャン、Git履歴クリーンアップ、自己ホストGitLab対応＆GUI'
+    },
+    category: 'devtools',
+    tags: ['python', 'git', 'bash'],
+    year: 2025,
+    scale: 'personal'
+  },
+  {
+    id: 'dash-doc-generator',
+    name: {
+      'zh-TW': '企業文件產生器',
+      en: 'Enterprise Document Generator',
+      ja: '企業ドキュメントジェネレーター'
+    },
+    description: {
+      'zh-TW': '17 種文件類型自動產生，對應 19+ 個系統，Word 輸出、自動掃描既有系統資訊填入',
+      en: 'Auto-generate 17 document types for 19+ systems: Word output with auto-scanning to populate system information',
+      ja: '17種ドキュメント自動生成、19+システム対応、Word出力＆自動スキャンによるシステム情報自動入力'
+    },
+    category: 'devtools',
+    tags: ['python', 'bash'],
+    year: 2025,
+    scale: 'internal'
+  },
+
   // === 個人作品 (personal) ===
   {
     id: 'sukuyodo',
