@@ -282,5 +282,39 @@ export const projects: Project[] = [
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'claude'],
     year: 2025,
     scale: 'personal'
+  },
+  {
+    id: 'toeic-practice',
+    name: {
+      'zh-TW': 'TOEIC 刷題系統',
+      en: 'TOEIC Practice',
+      ja: 'TOEIC 練習システム'
+    },
+    description: {
+      'zh-TW': 'TOEIC Reading Part 5/6/7 獨立刷題 App，練習模式即時回饋、75 分鐘模擬考計時、成績趨勢追蹤與弱項分析，124 題離線題庫',
+      en: 'Standalone TOEIC Reading drill app: Part 5/6/7 practice with instant feedback, 75-min timed mock test, score trend tracking and weak category analysis, 124-question offline bank',
+      ja: 'TOEIC Reading Part 5/6/7 独立練習アプリ、即時フィードバック付き練習モード、75分模試タイマー、成績推移追跡＆弱点分析、124問オフライン問題集'
+    },
+    category: 'learning',
+    tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'chartjs'],
+    year: 2026,
+    scale: 'personal'
+  },
+  {
+    id: 'ai-english-tutor',
+    name: {
+      'zh-TW': 'AI 英語家教',
+      en: 'AI English Tutor',
+      ja: 'AI英語チューター'
+    },
+    description: {
+      'zh-TW': '語音優先的英語口說練習工具，場景模擬對話、Web Speech API 語音輸入輸出、即時文法修正、對話匯出',
+      en: 'Voice-first English speaking practice: scenario-based conversation, Web Speech API input/output, real-time grammar correction, chat export',
+      ja: '音声ファースト英語スピーキング練習、シナリオベース会話、Web Speech API入出力、リアルタイム文法修正、チャットエクスポート'
+    },
+    category: 'learning',
+    tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'claude'],
+    year: 2026,
+    scale: 'personal'
   }
 ]
