@@ -286,8 +286,7 @@ export const projects: Project[] = [
     category: 'personal',
     tags: ['vite', 'shoelace', 'vercel'],
     year: 2024,
-    scale: 'personal',
-    url: 'https://portfolio.dashai.dev/'
+    scale: 'personal'
   },
   {
     id: 'dashastro',
@@ -322,8 +321,7 @@ export const projects: Project[] = [
     category: 'personal',
     tags: ['vue3', 'primevue', 'typescript', 'vite', 'vercel'],
     year: 2025,
-    scale: 'personal',
-    url: 'https://portfolio.dashai.dev'
+    scale: 'personal'
   },
 
   // === 學習專案 (learning) ===
