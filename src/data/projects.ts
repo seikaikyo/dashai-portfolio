@@ -202,14 +202,14 @@ export const projects: Project[] = [
   {
     id: 'git-security-tools',
     name: {
-      'zh-TW': 'Git 安全工具集',
-      en: 'Git Security Tools',
-      ja: 'Gitセキュリティツール'
+      'zh-TW': 'GitGuard Sync',
+      en: 'GitGuard Sync',
+      ja: 'GitGuard Sync'
     },
     description: {
-      'zh-TW': 'Git 倉庫安全管理三件套：GitLab/GitHub 雙平台同步、GitGuardian 整合機敏資料掃描、Git 歷史記錄清理，支援自架 GitLab 與 GUI 介面',
-      en: 'Git repo security management suite: GitLab/GitHub dual-platform sync, GitGuardian-integrated secret scanning, Git history cleanup for leaked credentials, self-hosted GitLab support with GUI',
-      ja: 'Gitリポジトリセキュリティ管理三点セット：GitLab/GitHubデュアルプラットフォーム同期、GitGuardian統合機密スキャン、Git履歴クリーンアップ、自己ホストGitLab対応＆GUI'
+      'zh-TW': 'GitLab/GitHub 雙平台倉庫安全同步，GitGuardian 整合機敏資料掃描，支援自架 GitLab、現代化 GUI 介面',
+      en: 'GitLab/GitHub dual-platform repo security sync with GitGuardian-integrated secret scanning, self-hosted GitLab support, modern GUI',
+      ja: 'GitLab/GitHubデュアルプラットフォームリポジトリ安全同期、GitGuardian統合機密スキャン、自己ホストGitLab対応、モダンGUI'
     },
     category: 'devtools',
     tags: ['python', 'git', 'bash'],
