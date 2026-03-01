@@ -140,7 +140,8 @@ export const projects: Project[] = [
     category: 'devtools',
     tags: ['python', 'gemini', 'bash'],
     year: 2025,
-    scale: 'personal'
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/dash-devtools'
   },
   {
     id: 'dash-skills',
@@ -157,7 +158,8 @@ export const projects: Project[] = [
     category: 'devtools',
     tags: ['claude', 'bash'],
     year: 2025,
-    scale: 'personal'
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/dash-skills'
   },
   {
     id: 'git-security-hooks',
@@ -174,7 +176,8 @@ export const projects: Project[] = [
     category: 'devtools',
     tags: ['bash', 'git'],
     year: 2025,
-    scale: 'personal'
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/git-security-hooks'
   },
 
   {
@@ -192,7 +195,8 @@ export const projects: Project[] = [
     category: 'devtools',
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'claude'],
     year: 2026,
-    scale: 'personal'
+    scale: 'personal',
+    url: 'https://ai-red-team.dashai.dev'
   },
 
   {
@@ -210,7 +214,8 @@ export const projects: Project[] = [
     category: 'devtools',
     tags: ['python', 'git', 'bash'],
     year: 2025,
-    scale: 'personal'
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/gitguard_sync'
   },
   {
     id: 'dash-doc-generator',
@@ -246,7 +251,8 @@ export const projects: Project[] = [
     category: 'personal',
     tags: ['vue3', 'primevue', 'fastapi', 'neon', 'vercel', 'render'],
     year: 2025,
-    scale: 'production'
+    scale: 'production',
+    url: 'https://sukuyodo.dashai.dev'
   },
   {
     id: 'job-crawler',
@@ -298,7 +304,8 @@ export const projects: Project[] = [
     category: 'personal',
     tags: ['vue3', 'shoelace', 'fastapi', 'sqlmodel', 'neon', 'claude', 'vercel', 'render'],
     year: 2025,
-    scale: 'personal'
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/DashAstro'
   },
   {
     id: 'dashai-portfolio',
@@ -315,7 +322,8 @@ export const projects: Project[] = [
     category: 'personal',
     tags: ['vue3', 'primevue', 'typescript', 'vite', 'vercel'],
     year: 2025,
-    scale: 'personal'
+    scale: 'personal',
+    url: 'https://portfolio.dashai.dev'
   },
 
   // === 學習專案 (learning) ===
@@ -334,7 +342,8 @@ export const projects: Project[] = [
     category: 'learning',
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'claude'],
     year: 2025,
-    scale: 'personal'
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/jlpt-n1-learner'
   },
   {
     id: 'toeic-practice',
@@ -351,7 +360,8 @@ export const projects: Project[] = [
     category: 'learning',
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'chartjs'],
     year: 2026,
-    scale: 'personal'
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/toeic-practice'
   },
   {
     id: 'ai-english-tutor',
@@ -368,6 +378,7 @@ export const projects: Project[] = [
     category: 'learning',
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'claude'],
     year: 2026,
-    scale: 'personal'
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/ai-english-tutor'
   }
 ]

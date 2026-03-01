@@ -1,5 +1,31 @@
-# Vue 3 + TypeScript + Vite
+# DashAI Portfolio
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**[https://portfolio.dashai.dev](https://portfolio.dashai.dev)**
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+Professional portfolio showcasing 15 projects across enterprise systems, AI security, trading, developer tools, and language learning.
+
+## Features
+
+- Trilingual UI (Traditional Chinese / English / Japanese) with auto-detection
+- Category filtering and full-text search
+- 33 technology tags with usage statistics
+- Responsive dark theme (PrimeVue Aura)
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Vue 3 + TypeScript + PrimeVue 4 (Aura) |
+| Build | Vite |
+| Deployment | Vercel |
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+## License
+
+MIT
