@@ -237,22 +237,22 @@ export const projects: Project[] = [
 
   // === 個人作品 (personal) ===
   {
-    id: 'sukuyodo',
+    id: 'shukuyo',
     name: {
-      'zh-TW': '宿曜道 運勢系統',
-      en: 'Sukuyodo Fortune System',
-      ja: '宿曜道 運勢システム'
+      'zh-TW': '宿曜道 - 運勢 / HR 選才 / 獵頭配對',
+      en: 'Shukuyodo - Fortune / HR Matching / Headhunter',
+      ja: '宿曜道 - 運勢・HR選考・ヘッドハント'
     },
     description: {
-      'zh-TW': '日本真言宗宿曜占星術，27 宿分析、九曜流年、雙人相性診斷、吉日查詢，經六輪驗證通過',
-      en: 'Japanese Shingon Sukuyodo astrology: 27 mansion analysis, nine-planet annual fortune, dual compatibility diagnosis, auspicious day lookup, 6-round verified',
-      ja: '真言宗宿曜占星術、27宿分析、九曜流年、二人相性診断、吉日検索、6ラウンド検証済み'
+      'zh-TW': '基於大正藏 T21n1299 的宿曜占星平台。個人運勢（日/週/月/年）、27 宿相性診斷、HR 適才適所分析（原典三段式指引）、獵頭交叉矩陣、吉日月曆。中日雙語',
+      en: 'Japanese esoteric Buddhist astrology platform based on T21 No.1299. Personal fortune, 27 mansion compatibility, HR talent matching with sutra-based placement guidance, headhunter cross-matrix, auspicious calendar. Bilingual ZH-TW/JA',
+      ja: '大正蔵 T21n1299 に基づく宿曜占星プラットフォーム。個人運勢、27宿相性診断、HR適材適所分析（原典三段指針）、ヘッドハントクロス表、吉日カレンダー。中日二言語'
     },
     category: 'personal',
-    tags: ['vue3', 'primevue', 'fastapi', 'neon', 'vercel', 'render'],
+    tags: ['vue3', 'primevue', 'fastapi', 'neon', 'vercel', 'render', 'i18n'],
     year: 2025,
     scale: 'production',
-    url: 'https://sukuyodo.dashai.dev'
+    url: 'https://shukuyo.dashai.dev'
   },
   {
     id: 'job-crawler',
