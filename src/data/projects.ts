@@ -244,9 +244,9 @@ export const projects: Project[] = [
       ja: '宿曜道 - 運勢・HR選考・ヘッドハント'
     },
     description: {
-      'zh-TW': '基於大正藏 T21n1299 的宿曜占星平台。個人運勢（日/週/月/年）、27 宿相性診斷、HR 適才適所分析（原典三段式指引）、獵頭交叉矩陣、吉日月曆。中日雙語',
-      en: 'Japanese esoteric Buddhist astrology platform based on T21 No.1299. Personal fortune, 27 mansion compatibility, HR talent matching with sutra-based placement guidance, headhunter cross-matrix, auspicious calendar. Bilingual ZH-TW/JA',
-      ja: '大正蔵 T21n1299 に基づく宿曜占星プラットフォーム。個人運勢、27宿相性診断、HR適材適所分析（原典三段指針）、ヘッドハントクロス表、吉日カレンダー。中日二言語'
+      'zh-TW': '基於大正藏 T21n1299 的宿曜占星平台。個人運勢（日/週/月/年）、27 宿相性診斷、HR 適才適所分析（原典三段式指引）、獵頭交叉矩陣、吉日月曆。中日英三語',
+      en: 'Japanese esoteric Buddhist astrology platform based on T21 No.1299. Personal fortune, 27 mansion compatibility, HR talent matching with sutra-based placement guidance, headhunter cross-matrix, auspicious calendar. Trilingual ZH-TW/JA/EN',
+      ja: '大正蔵 T21n1299 に基づく宿曜占星プラットフォーム。個人運勢、27宿相性診断、HR適材適所分析（原典三段指針）、ヘッドハントクロス表、吉日カレンダー。中日英三言語'
     },
     category: 'personal',
     tags: ['vue3', 'primevue', 'fastapi', 'neon', 'vercel', 'render', 'i18n'],
