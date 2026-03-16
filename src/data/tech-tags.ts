@@ -33,7 +33,9 @@ export const techTags: TechTag[] = [
   { id: 'docker', label: 'Docker' },
   { id: 'git', label: 'Git' },
   { id: 'bash', label: 'Bash/Shell' },
-  { id: 'github-actions', label: 'GitHub Actions' }
+  { id: 'github-actions', label: 'GitHub Actions' },
+  { id: 'web-speech', label: 'Web Speech API' },
+  { id: 'pwa', label: 'PWA' }
 ]
 
 export const techTagMap = Object.fromEntries(
