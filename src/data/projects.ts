@@ -188,9 +188,9 @@ export const projects: Project[] = [
       ja: 'AI Red Team Toolkit'
     },
     description: {
-      'zh-TW': 'LLM 對抗性安全測試工具，96 個攻擊模板涵蓋 prompt injection、jailbreak、偏見偵測，支援三語介面與 OpenAI-compatible API 自架模型測試',
-      en: 'LLM adversarial safety testing toolkit: 96 attack templates across prompt injection, jailbreak, bias detection, trilingual UI (EN/ZH/JA), OpenAI-compatible API for self-hosted model testing',
-      ja: 'LLM敵対的安全テストツール、96攻撃テンプレート（プロンプトインジェクション・脱獄・バイアス検出）、三言語UI（EN/ZH/JA）、OpenAI互換API自己ホストモデルテスト対応'
+      'zh-TW': 'LLM 對抗性安全測試工具，177 個攻擊模板涵蓋 12 類攻擊向量（含 RAG 污染、工具注入、幻覺誘導），支援三語介面與主流模型分群測試',
+      en: 'LLM adversarial safety testing toolkit: 177 attack templates across 12 categories (incl. RAG poisoning, tool use injection, hallucination), trilingual UI (EN/ZH/JA), multi-vendor model testing',
+      ja: 'LLM敵対的安全テストツール、177攻撃テンプレート12カテゴリ（RAGポイズニング・ツール注入・ハルシネーション含む）、三言語UI、マルチベンダーモデルテスト対応'
     },
     category: 'devtools',
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'claude'],
