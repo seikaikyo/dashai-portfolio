@@ -364,19 +364,19 @@ export const projects: Project[] = [
   {
     id: 'ai-english-tutor',
     name: {
-      'zh-TW': 'AI 英語家教',
+      'zh-TW': 'AI 英語面試家教',
       en: 'AI English Tutor',
-      ja: 'AI英語チューター'
+      ja: 'AI英語面接チューター'
     },
     description: {
-      'zh-TW': '語音優先的英語口說練習工具，場景模擬對話、Web Speech API 語音輸入輸出、即時文法修正、對話匯出',
-      en: 'Voice-first English speaking practice: scenario-based conversation, Web Speech API input/output, real-time grammar correction, chat export',
-      ja: '音声ファースト英語スピーキング練習、シナリオベース会話、Web Speech API入出力、リアルタイム文法修正、チャットエクスポート'
+      'zh-TW': '英語面試口說練習平台。27 題面試題庫 + 離線即時計分、語音輸入/輸出（Web Speech API）、AI 文法修正與翻譯、Claude API 深度回饋、藍染設計系統、PWA 離線可用。企業級資安（CSP / Rate Limiting / DOMPurify）+ WCAG AA 無障礙合規',
+      en: 'English interview practice platform. 27-question bank with offline scoring, voice I/O (Web Speech API), AI grammar correction & translation, Claude API deep feedback, Aizome design system, PWA offline-ready. Enterprise security (CSP / rate limiting / DOMPurify) + WCAG AA accessibility',
+      ja: '英語面接練習プラットフォーム。27問の面接問題バンク＋オフライン即時採点、音声入出力（Web Speech API）、AI文法修正＆翻訳、Claude APIディープフィードバック、藍染デザインシステム、PWAオフライン対応。企業レベルセキュリティ＋WCAG AAアクセシビリティ'
     },
     category: 'learning',
-    tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'claude'],
+    tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'claude', 'vercel', 'render', 'web-speech', 'pwa'],
     year: 2026,
-    scale: 'personal',
-    url: 'https://github.com/seikaikyo/ai-english-tutor'
+    scale: 'production',
+    url: 'https://english.dashai.dev'
   }
 ]
