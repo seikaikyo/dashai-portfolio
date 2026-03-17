@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import HeroSection from './components/HeroSection.vue'
+import FeaturedProject from './components/FeaturedProject.vue'
 import StatsBar from './components/StatsBar.vue'
 import FilterBar from './components/FilterBar.vue'
 import ProjectGrid from './components/ProjectGrid.vue'
@@ -36,6 +37,7 @@ const filteredProjects = computed(() => {
 
 <template>
   <HeroSection />
+  <FeaturedProject />
   <StatsBar />
   <FilterBar
     v-model:selectedCategory="selectedCategory"

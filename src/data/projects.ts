@@ -1,6 +1,26 @@
 import type { Project } from '../types'
 
 export const projects: Project[] = [
+  // === 旗艦作品 (featured) ===
+  {
+    id: 'smart-factory-demo',
+    name: {
+      'zh-TW': 'Smart Factory Demo - 智慧工廠全端展示',
+      en: 'Smart Factory Demo - Full-Stack Manufacturing Showcase',
+      ja: 'Smart Factory Demo - スマートファクトリー全スタック展示'
+    },
+    description: {
+      'zh-TW': '9 階段生產流程 x 54 個子系統 CRUD x 15 種 AI 工具（DashAI 對話即操作）x BCM 營運持續 x Agentic AI 多 Agent 架構 x 三語介面。從訂單到出貨的完整智慧工廠系統架構展示。',
+      en: '9-stage production flow x 54 subsystem CRUDs x 15 AI tools (DashAI chat-to-action) x BCM business continuity x Agentic AI multi-agent architecture x trilingual UI. A complete smart factory system architecture demo from order to shipment.',
+      ja: '9段階生産フロー x 54サブシステムCRUD x 15種AIツール（DashAI対話で操作）x BCM事業継続 x Agentic AIマルチエージェント x 三言語UI。受注から出荷までの完全なスマートファクトリーシステム展示。'
+    },
+    category: 'industry',
+    tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'neon', 'claude', 'chartjs', 'vercel', 'render'],
+    year: 2026,
+    scale: 'production',
+    url: 'https://factory.dashai.dev'
+  },
+
   // === 產業經歷 (industry) ===
   {
     id: 'ind-mes',
