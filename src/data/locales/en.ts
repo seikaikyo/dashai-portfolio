@@ -1,6 +1,6 @@
 export const en = {
   hero: {
-    tagline: 'AI Security & Adversarial Testing Consultant'
+    tagline: 'Systems Architect | Enterprise AI & DX'
   },
   featured: {
     badge: 'Featured Project',

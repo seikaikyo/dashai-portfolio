@@ -1,6 +1,6 @@
 export const ja = {
   hero: {
-    tagline: 'AIセキュリティ・敵対的テストコンサルタント'
+    tagline: 'システムアーキテクト | エンタープライズAI・DX'
   },
   featured: {
     badge: '注目プロジェクト',
