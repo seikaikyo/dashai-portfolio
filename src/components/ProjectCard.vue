@@ -19,6 +19,20 @@ const category = categoryMap[props.project.category]
     class="card"
     :style="{ '--cat-color': category?.color }"
   >
+    <!-- 截圖縮圖 -->
+    <div class="card__thumb">
+      <img
+        v-if="project.screenshot"
+        :src="project.screenshot"
+        :alt="project.name[locale]"
+        class="card__thumb-img"
+        loading="lazy"
+      />
+      <div v-else class="card__thumb-fallback">
+        <i :class="'pi ' + (category?.icon ?? 'pi-box')" />
+      </div>
+    </div>
+
     <div class="card__header">
       <span class="card__category">{{ category?.label[locale] }}</span>
     </div>
@@ -55,16 +69,71 @@ const category = categoryMap[props.project.category]
   border: 1px solid var(--border);
   border-left: 3px solid var(--cat-color, var(--brand));
   border-radius: var(--radius-md);
-  padding: var(--sp-6);
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--sp-3);
+  gap: 0;
   transition: box-shadow var(--transition), border-color var(--transition);
+  overflow: hidden;
 }
 
 .card:hover {
   box-shadow: var(--shadow-hover);
   border-color: var(--cat-color, var(--brand));
+}
+
+.card:hover .card__thumb-img {
+  transform: scale(1.03);
+}
+
+/* 截圖縮圖 */
+.card__thumb {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: var(--bg-surface);
+}
+
+.card__thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 200ms ease;
+}
+
+.card__thumb-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--cat-color, var(--brand)) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.card__thumb-fallback i {
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card__header,
+.card__title,
+.card__desc,
+.card__tags,
+.card__footer {
+  padding-left: var(--sp-6);
+  padding-right: var(--sp-6);
+}
+
+.card__header {
+  padding-top: var(--sp-4);
+}
+
+.card__footer {
+  padding-bottom: var(--sp-6);
+}
+
+.card__header ~ * + * {
+  margin-top: var(--sp-3);
 }
 
 .card__header {
@@ -133,5 +202,15 @@ const category = categoryMap[props.project.category]
   height: 3px;
   border-radius: 50%;
   background: var(--text-muted);
+}
+
+.card__footer {
+  margin-top: var(--sp-3);
+}
+
+@media (max-width: 768px) {
+  .card__thumb {
+    height: 120px;
+  }
 }
 </style>

@@ -26,4 +26,5 @@ export interface Project {
   year: number
   scale: ProjectScale
   url?: string
+  screenshot?: string
 }

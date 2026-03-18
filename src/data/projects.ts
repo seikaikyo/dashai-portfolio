@@ -18,7 +18,8 @@ export const projects: Project[] = [
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'neon', 'claude', 'chartjs', 'vercel', 'render'],
     year: 2026,
     scale: 'production',
-    url: 'https://factory.dashai.dev'
+    url: 'https://factory.dashai.dev',
+    screenshot: '/screenshots/smart-factory-demo.png'
   },
 
   // === 產業經歷 (industry) ===
@@ -216,7 +217,8 @@ export const projects: Project[] = [
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'claude'],
     year: 2026,
     scale: 'personal',
-    url: 'https://ai-red-team.dashai.dev'
+    url: 'https://ai-red-team.dashai.dev',
+    screenshot: '/screenshots/ai-red-team.png'
   },
 
   {
@@ -272,7 +274,8 @@ export const projects: Project[] = [
     tags: ['vue3', 'primevue', 'fastapi', 'neon', 'vercel', 'render', 'i18n'],
     year: 2025,
     scale: 'production',
-    url: 'https://shukuyo.dashai.dev'
+    url: 'https://shukuyo.dashai.dev',
+    screenshot: '/screenshots/shukuyo.png'
   },
   {
     id: 'job-crawler',
@@ -341,7 +344,8 @@ export const projects: Project[] = [
     category: 'personal',
     tags: ['vue3', 'primevue', 'typescript', 'vite', 'vercel'],
     year: 2025,
-    scale: 'personal'
+    scale: 'personal',
+    screenshot: '/screenshots/dashai-portfolio.png'
   },
 
   // === 學習專案 (learning) ===
@@ -397,6 +401,7 @@ export const projects: Project[] = [
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'claude', 'vercel', 'render', 'web-speech', 'pwa'],
     year: 2026,
     scale: 'production',
-    url: 'https://english.dashai.dev'
+    url: 'https://english.dashai.dev',
+    screenshot: '/screenshots/ai-english-tutor.png'
   }
 ]
