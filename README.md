@@ -4,6 +4,10 @@
 
 Professional portfolio showcasing 15 projects across enterprise systems, AI security, trading, developer tools, and language learning.
 
+![Portfolio Home](public/screenshots/portfolio-home.png)
+
+![Project Cards](public/screenshots/portfolio-projects.png)
+
 ## Features
 
 - Trilingual UI (Traditional Chinese / English / Japanese) with auto-detection
