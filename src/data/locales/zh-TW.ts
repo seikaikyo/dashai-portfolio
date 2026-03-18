@@ -1,6 +1,6 @@
 export const zhTW = {
   hero: {
-    tagline: 'AI 安全與對抗性測試顧問'
+    tagline: '系統架構師 | 企業 AI 解決方案與數位轉型'
   },
   featured: {
     badge: '旗艦作品',
