@@ -15,9 +15,6 @@ const messages: Record<Locale, Messages> = {
 function detectLocale(): Locale {
   const saved = localStorage.getItem('dashai-locale')
   if (saved && saved in messages) return saved as Locale
-  const lang = navigator.language
-  if (lang.startsWith('ja')) return 'ja'
-  if (lang.startsWith('zh')) return 'zh-TW'
   return 'en'
 }
 
