@@ -19,7 +19,8 @@ export const projects: Project[] = [
     year: 2026,
     scale: 'production',
     url: 'https://factory.dashai.dev',
-    screenshot: '/screenshots/smart-factory-demo.png'
+    screenshot: '/screenshots/smart-factory-demo.png',
+    video: { en: '/videos/smart-factory-intro.en.mp4', ja: '/videos/smart-factory-intro.ja.mp4' }
   },
 
   // === 產業經歷 (industry) ===
@@ -275,7 +276,8 @@ export const projects: Project[] = [
     year: 2025,
     scale: 'production',
     url: 'https://shukuyo.dashai.dev',
-    screenshot: '/screenshots/shukuyo.png'
+    screenshot: '/screenshots/shukuyo.png',
+    video: { en: '/videos/shukuyodo-intro.en.mp4', ja: '/videos/shukuyodo-intro.ja.mp4' }
   },
   {
     id: 'job-crawler',
