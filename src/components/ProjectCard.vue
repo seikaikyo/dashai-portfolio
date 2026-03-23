@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { ref, computed } from 'vue'
 import Tag from 'primevue/tag'
+import Dialog from 'primevue/dialog'
 import type { Project } from '../types'
 import { categoryMap } from '../data/categories'
 import { techTagMap } from '../data/tech-tags'
@@ -12,6 +14,16 @@ const props = defineProps<{
 }>()
 
 const category = categoryMap[props.project.category]
+const showVideo = ref(false)
+
+const videoSrc = computed(() => {
+  if (!props.project.video) return null
+  return props.project.video[locale.value] || props.project.video['en'] || null
+})
+
+function openVideo() {
+  showVideo.value = true
+}
 </script>
 
 <template>
@@ -20,7 +32,7 @@ const category = categoryMap[props.project.category]
     :style="{ '--cat-color': category?.color }"
   >
     <!-- 截圖縮圖 -->
-    <div class="card__thumb">
+    <div class="card__thumb" @click="videoSrc ? openVideo() : undefined">
       <img
         v-if="project.screenshot"
         :src="project.screenshot"
@@ -31,7 +43,29 @@ const category = categoryMap[props.project.category]
       <div v-else class="card__thumb-fallback">
         <i :class="'pi ' + (category?.icon ?? 'pi-box')" />
       </div>
+      <button v-if="videoSrc" class="card__play" aria-label="Play video">
+        <i class="pi pi-play-circle" />
+      </button>
     </div>
+
+    <Dialog
+      v-if="videoSrc"
+      v-model:visible="showVideo"
+      :header="project.name[locale]"
+      modal
+      dismissableMask
+      :style="{ width: '56rem', maxWidth: '95vw' }"
+      :contentStyle="{ padding: 0 }"
+      @hide="showVideo = false"
+    >
+      <video
+        v-if="showVideo"
+        :src="videoSrc"
+        controls
+        autoplay
+        style="width: 100%; display: block; border-radius: 0 0 var(--radius-md) var(--radius-md)"
+      />
+    </Dialog>
 
     <div class="card__header">
       <span class="card__category">{{ category?.label[locale] }}</span>
@@ -88,10 +122,12 @@ const category = categoryMap[props.project.category]
 
 /* 截圖縮圖 */
 .card__thumb {
+  position: relative;
   width: 100%;
   height: 160px;
   overflow: hidden;
   background: var(--bg-surface);
+  cursor: pointer;
 }
 
 .card__thumb-img {
@@ -113,6 +149,33 @@ const category = categoryMap[props.project.category]
 .card__thumb-fallback i {
   font-size: 2.5rem;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.card__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.55);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.card__play i {
+  font-size: 1.6rem;
+  color: white;
+}
+
+.card__thumb:hover .card__play {
+  opacity: 1;
 }
 
 .card__header,

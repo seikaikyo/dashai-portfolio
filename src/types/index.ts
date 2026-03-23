@@ -27,4 +27,5 @@ export interface Project {
   scale: ProjectScale
   url?: string
   screenshot?: string
+  video?: Record<string, string>
 }
