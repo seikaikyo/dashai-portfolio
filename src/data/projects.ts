@@ -10,9 +10,9 @@ export const projects: Project[] = [
       ja: 'Smart Factory Demo - スマートファクトリー全スタック展示'
     },
     description: {
-      'zh-TW': '9 階段生產流程 x 54 個子系統 CRUD x 15 種 AI 工具（DashAI 對話即操作）x BCM 營運持續 x Agentic AI 多 Agent 架構 x 三語介面。從訂單到出貨的完整智慧工廠系統架構展示。',
-      en: '9-stage production flow x 54 subsystem CRUDs x 15 AI tools (DashAI chat-to-action) x BCM business continuity x Agentic AI multi-agent architecture x trilingual UI. A complete smart factory system architecture demo from order to shipment.',
-      ja: '9段階生産フロー x 54サブシステムCRUD x 15種AIツール（DashAI対話で操作）x BCM事業継続 x Agentic AIマルチエージェント x 三言語UI。受注から出荷までの完全なスマートファクトリーシステム展示。'
+      'zh-TW': '25 年工廠經驗做成的互動系統。9 階段 x 54 子系統 CRUD x DashAI（即時 NCR 分診、訂單排程、風險評估，不是聊天機器人）x BCM 災害模擬 x 5 Agent 協作。三語介面',
+      en: '25 years of factory knowledge in one system. 9 stages x 54 subsystem CRUDs x DashAI (live NCR triage, order scheduling, risk assessment — it operates, not summarizes) x BCM disaster simulation x 5-agent collaboration. Trilingual.',
+      ja: '工場現場25年の経験を一つのシステムに。9段階 x 54サブシステムCRUD x DashAI（リアルタイムNCRトリアージ、注文振り分け、リスク評価 — 要約ではなく実行）x BCM災害シミュレーション x 5エージェント協調。三言語'
     },
     category: 'industry',
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'neon', 'claude', 'chartjs', 'vercel', 'render'],
@@ -266,9 +266,9 @@ export const projects: Project[] = [
       ja: '宿曜道 - 運勢・HR選考・ヘッドハント'
     },
     description: {
-      'zh-TW': '基於大正藏 T21n1299 的宿曜占星平台。個人運勢（日/週/月/年）、27 宿相性診斷、HR 適才適所分析（原典三段式指引）、獵頭交叉矩陣、吉日月曆。中日英三語',
-      en: 'Japanese esoteric Buddhist astrology platform based on T21 No.1299. Personal fortune, 27 mansion compatibility, HR talent matching with sutra-based placement guidance, headhunter cross-matrix, auspicious calendar. Trilingual ZH-TW/JA/EN',
-      ja: '大正蔵 T21n1299 に基づく宿曜占星プラットフォーム。個人運勢、27宿相性診断、HR適材適所分析（原典三段指針）、ヘッドハントクロス表、吉日カレンダー。中日英三言語'
+      'zh-TW': '空海從唐朝帶回的宿曜經，做成現代分析平台。27 宿相性診斷（每筆結果追溯原典）、個人運勢、HR 選才、獵頭交叉矩陣。規則引擎，不用 LLM 推論，資料存瀏覽器。中日英三語',
+      en: 'Kukai brought this sutra from the Tang Dynasty in 806 AD. I turned it into software. 27 mansion compatibility (every result links to source text), personal fortune, HR talent matching, headhunter cross-matrix. Rule-based engine, no LLM. Trilingual.',
+      ja: '空海が唐から持ち帰った宿曜経をソフトウェアに。27宿相性診断（全結果に原典リンク）、個人運勢、HR適材適所、ヘッドハントクロス表。ルールベースエンジン、LLMなし。三言語対応'
     },
     category: 'personal',
     tags: ['vue3', 'primevue', 'fastapi', 'neon', 'vercel', 'render', 'i18n'],
