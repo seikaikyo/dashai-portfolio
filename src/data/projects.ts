@@ -10,9 +10,9 @@ export const projects: Project[] = [
       ja: 'Smart Factory Demo - スマートファクトリー全スタック展示'
     },
     description: {
-      'zh-TW': '25 年工廠經驗做成的互動系統。9 階段 x 54 子系統 CRUD x DashAI（即時 NCR 分診、訂單排程、風險評估，不是聊天機器人）x BCM 災害模擬 x 5 Agent 協作。三語介面',
-      en: '25 years of factory knowledge in one system. 9 stages x 54 subsystem CRUDs x DashAI (live NCR triage, order scheduling, risk assessment — it operates, not summarizes) x BCM disaster simulation x 5-agent collaboration. Trilingual.',
-      ja: '工場現場25年の経験を一つのシステムに。9段階 x 54サブシステムCRUD x DashAI（リアルタイムNCRトリアージ、注文振り分け、リスク評価 — 要約ではなく実行）x BCM災害シミュレーション x 5エージェント協調。三言語'
+      'zh-TW': '25 年工廠經驗做成的互動系統。9 階段 x 54 子系統 CRUD x DashAI 15 工具（即時 NCR 分診、訂單排程、風險評估）x BCM 災害模擬 x 5 Agent 協作 x OEE 設備即時監控（SECS/GEM）x 跨頁訂單高亮追蹤 x 10 War Room TV。三語介面',
+      en: '25 years of factory knowledge in one system. 9 stages x 54 subsystem CRUDs x DashAI with 15 tools (NCR triage, order scheduling, risk assessment) x BCM disaster simulation x 5-agent collaboration x OEE real-time equipment monitoring (SECS/GEM) x cross-page order highlighting x 10 War Room TVs. Trilingual.',
+      ja: '工場現場25年の経験を一つのシステムに。9段階 x 54サブシステムCRUD x DashAI 15ツール（NCRトリアージ、受注振り分け、リスク評価）x BCM災害シミュレーション x 5エージェント協調 x OEEリアルタイム設備監視（SECS/GEM）x ページ横断注文ハイライト x War Room TV 10画面。三言語'
     },
     category: 'industry',
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'neon', 'claude', 'chartjs', 'vercel', 'render'],
@@ -105,7 +105,7 @@ export const projects: Project[] = [
       ja: 'SSO統合認証（130+権限項目）、APIゲートウェイ＆OpenAPIドキュメント、請負業者入退管理、技術ドキュメント自動生成、DBバックアップスケジューリング、炭素インベントリ計算、SSL証明書管理'
     },
     category: 'industry',
-    tags: ['fastapi', 'neon', 'clerk', 'vercel', 'render', 'python', 'javascript', 'prisma', 'github-actions'],
+    tags: ['fastapi', 'neon', 'logto', 'vercel', 'render', 'python', 'javascript', 'prisma', 'github-actions'],
     year: 2025,
     scale: 'enterprise'
   },

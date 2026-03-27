@@ -1,6 +1,6 @@
 export const ja = {
   hero: {
-    tagline: 'システムアーキテクト | エンタープライズAI・DX'
+    tagline: 'Forward Deployed Engineer | Vue 3 / Angular / React / FastAPI | 30+ Manufacturing Systems Solo-Built | TSMC 4 Fabs 11yr'
   },
   featured: {
     badge: '注目プロジェクト',
