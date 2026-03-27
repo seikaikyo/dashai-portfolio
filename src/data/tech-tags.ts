@@ -23,7 +23,7 @@ export const techTags: TechTag[] = [
   { id: 'yolo', label: 'YOLO11' },
   { id: 'plotly', label: 'Plotly.js' },
   { id: 'chartjs', label: 'Chart.js' },
-  { id: 'clerk', label: 'Clerk SSO' },
+  { id: 'logto', label: 'Logto Auth' },
   { id: 'gas', label: 'Google Apps Script' },
   { id: 'sheets', label: 'Google Sheets' },
   { id: 'shioaji', label: 'Shioaji API' },

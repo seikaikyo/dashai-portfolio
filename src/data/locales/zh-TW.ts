@@ -1,6 +1,6 @@
 export const zhTW = {
   hero: {
-    tagline: '系統架構師 | 企業 AI 解決方案與數位轉型'
+    tagline: 'Forward Deployed Engineer | Vue 3 / Angular / React / FastAPI | 30+ Manufacturing Systems Solo-Built | TSMC 4 Fabs 11yr'
   },
   featured: {
     badge: '旗艦作品',

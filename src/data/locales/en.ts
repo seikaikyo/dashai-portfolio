@@ -1,6 +1,6 @@
 export const en = {
   hero: {
-    tagline: 'Systems Architect | Enterprise AI & DX'
+    tagline: 'Forward Deployed Engineer | Vue 3 / Angular / React / FastAPI | 30+ Manufacturing Systems Solo-Built | TSMC 4 Fabs 11yr'
   },
   featured: {
     badge: 'Featured Project',
