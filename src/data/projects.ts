@@ -129,6 +129,24 @@ export const projects: Project[] = [
     url: 'https://github.com/seikaikyo/go-factory-io',
     video: { en: '/videos/go-factory-io-showcase.mp4' }
   },
+  {
+    id: 'secsgem-mcp-server',
+    name: {
+      'zh-TW': 'SECS/GEM MCP Server',
+      en: 'SECS/GEM MCP Server',
+      ja: 'SECS/GEM MCPサーバー'
+    },
+    description: {
+      'zh-TW': 'Claude Code MCP Server，用自然語言操作半導體設備。包裝 go-factory-io REST API，10 個工具涵蓋設備監控（SV/EC/告警/OEE）、遠端指令、FOUP 管理、製程工作控制、E191 資安狀態',
+      en: 'MCP Server for Claude Code -- control semiconductor equipment with natural language. Wraps go-factory-io REST API with 10 tools: equipment monitoring (SV/EC/alarms/OEE), remote commands, carrier management, process jobs, E191 security status.',
+      ja: 'Claude Code用MCPサーバー。自然言語で半導体装置を制御。go-factory-io REST APIをラップ、10ツール：設備監視（SV/EC/アラーム/OEE）、リモートコマンド、キャリア管理、プロセスジョブ、E191セキュリティ'
+    },
+    category: 'industry',
+    tags: ['python', 'fastmcp', 'secs-gem', 'claude', 'mcp'],
+    year: 2026,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/secsgem-mcp-server'
+  },
 
   // === 交易金融 (trading) ===
   {
