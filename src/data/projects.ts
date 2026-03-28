@@ -84,7 +84,7 @@ export const projects: Project[] = [
     },
     description: {
       'zh-TW': 'ISO 合規品質管理，8D 問題解決全流程（D0-D8）、SPC 統計製程管制與管制圖、AI 輔助分析填寫、AES 加密報表匯出',
-      en: 'ISO-compliant quality management: full 8D problem-solving workflow (D0-D8), SPC statistical process control with control charts, AI-assisted analysis, AES-encrypted report export',
+      en: 'Quality management following ISO principles: full 8D problem-solving workflow (D0-D8), SPC statistical process control with control charts, AI-assisted analysis, AES-encrypted report export',
       ja: 'ISO準拠品質管理、8D問題解決フルワークフロー（D0-D8）、SPC統計的工程管理＆管理図、AI支援分析、AES暗号化レポートエクスポート'
     },
     category: 'industry',
