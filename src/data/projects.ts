@@ -110,6 +110,26 @@ export const projects: Project[] = [
     scale: 'enterprise'
   },
 
+  {
+    id: 'go-factory-io',
+    name: {
+      'zh-TW': 'go-factory-io - 開源 Go SECS/GEM Driver',
+      en: 'go-factory-io - Open-Source Go SECS/GEM Driver',
+      ja: 'go-factory-io - オープンソース Go SECS/GEM ドライバー'
+    },
+    description: {
+      'zh-TW': '開源 SECS/GEM 設備驅動，實作 12 項 SEMI 標準（E5/E30/E37/E87/E40/E90/E94/E116/E187/E191），整合 HSMS、OPC-UA、MQTT、Modbus TCP、gRPC 五種協定，實作 IEC 62443 SL4 安全控制。單一 static binary，可跨編譯至 ARM64。Simulator 驗證',
+      en: 'Open-source SECS/GEM equipment driver implementing 12 SEMI standards (E5/E30/E37/E87/E40/E90/E94/E116/E187/E191), integrating HSMS, OPC-UA, MQTT, Modbus TCP, and gRPC. Implements IEC 62443 SL4 security controls. Single static binary, cross-compiles to ARM64. Simulator-verified.',
+      ja: 'オープンソースSECS/GEM設備ドライバー、12のSEMI標準を実装（E5/E30/E37/E87/E40/E90/E94/E116/E187/E191）。HSMS、OPC-UA、MQTT、Modbus TCP、gRPCの5プロトコル統合。IEC 62443 SL4セキュリティコントロール実装。単一スタティックバイナリ、ARM64クロスコンパイル対応。シミュレーター検証済み'
+    },
+    category: 'industry',
+    tags: ['go', 'secs-gem', 'hsms', 'opcua', 'mqtt', 'modbus', 'grpc', 'iec62443', 'prometheus'],
+    year: 2026,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/go-factory-io',
+    video: { en: '/videos/go-factory-io-showcase.mp4' }
+  },
+
   // === 交易金融 (trading) ===
   {
     id: 'sinoauto',
@@ -182,6 +202,24 @@ export const projects: Project[] = [
     year: 2025,
     scale: 'personal',
     url: 'https://github.com/seikaikyo/dash-skills'
+  },
+  {
+    id: 'claude-code-skills',
+    name: {
+      'zh-TW': 'Claude Code Skill Pack (公開版)',
+      en: 'Claude Code Skill Pack (Public)',
+      ja: 'Claude Code スキルパック (公開版)'
+    },
+    description: {
+      'zh-TW': '7 個可重用的 Claude Code 技能包：OpenSpec 規格驅動、建構錯誤修復、OWASP 安全審查、死碼清理、架構稽核、FastAPI 模式、Angular+PrimeNG 模式。一鍵安裝',
+      en: '7 reusable Claude Code skills: OpenSpec spec-driven dev, build error resolver, OWASP security review, dead code cleanup, architecture audit, FastAPI patterns, Angular+PrimeNG patterns. One-command install.',
+      ja: '再利用可能な7つのClaude Codeスキル：OpenSpec仕様駆動、ビルドエラー修復、OWASPセキュリティ審査、デッドコード削除、アーキテクチャ監査、FastAPIパターン、Angular+PrimeNGパターン。ワンコマンドインストール'
+    },
+    category: 'devtools',
+    tags: ['claude', 'bash'],
+    year: 2026,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/claude-code-skills'
   },
   {
     id: 'git-security-hooks',
