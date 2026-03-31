@@ -2,7 +2,7 @@
 
 **[https://portfolio.dashai.dev](https://portfolio.dashai.dev)**
 
-Professional portfolio showcasing 15 projects across enterprise systems, AI security, trading, developer tools, and language learning.
+Professional portfolio showcasing 23 projects across enterprise systems, AI security, trading, developer tools, and language learning.
 
 ![Portfolio Home](public/screenshots/portfolio-home.png)
 
