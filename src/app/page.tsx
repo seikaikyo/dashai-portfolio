@@ -12,6 +12,7 @@ import { FilterBar } from '@/components/filter-bar'
 import { ProjectList } from '@/components/project-list'
 import { TechStack } from '@/components/tech-stack'
 import { SiteFooter } from '@/components/site-footer'
+import { BackToTop } from '@/components/back-to-top'
 
 export default function Home() {
   const { locale } = useI18n()
@@ -50,31 +51,34 @@ export default function Home() {
       .sort((a, b) => b.count - a.count)
   }, [])
 
-  const featured = projects.find(p => p.id === 'smart-factory-demo')!
+  const featured = projects.find(p => p.id === 'smart-factory-demo')
 
   return (
     <div className="max-w-[920px] mx-auto px-8">
       <Hero />
       <div className="divider" />
-      <StatsBar
-        projectCount={projects.length}
-        categoryCount={categories.length}
-        techCount={techUsage.length}
-      />
-      <div className="divider" />
-      <FeaturedProject project={featured} />
-      <div className="divider" />
-      <FilterBar
-        categories={categories}
-        selectedCategory={selectedCategory}
-        onCategoryChange={setSelectedCategory}
-        searchQuery={searchQuery}
-        onSearchChange={setSearchQuery}
-      />
-      <ProjectList projects={filteredProjects} />
-      <div className="divider" />
-      <TechStack items={techUsage} />
+      <main>
+        <StatsBar
+          projectCount={projects.length}
+          categoryCount={categories.length}
+          techCount={techUsage.length}
+        />
+        <div className="divider" />
+        {featured && <FeaturedProject project={featured} />}
+        <div className="divider" />
+        <FilterBar
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onCategoryChange={setSelectedCategory}
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
+        />
+        <ProjectList projects={filteredProjects} />
+        <div className="divider" />
+        <TechStack items={techUsage} />
+      </main>
       <SiteFooter />
+      <BackToTop />
     </div>
   )
 }

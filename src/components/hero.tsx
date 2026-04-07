@@ -31,17 +31,19 @@ export function Hero() {
   const text = heroText[locale]
 
   return (
-    <section className="pt-24 pb-16">
-      <div className="flex justify-between items-center mb-14">
+    <header className="pt-24 pb-16">
+      <nav className="flex justify-between items-center mb-14" aria-label="Site navigation">
         <div className="text-sm font-medium tracking-[4px] uppercase text-muted-foreground">
           Dash<span className="text-primary">AI</span>
         </div>
-        <div className="flex gap-0.5">
+        <div className="flex gap-0.5" role="group" aria-label="Language">
           {locales.map(l => (
             <button
               key={l.value}
               onClick={() => setLocale(l.value)}
-              className={`px-3.5 py-1.5 text-xs rounded transition-all ${
+              aria-label={`Switch to ${l.value}`}
+              aria-pressed={locale === l.value}
+              className={`px-3.5 py-1.5 text-xs rounded transition-all focus-visible:ring-2 focus-visible:ring-primary ${
                 locale === l.value
                   ? 'text-foreground bg-card'
                   : 'text-muted-foreground hover:text-secondary-foreground'
@@ -51,7 +53,7 @@ export function Hero() {
             </button>
           ))}
         </div>
-      </div>
+      </nav>
 
       <h1 className="text-[2.4rem] font-light tracking-tight leading-[1.3] max-w-[720px]">
         {text.statement}
@@ -80,6 +82,6 @@ export function Hero() {
           </a>
         ))}
       </div>
-    </section>
+    </header>
   )
 }

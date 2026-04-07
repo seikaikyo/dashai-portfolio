@@ -20,11 +20,12 @@ export function FilterBar({
   const { locale, t } = useI18n()
 
   return (
-    <div className="flex gap-3 pt-12 pb-5 flex-wrap items-center">
-      <div className="flex gap-1 flex-wrap">
+    <nav className="flex gap-3 pt-12 pb-5 flex-wrap items-center" aria-label="Project filters">
+      <div className="flex gap-1 flex-wrap" role="group" aria-label="Categories">
         <button
           onClick={() => onCategoryChange(null)}
-          className={`px-4 py-1.5 text-[0.8rem] rounded transition-all tracking-wide ${
+          aria-pressed={!selectedCategory}
+          className={`px-4 py-1.5 text-[0.8rem] rounded transition-all tracking-wide focus-visible:ring-2 focus-visible:ring-primary ${
             !selectedCategory
               ? 'text-primary border border-primary bg-primary/[0.08]'
               : 'text-muted-foreground border border-transparent hover:text-secondary-foreground'
@@ -36,7 +37,8 @@ export function FilterBar({
           <button
             key={cat.id}
             onClick={() => onCategoryChange(cat.id === selectedCategory ? null : cat.id)}
-            className={`px-4 py-1.5 text-[0.8rem] rounded transition-all tracking-wide ${
+            aria-pressed={selectedCategory === cat.id}
+            className={`px-4 py-1.5 text-[0.8rem] rounded transition-all tracking-wide focus-visible:ring-2 focus-visible:ring-primary ${
               selectedCategory === cat.id
                 ? 'text-primary border border-primary bg-primary/[0.08]'
                 : 'text-muted-foreground border border-transparent hover:text-secondary-foreground'
@@ -50,8 +52,9 @@ export function FilterBar({
         value={searchQuery}
         onChange={e => onSearchChange(e.target.value)}
         placeholder={t('filter.search')}
+        aria-label="Search projects"
         className="ml-auto max-w-[240px] h-8 text-sm bg-card border-border/50"
       />
-    </div>
+    </nav>
   )
 }
