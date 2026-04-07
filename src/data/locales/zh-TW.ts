@@ -1,6 +1,6 @@
 export const zhTW = {
   hero: {
-    tagline: 'Forward Deployed Engineer | Vue 3 / Angular / React / FastAPI | 30+ Manufacturing Systems Solo-Built | TSMC 4 Fabs 11yr'
+    tagline: 'Forward Deployed Engineer | Vue 3 / Angular / React / FastAPI / Go | 30+ Manufacturing Systems Solo-Built | TSMC 4 Fabs 11yr'
   },
   featured: {
     badge: '旗艦作品',
