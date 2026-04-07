@@ -1,65 +1,80 @@
-import Image from "next/image";
+'use client'
+
+import { useState, useMemo } from 'react'
+import { useI18n } from '@/lib/i18n'
+import { projects } from '@/data/projects'
+import { categories } from '@/data/categories'
+import { techTags, techTagMap } from '@/data/tech-tags'
+import { Hero } from '@/components/hero'
+import { StatsBar } from '@/components/stats-bar'
+import { FeaturedProject } from '@/components/featured-project'
+import { FilterBar } from '@/components/filter-bar'
+import { ProjectList } from '@/components/project-list'
+import { TechStack } from '@/components/tech-stack'
+import { SiteFooter } from '@/components/site-footer'
 
 export default function Home() {
+  const { locale } = useI18n()
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+  const [searchQuery, setSearchQuery] = useState('')
+
+  const filteredProjects = useMemo(() => {
+    let result = projects
+    if (selectedCategory) {
+      result = result.filter(p => p.category === selectedCategory)
+    }
+    const q = searchQuery.trim().toLowerCase()
+    if (q) {
+      result = result.filter(p =>
+        p.name[locale].toLowerCase().includes(q) ||
+        p.description[locale].toLowerCase().includes(q) ||
+        p.tags.some(t => {
+          const tag = techTagMap[t]
+          return tag?.label.toLowerCase().includes(q)
+        })
+      )
+    }
+    return result
+  }, [selectedCategory, searchQuery, locale])
+
+  const techUsage = useMemo(() => {
+    const counts: Record<string, number> = {}
+    for (const p of projects) {
+      for (const t of p.tags) {
+        counts[t] = (counts[t] || 0) + 1
+      }
+    }
+    return techTags
+      .map(t => ({ ...t, count: counts[t.id] || 0 }))
+      .filter(t => t.count > 0)
+      .sort((a, b) => b.count - a.count)
+  }, [])
+
+  const featured = projects.find(p => p.id === 'smart-factory-demo')!
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="max-w-[920px] mx-auto px-8">
+      <Hero />
+      <div className="divider" />
+      <StatsBar
+        projectCount={projects.length}
+        categoryCount={categories.length}
+        techCount={techUsage.length}
+      />
+      <div className="divider" />
+      <FeaturedProject project={featured} />
+      <div className="divider" />
+      <FilterBar
+        categories={categories}
+        selectedCategory={selectedCategory}
+        onCategoryChange={setSelectedCategory}
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+      />
+      <ProjectList projects={filteredProjects} />
+      <div className="divider" />
+      <TechStack items={techUsage} />
+      <SiteFooter />
     </div>
-  );
+  )
 }
