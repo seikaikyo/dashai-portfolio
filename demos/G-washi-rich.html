@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DashAI Portfolio — Design G: Washi Rich</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #f5f0e8;
+    --bg-warm: #efe9df;
+    --bg-card: #ffffff;
+    --bg-card-hover: #fffefa;
+    --bg-dark: #2a2520;
+
+    --border: #ddd6c8;
+    --border-hover: #c8bfae;
+    --border-subtle: #e8e2d8;
+
+    --text: #2a2520;
+    --text-secondary: #5a5248;
+    --text-muted: #908878;
+    --text-on-dark: #f0ebe3;
+    --text-on-dark-secondary: #b8b0a4;
+
+    --accent: #b83b2e;
+    --accent-dim: #9a3028;
+    --accent-light: rgba(184, 59, 46, 0.08);
+
+    --indigo: #2a4060;
+    --gold: #8a7038;
+
+    --cat-industry: #3a5880;
+    --cat-trading: #8a7038;
+    --cat-devtools: #6a5a8a;
+    --cat-personal: #a06040;
+    --cat-learning: #4a7a6a;
+
+    --shadow-sm: 0 1px 3px rgba(42,37,32,0.06), 0 1px 2px rgba(42,37,32,0.04);
+    --shadow-md: 0 4px 12px rgba(42,37,32,0.08), 0 2px 4px rgba(42,37,32,0.04);
+    --shadow-lg: 0 8px 24px rgba(42,37,32,0.1), 0 4px 8px rgba(42,37,32,0.05);
+  }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+
+  /* Texture */
+  body::before {
+    content: '';
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 0;
+  }
+  body > * { position: relative; z-index: 1; }
+
+  /* === HERO === */
+  .hero { padding: 80px 0 0; }
+  .hero-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 64px; }
+  .hero-brand { font-size: 1.1rem; font-weight: 700; letter-spacing: 2px; color: var(--text); }
+  .hero-brand em { font-style: normal; color: var(--accent); }
+  .hero-lang { display: flex; gap: 2px; }
+  .hero-lang button { background: none; border: 1px solid transparent; color: var(--text-muted); padding: 6px 14px; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; font-family: inherit; border-radius: 6px; }
+  .hero-lang button.active { color: var(--text); border-color: var(--border); background: var(--bg-card); box-shadow: var(--shadow-sm); }
+
+  .hero-content { max-width: 680px; }
+  .hero-statement { font-family: 'Noto Serif JP', serif; font-size: 3.2rem; font-weight: 900; letter-spacing: -1.5px; line-height: 1.15; }
+  .hero-statement .hl { color: var(--accent); display: inline; background: linear-gradient(transparent 60%, rgba(184,59,46,0.12) 60%); }
+  .hero-sub { margin-top: 20px; font-size: 1rem; color: var(--text-secondary); line-height: 1.8; }
+  .hero-links { margin-top: 28px; display: flex; gap: 12px; }
+  .hero-link-primary { padding: 12px 28px; background: var(--accent); color: #fff; font-size: 0.85rem; font-weight: 600; border-radius: 8px; text-decoration: none; transition: all 0.2s; box-shadow: 0 2px 8px rgba(184,59,46,0.25); }
+  .hero-link-primary:hover { background: var(--accent-dim); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(184,59,46,0.3); }
+  .hero-link { padding: 12px 24px; border: 1px solid var(--border); color: var(--text-secondary); font-size: 0.85rem; font-weight: 500; border-radius: 8px; text-decoration: none; transition: all 0.2s; }
+  .hero-link:hover { border-color: var(--border-hover); color: var(--text); }
+
+  /* === STATS BAR === */
+  .stats-bar { display: flex; gap: 2px; margin: 64px 0 0; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md); }
+  .stats-bar .stat { flex: 1; background: var(--bg-dark); padding: 28px 24px; text-align: center; }
+  .stats-bar .stat-value { font-family: 'JetBrains Mono', monospace; font-size: 2.5rem; font-weight: 700; color: var(--text-on-dark); line-height: 1; }
+  .stats-bar .stat-label { font-size: 0.65rem; color: var(--text-on-dark-secondary); text-transform: uppercase; letter-spacing: 3px; margin-top: 6px; }
+
+  /* === FEATURED === */
+  .featured-section { margin: 48px 0; padding: 48px; background: var(--bg-dark); border-radius: 20px; box-shadow: var(--shadow-lg); position: relative; overflow: hidden; }
+  .featured-section::before { content: ''; position: absolute; top: 0; right: 0; width: 300px; height: 300px; background: radial-gradient(circle, rgba(184,59,46,0.08), transparent 70%); pointer-events: none; }
+  .featured-eyebrow { font-size: 0.65rem; color: var(--accent-light); background: var(--accent); display: inline-block; padding: 4px 14px; border-radius: 4px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 20px; color: #fff; }
+  .featured-title { font-family: 'Noto Serif JP', serif; font-size: 2rem; font-weight: 700; color: var(--text-on-dark); margin-bottom: 10px; }
+  .featured-desc { color: var(--text-on-dark-secondary); max-width: 600px; line-height: 1.8; font-size: 0.95rem; }
+  .featured-metrics { display: flex; gap: 32px; margin-top: 24px; }
+  .featured-metric { }
+  .featured-metric .val { font-family: 'JetBrains Mono', monospace; font-size: 2rem; font-weight: 700; color: #fff; }
+  .featured-metric .label { font-size: 0.6rem; color: var(--text-on-dark-secondary); text-transform: uppercase; letter-spacing: 2px; margin-top: 2px; }
+  .featured-cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; padding: 12px 28px; background: var(--accent); color: #fff; font-size: 0.85rem; font-weight: 600; border-radius: 8px; text-decoration: none; transition: all 0.2s; }
+  .featured-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(184,59,46,0.35); }
+
+  /* === FILTER === */
+  .filter { display: flex; gap: 6px; margin: 48px 0 24px; flex-wrap: wrap; }
+  .filter button { padding: 8px 20px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-muted); font-size: 0.8rem; cursor: pointer; border-radius: 8px; transition: all 0.2s; font-family: inherit; box-shadow: var(--shadow-sm); }
+  .filter button.active { background: var(--accent); color: #fff; border-color: var(--accent); box-shadow: 0 2px 8px rgba(184,59,46,0.2); }
+  .filter button:hover:not(.active) { border-color: var(--border-hover); color: var(--text); }
+
+  /* === PROJECT GRID === */
+  .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 56px; }
+  .card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 14px; padding: 28px; box-shadow: var(--shadow-sm); transition: all 0.3s; position: relative; overflow: hidden; }
+  .card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: var(--border); }
+  .card-accent { position: absolute; top: 0; left: 0; width: 4px; height: 100%; }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+  .card-cat { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; padding: 3px 10px; border-radius: 4px; }
+  .card-year { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-muted); }
+  .card-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
+  .card-title a { color: var(--text); text-decoration: none; transition: color 0.2s; }
+  .card-title a:hover { color: var(--accent); }
+  .card-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 14px; }
+  .card-tag { font-size: 0.65rem; padding: 3px 10px; border-radius: 5px; background: var(--bg-warm); color: var(--text-muted); font-weight: 500; }
+  .card-scale { position: absolute; bottom: 16px; right: 20px; font-size: 0.6rem; color: var(--text-muted); font-style: italic; }
+
+  /* === TECH === */
+  .tech-section { padding: 56px 0; }
+  .tech-section h2 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 4px; color: var(--text-muted); margin-bottom: 24px; text-align: center; }
+  .tech-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .tech-pill { font-size: 0.8rem; color: var(--text-secondary); padding: 8px 18px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 24px; box-shadow: var(--shadow-sm); transition: all 0.2s; display: flex; align-items: center; gap: 6px; }
+  .tech-pill:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); border-color: var(--border); }
+  .tech-count { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--accent); font-weight: 600; }
+
+  /* === FOOTER === */
+  footer { padding: 40px 0; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; }
+  .footer-left { font-size: 0.8rem; color: var(--text-muted); }
+  .footer-left em { font-style: normal; color: var(--accent); font-weight: 600; }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.8rem; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--accent); }
+
+  @media (max-width: 768px) {
+    .hero-statement { font-size: 2rem; }
+    .stats-bar { flex-direction: column; }
+    .project-grid { grid-template-columns: 1fr; }
+    .featured-section { padding: 28px; }
+    .featured-metrics { flex-wrap: wrap; gap: 16px; }
+    .hero-nav { flex-direction: column; gap: 16px; align-items: flex-start; }
+    .hero-links { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- HERO -->
+  <section class="hero">
+    <nav class="hero-nav">
+      <div class="hero-brand">DASH<em>AI</em></div>
+      <div class="hero-lang">
+        <button class="active">EN</button>
+        <button>中</button>
+        <button>日</button>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <h1 class="hero-statement">I walk into factories and <span class="hl">write the software</span> they didn't know they needed.</h1>
+      <p class="hero-sub">25 years in IT and manufacturing. Solo-built 30+ smart manufacturing systems. 11 years across 4 TSMC fabs. Vue 3, Angular, React, FastAPI, Go.</p>
+      <div class="hero-links">
+        <a href="https://factory.dashai.dev" class="hero-link-primary">Open Live Demo &rarr;</a>
+        <a href="https://github.com/seikaikyo" class="hero-link">GitHub</a>
+        <a href="https://linkedin.com/in/seikaikyo" class="hero-link">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat"><div class="stat-value">26</div><div class="stat-label">Projects</div></div>
+      <div class="stat"><div class="stat-value">5</div><div class="stat-label">Categories</div></div>
+      <div class="stat"><div class="stat-value">49+</div><div class="stat-label">Tech Stacks</div></div>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section class="featured-section">
+    <div class="featured-eyebrow">Featured Project</div>
+    <div class="featured-title">Smart Factory Demo</div>
+    <p class="featured-desc">25 years of factory knowledge in one interactive system. 9 production stages, 54 subsystem CRUDs, 15 AI tools, BCM disaster simulation, 5-agent collaborative AI, 10 War Room dashboards. Trilingual.</p>
+    <div class="featured-metrics">
+      <div class="featured-metric"><div class="val">54</div><div class="label">CRUD APIs</div></div>
+      <div class="featured-metric"><div class="val">9</div><div class="label">Stages</div></div>
+      <div class="featured-metric"><div class="val">15</div><div class="label">AI Tools</div></div>
+      <div class="featured-metric"><div class="val">3</div><div class="label">Languages</div></div>
+    </div>
+    <a href="https://factory.dashai.dev" class="featured-cta">Open Live Demo &rarr;</a>
+  </section>
+
+  <!-- FILTER -->
+  <div class="filter">
+    <button class="active">All</button>
+    <button>Industry</button>
+    <button>Trading</button>
+    <button>DevTools</button>
+    <button>Personal</button>
+    <button>Learning</button>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="project-grid">
+    <div class="card">
+      <div class="card-accent" style="background: var(--cat-industry);"></div>
+      <div class="card-top">
+        <span class="card-cat" style="color: var(--cat-industry); background: rgba(58,88,128,0.08);">Industry</span>
+        <span class="card-year">2026</span>
+      </div>
+      <div class="card-title"><a href="https://github.com/seikaikyo/go-factory-io">Go Industrial Platform</a></div>
+      <div class="card-desc">4 repos: SECS/GEM driver (12 SEMI standards), edge gateway (HSMS/Modbus/MQTT), OT security scanner (CVE + IEC 62443), shared Go API gateway. All single binaries, ARM64.</div>
+      <div class="card-tags"><span class="card-tag">Go</span><span class="card-tag">SECS/GEM</span><span class="card-tag">IEC 62443</span><span class="card-tag">Modbus</span></div>
+      <span class="card-scale">personal</span>
+    </div>
+
+    <div class="card">
+      <div class="card-accent" style="background: var(--cat-industry);"></div>
+      <div class="card-top">
+        <span class="card-cat" style="color: var(--cat-industry); background: rgba(58,88,128,0.08);">Industry</span>
+        <span class="card-year">2025</span>
+      </div>
+      <div class="card-title">Manufacturing Execution System</div>
+      <div class="card-desc">Full-stack MES for semiconductor fab. 54 CRUD APIs across 9 production stages. Work order dispatch, quality inspection, warehouse management. 13 subsystems, 130+ RBAC permissions.</div>
+      <div class="card-tags"><span class="card-tag">Angular</span><span class="card-tag">PrimeNG</span><span class="card-tag">FastAPI</span><span class="card-tag">Neon</span></div>
+      <span class="card-scale">enterprise</span>
+    </div>
+
+    <div class="card">
+      <div class="card-accent" style="background: var(--cat-personal);"></div>
+      <div class="card-top">
+        <span class="card-cat" style="color: var(--cat-personal); background: rgba(160,96,64,0.08);">Personal</span>
+        <span class="card-year">2025</span>
+      </div>
+      <div class="card-title"><a href="https://shukuyo.dashai.dev">Shukuyodo</a></div>
+      <div class="card-desc">Kukai brought this sutra from the Tang Dynasty in 806 AD. I turned it into software. 27 mansion compatibility, HR matching, headhunter mode. Rule-based, no LLM. Trilingual.</div>
+      <div class="card-tags"><span class="card-tag">Vue 3</span><span class="card-tag">PrimeVue</span><span class="card-tag">FastAPI</span><span class="card-tag">Logto</span></div>
+      <span class="card-scale">production</span>
+    </div>
+
+    <div class="card">
+      <div class="card-accent" style="background: var(--cat-devtools);"></div>
+      <div class="card-top">
+        <span class="card-cat" style="color: var(--cat-devtools); background: rgba(106,90,138,0.08);">DevTools</span>
+        <span class="card-year">2026</span>
+      </div>
+      <div class="card-title"><a href="https://ai-red-team.dashai.dev">AI Red Team Toolkit</a></div>
+      <div class="card-desc">LLM adversarial safety testing. 177 attack templates across 12 categories. RAG poisoning, tool use injection, hallucination, bias detection. Trilingual.</div>
+      <div class="card-tags"><span class="card-tag">Vue 3</span><span class="card-tag">TypeScript</span><span class="card-tag">Claude AI</span></div>
+      <span class="card-scale">personal</span>
+    </div>
+
+    <div class="card">
+      <div class="card-accent" style="background: var(--cat-trading);"></div>
+      <div class="card-top">
+        <span class="card-cat" style="color: var(--cat-trading); background: rgba(138,112,56,0.08);">Trading</span>
+        <span class="card-year">2025</span>
+      </div>
+      <div class="card-title">DashTrade AI Technical Analysis</div>
+      <div class="card-desc">Multi-market (TW/US/JP). RSI/KD/MACD/Bollinger Bands, dual-engine analysis, daily auto-prediction of 80 stocks with next-day validation.</div>
+      <div class="card-tags"><span class="card-tag">Vue 3</span><span class="card-tag">FastAPI</span><span class="card-tag">Neon</span></div>
+      <span class="card-scale">personal</span>
+    </div>
+
+    <div class="card">
+      <div class="card-accent" style="background: var(--cat-learning);"></div>
+      <div class="card-top">
+        <span class="card-cat" style="color: var(--cat-learning); background: rgba(74,122,106,0.08);">Learning</span>
+        <span class="card-year">2026</span>
+      </div>
+      <div class="card-title"><a href="https://english.dashai.dev">AI English Tutor</a></div>
+      <div class="card-desc">Voice-first English interview practice. 27 questions, Web Speech API voice I/O, Claude API deep feedback, Aizome design system, PWA offline-ready.</div>
+      <div class="card-tags"><span class="card-tag">Vue 3</span><span class="card-tag">Claude AI</span><span class="card-tag">Web Speech</span><span class="card-tag">PWA</span></div>
+      <span class="card-scale">production</span>
+    </div>
+
+    <div class="card">
+      <div class="card-accent" style="background: var(--cat-industry);"></div>
+      <div class="card-top">
+        <span class="card-cat" style="color: var(--cat-industry); background: rgba(58,88,128,0.08);">Industry</span>
+        <span class="card-year">2026</span>
+      </div>
+      <div class="card-title"><a href="https://github.com/seikaikyo/secsgem-mcp-server">SECS/GEM MCP Server</a></div>
+      <div class="card-desc">MCP Server for Claude Code. Control semiconductor equipment with natural language. 10 tools wrapping go-factory-io REST API.</div>
+      <div class="card-tags"><span class="card-tag">Python</span><span class="card-tag">FastMCP</span><span class="card-tag">SECS/GEM</span></div>
+      <span class="card-scale">personal</span>
+    </div>
+
+    <div class="card">
+      <div class="card-accent" style="background: var(--cat-devtools);"></div>
+      <div class="card-top">
+        <span class="card-cat" style="color: var(--cat-devtools); background: rgba(106,90,138,0.08);">DevTools</span>
+        <span class="card-year">2026</span>
+      </div>
+      <div class="card-title"><a href="https://github.com/seikaikyo/claude-code-skills">Claude Code Skill Pack</a></div>
+      <div class="card-desc">7 reusable skills: OpenSpec spec-driven dev, build error resolver, security review, dead code cleanup, architecture audit, FastAPI patterns, Angular+PrimeNG.</div>
+      <div class="card-tags"><span class="card-tag">Claude</span><span class="card-tag">Bash</span></div>
+      <span class="card-scale">personal</span>
+    </div>
+  </div>
+
+  <!-- TECH -->
+  <section class="tech-section">
+    <h2>Technologies</h2>
+    <div class="tech-grid">
+      <div class="tech-pill">Vue 3 <span class="tech-count">9</span></div>
+      <div class="tech-pill">TypeScript <span class="tech-count">8</span></div>
+      <div class="tech-pill">FastAPI <span class="tech-count">8</span></div>
+      <div class="tech-pill">Go <span class="tech-count">5</span></div>
+      <div class="tech-pill">Python <span class="tech-count">5</span></div>
+      <div class="tech-pill">Claude AI <span class="tech-count">5</span></div>
+      <div class="tech-pill">Vercel <span class="tech-count">5</span></div>
+      <div class="tech-pill">Render <span class="tech-count">4</span></div>
+      <div class="tech-pill">PrimeVue <span class="tech-count">4</span></div>
+      <div class="tech-pill">SECS/GEM <span class="tech-count">3</span></div>
+      <div class="tech-pill">Neon <span class="tech-count">3</span></div>
+      <div class="tech-pill">React <span class="tech-count">2</span></div>
+      <div class="tech-pill">Angular <span class="tech-count">1</span></div>
+      <div class="tech-pill">YOLO11 <span class="tech-count">1</span></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">DASH<em>AI</em> &middot; 2026</div>
+    <div class="footer-links">
+      <a href="https://github.com/seikaikyo">GitHub</a>
+      <a href="https://linkedin.com/in/seikaikyo">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
