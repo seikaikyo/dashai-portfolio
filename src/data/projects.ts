@@ -171,12 +171,12 @@ export const projects: Project[] = [
       ja: 'go-edge-gateway - 産業エッジゲートウェイ'
     },
     description: {
-      'zh-TW': '模組化邊緣閘道器，透過插件架構橋接工業設備到 MES/雲端。支援 SECS/GEM (HSMS)、Modbus TCP、MQTT 3.1.1/5.0，YAML 設定驅動，新增設備不需改程式碼。單一 Go binary，支援 Linux ARM64 現場部署',
-      en: 'Modular edge gateway bridging industrial devices to MES/cloud via plugin architecture. Supports SECS/GEM (HSMS), Modbus TCP, MQTT 3.1.1/5.0. YAML config-driven, no code change to add devices. Single Go binary for ARM64 field deployment.',
-      ja: 'プラグインアーキテクチャで産業機器をMES/クラウドに橋渡しするモジュラーエッジゲートウェイ。SECS/GEM (HSMS)、Modbus TCP、MQTT 3.1.1/5.0対応。YAML設定駆動、デバイス追加にコード変更不要。ARM64対応単一Goバイナリ'
+      'zh-TW': '模組化邊緣閘道器，透過插件架構橋接工業設備到 MES/雲端。支援 SECS/GEM (HSMS)、Modbus TCP、MQTT 3.1.1/5.0，YAML 設定驅動。內建 Modbus 掃描 API + 嵌入式 React UI，掃描結果可一鍵轉為監控設定。單一 Go binary，ARM64 現場部署',
+      en: 'Modular edge gateway bridging industrial devices to MES/cloud via plugin architecture. Supports SECS/GEM (HSMS), Modbus TCP, MQTT 3.1.1/5.0. YAML config-driven. Built-in Modbus scanner API with embedded React UI — scan results convert directly to monitoring config. Single Go binary for ARM64 field deployment.',
+      ja: 'プラグインアーキテクチャで産業機器をMES/クラウドに橋渡しするモジュラーエッジゲートウェイ。SECS/GEM (HSMS)、Modbus TCP、MQTT 3.1.1/5.0対応。YAML設定駆動。内蔵Modbusスキャナー API + React UIで、スキャン結果を監視設定に直接変換。ARM64対応単一Goバイナリ'
     },
     category: 'industry',
-    tags: ['go', 'secs-gem', 'modbus', 'mqtt', 'hsms'],
+    tags: ['go', 'secs-gem', 'modbus', 'mqtt', 'hsms', 'react'],
     year: 2026,
     scale: 'personal',
     url: 'https://github.com/seikaikyo/go-edge-gateway'
@@ -207,9 +207,9 @@ export const projects: Project[] = [
       ja: 'dashai-go - 共通Goバックエンドゲートウェイ'
     },
     description: {
-      'zh-TW': '共用 Go 後端閘道器，Chi 路由 + pgx (Neon PostgreSQL) + JWT (Logto) 認證。服務多個 AI 模組（宿曜道運勢/相性引擎、Modbus 掃描、資安掃描、邊緣協調器），Rate limiting + CORS + 內嵌 React 儀表板。Render 自動部署',
-      en: 'Shared Go backend gateway serving multiple AI modules. Chi router + pgx (Neon PostgreSQL) + JWT (Logto) auth. Serves Shukuyo fortune/compatibility engine, Modbus scanner, security scanner, edge coordinator. Rate limiting, CORS, embedded React dashboard. Auto-deployed on Render.',
-      ja: '複数AIモジュールを提供する共通Goバックエンドゲートウェイ。Chiルーター + pgx (Neon PostgreSQL) + JWT (Logto)認証。宿曜道運勢/相性エンジン、Modbusスキャナー、セキュリティスキャナー、エッジコーディネーターを提供。Renderデプロイ'
+      'zh-TW': '共用 Go 後端閘道器，Chi 路由 + pgx (Neon PostgreSQL) + JWT (Logto) 認證。服務多個模組（宿曜道運勢/相性引擎、資安報告彙整、邊緣協調器），Rate limiting + CORS + 內嵌 React 監控儀表板。go-common 共用模組統一 response/middleware/auth。Render 自動部署',
+      en: 'Shared Go backend gateway. Chi router + pgx (Neon PostgreSQL) + JWT (Logto) auth. Serves Shukuyo fortune/compatibility engine, security report aggregation, edge coordinator. Embedded React monitoring dashboard. Unified go-common modules for response/middleware/auth. Auto-deployed on Render.',
+      ja: '共通Goバックエンドゲートウェイ。Chiルーター + pgx (Neon PostgreSQL) + JWT (Logto)認証。宿曜道運勢/相性エンジン、セキュリティレポート集約、エッジコーディネーターを提供。React組込み監視ダッシュボード。go-common共通モジュールで統一。Renderデプロイ'
     },
     category: 'industry',
     tags: ['go', 'chi', 'pgx', 'neon', 'jwt', 'render'],
