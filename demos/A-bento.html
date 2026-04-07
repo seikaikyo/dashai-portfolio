@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DashAI Portfolio — Design A: Bento Grid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #09090b; --bg-card: #18181b; --bg-card-hover: #1f1f23;
+    --border: #27272a; --border-hover: #3f3f46;
+    --text: #fafafa; --text-secondary: #a1a1aa; --text-muted: #71717a;
+    --brand: #06b6d4; --brand-dim: #0891b2;
+    --radius: 16px; --radius-sm: 10px;
+    --cat-industry: #06b6d4; --cat-trading: #f59e0b; --cat-devtools: #a78bfa;
+    --cat-personal: #fbbf24; --cat-learning: #67e8f9;
+  }
+  html { color-scheme: dark; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  .hero { padding: 100px 0 60px; text-align: center; }
+  .hero-brand { font-size: 5rem; font-weight: 900; letter-spacing: -3px; line-height: 1; }
+  .hero-brand span { color: var(--brand); }
+  .hero-tagline { margin-top: 16px; font-size: 1.1rem; color: var(--text-secondary); max-width: 700px; margin-left: auto; margin-right: auto; }
+  .hero-lang { display: flex; justify-content: center; gap: 8px; margin-bottom: 40px; }
+  .hero-lang button { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-muted); padding: 6px 16px; border-radius: 8px; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; }
+  .hero-lang button.active { background: var(--brand); color: var(--bg); border-color: var(--brand); font-weight: 600; }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin: 0 0 48px; border-radius: var(--radius); overflow: hidden; }
+  .stat { background: var(--bg-card); padding: 32px 24px; text-align: center; }
+  .stat-value { font-family: 'JetBrains Mono', monospace; font-size: 3rem; font-weight: 800; color: var(--brand); line-height: 1; }
+  .stat-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin-top: 8px; }
+
+  /* Bento Grid */
+  .bento { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 12px; margin-bottom: 48px; }
+  .bento-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; justify-content: flex-end; position: relative; overflow: hidden; cursor: pointer; transition: all 0.3s ease; }
+  .bento-item:hover { border-color: var(--border-hover); background: var(--bg-card-hover); transform: translateY(-2px); }
+
+  /* Featured — big card */
+  .bento-featured { grid-column: span 2; grid-row: span 2; background: linear-gradient(135deg, #0c1620, #0a1628); border-color: rgba(6,182,212,0.2); }
+  .bento-featured:hover { border-color: rgba(6,182,212,0.4); }
+  .bento-featured .bento-badge { background: var(--brand); color: var(--bg); padding: 4px 12px; border-radius: 6px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; position: absolute; top: 24px; left: 24px; }
+  .bento-featured .bento-title { font-size: 1.75rem; font-weight: 800; margin-bottom: 8px; }
+  .bento-featured .bento-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
+  .bento-featured .bento-metrics { display: flex; gap: 24px; margin-top: 16px; }
+  .bento-featured .metric { text-align: center; }
+  .bento-featured .metric-val { font-family: 'JetBrains Mono', monospace; font-size: 1.5rem; font-weight: 700; color: var(--brand); }
+  .bento-featured .metric-label { font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; }
+
+  /* Wide card */
+  .bento-wide { grid-column: span 2; }
+
+  /* Regular card */
+  .bento-cat { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }
+  .bento-title { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+  .bento-desc { font-size: 0.8rem; color: var(--text-secondary); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .bento-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: auto; padding-top: 12px; }
+  .bento-tag { font-size: 0.65rem; padding: 2px 8px; border-radius: 4px; background: rgba(255,255,255,0.06); color: var(--text-muted); }
+  .bento-year { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--text-muted); position: absolute; top: 16px; right: 16px; }
+  .bento-thumb { position: absolute; top: 0; left: 0; width: 100%; height: 60%; object-fit: cover; opacity: 0.3; mask-image: linear-gradient(to bottom, black, transparent); }
+
+  /* Tech Stack */
+  .tech { padding: 48px 0; border-top: 1px solid var(--border); }
+  .tech h2 { text-align: center; font-size: 1.25rem; font-weight: 700; margin-bottom: 32px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 3px; }
+  .tech-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .tech-pill { display: flex; align-items: center; gap: 6px; padding: 6px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; font-size: 0.8rem; }
+  .tech-pill .count { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--brand); }
+
+  /* Footer */
+  footer { padding: 32px 0; border-top: 1px solid var(--border); text-align: center; font-size: 0.8rem; color: var(--text-muted); }
+  footer a { color: var(--text-secondary); text-decoration: none; }
+  footer a:hover { color: var(--brand); }
+
+  /* Filter */
+  .filter { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+  .filter button { padding: 8px 18px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-secondary); font-size: 0.8rem; cursor: pointer; transition: all 0.2s; }
+  .filter button.active { background: var(--brand); color: var(--bg); border-color: var(--brand); font-weight: 600; }
+  .filter button:hover:not(.active) { border-color: var(--border-hover); color: var(--text); }
+
+  @media (max-width: 768px) {
+    .hero-brand { font-size: 3rem; }
+    .stats { grid-template-columns: 1fr; }
+    .bento { grid-template-columns: 1fr; grid-auto-rows: auto; }
+    .bento-featured { grid-column: span 1; grid-row: span 1; min-height: 320px; }
+    .bento-wide { grid-column: span 1; }
+    .bento-item { min-height: 180px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <section class="hero">
+    <div class="hero-lang">
+      <button class="active">EN</button>
+      <button>中</button>
+      <button>日</button>
+    </div>
+    <h1 class="hero-brand">Dash<span>AI</span></h1>
+    <p class="hero-tagline">Forward Deployed Engineer | Vue 3 / Angular / React / FastAPI / Go | 30+ Manufacturing Systems Solo-Built | TSMC 4 Fabs 11yr</p>
+  </section>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-value">26</div><div class="stat-label">Projects</div></div>
+    <div class="stat"><div class="stat-value">5</div><div class="stat-label">Categories</div></div>
+    <div class="stat"><div class="stat-value">49+</div><div class="stat-label">Tech Stacks</div></div>
+  </div>
+
+  <div class="filter">
+    <button class="active">All</button>
+    <button>Industry</button>
+    <button>Trading</button>
+    <button>DevTools</button>
+    <button>Personal</button>
+    <button>Learning</button>
+  </div>
+
+  <div class="bento">
+    <!-- Featured: Smart Factory Demo -->
+    <div class="bento-item bento-featured">
+      <div class="bento-badge">Featured Project</div>
+      <div class="bento-title">Smart Factory Demo</div>
+      <div class="bento-desc">25 years of factory knowledge in one system. 9 stages, 54 subsystem CRUDs, DashAI with 15 tools, BCM disaster simulation, 5-agent collaboration, 10 War Room TVs. Trilingual.</div>
+      <div class="bento-metrics">
+        <div class="metric"><div class="metric-val">54</div><div class="metric-label">CRUD APIs</div></div>
+        <div class="metric"><div class="metric-val">9</div><div class="metric-label">Stages</div></div>
+        <div class="metric"><div class="metric-val">15</div><div class="metric-label">AI Tools</div></div>
+        <div class="metric"><div class="metric-val">3</div><div class="metric-label">Languages</div></div>
+      </div>
+    </div>
+
+    <!-- Go Industrial Platform -->
+    <div class="bento-item bento-wide" style="border-left: 3px solid var(--cat-industry);">
+      <span class="bento-year">2026</span>
+      <div class="bento-cat" style="color: var(--cat-industry);">Industry</div>
+      <div class="bento-title">Go Industrial Platform</div>
+      <div class="bento-desc">4 repos: SECS/GEM driver, edge gateway, OT security scanner, shared API gateway. Single binaries, ARM64.</div>
+      <div class="bento-tags"><span class="bento-tag">Go</span><span class="bento-tag">SECS/GEM</span><span class="bento-tag">IEC 62443</span><span class="bento-tag">Modbus</span></div>
+    </div>
+
+    <!-- Shukuyo -->
+    <div class="bento-item" style="border-left: 3px solid var(--cat-personal);">
+      <span class="bento-year">2025</span>
+      <div class="bento-cat" style="color: var(--cat-personal);">Personal</div>
+      <div class="bento-title">Shukuyodo</div>
+      <div class="bento-desc">1200-year-old sutra turned into software. 27 mansions, HR matching, headhunter mode.</div>
+      <div class="bento-tags"><span class="bento-tag">Vue 3</span><span class="bento-tag">FastAPI</span><span class="bento-tag">Logto</span></div>
+    </div>
+
+    <!-- AI Red Team -->
+    <div class="bento-item" style="border-left: 3px solid var(--cat-devtools);">
+      <span class="bento-year">2026</span>
+      <div class="bento-cat" style="color: var(--cat-devtools);">DevTools</div>
+      <div class="bento-title">AI Red Team Toolkit</div>
+      <div class="bento-desc">177 adversarial attack templates across 12 categories. Trilingual.</div>
+      <div class="bento-tags"><span class="bento-tag">Vue 3</span><span class="bento-tag">Claude AI</span></div>
+    </div>
+
+    <!-- MES -->
+    <div class="bento-item" style="border-left: 3px solid var(--cat-industry);">
+      <span class="bento-year">2025</span>
+      <div class="bento-cat" style="color: var(--cat-industry);">Industry</div>
+      <div class="bento-title">MES Platform</div>
+      <div class="bento-desc">54 CRUD APIs, 9 production stages, 130+ RBAC permissions, 10 War Room dashboards.</div>
+      <div class="bento-tags"><span class="bento-tag">Angular</span><span class="bento-tag">PrimeNG</span><span class="bento-tag">FastAPI</span></div>
+    </div>
+
+    <!-- DashTrade -->
+    <div class="bento-item" style="border-left: 3px solid var(--cat-trading);">
+      <span class="bento-year">2025</span>
+      <div class="bento-cat" style="color: var(--cat-trading);">Trading</div>
+      <div class="bento-title">DashTrade</div>
+      <div class="bento-desc">Multi-market technical analysis. RSI/KD/MACD, daily auto-prediction of 80 stocks.</div>
+      <div class="bento-tags"><span class="bento-tag">Vue 3</span><span class="bento-tag">FastAPI</span></div>
+    </div>
+
+    <!-- SECSGEM MCP -->
+    <div class="bento-item" style="border-left: 3px solid var(--cat-industry);">
+      <span class="bento-year">2026</span>
+      <div class="bento-cat" style="color: var(--cat-industry);">Industry</div>
+      <div class="bento-title">SECS/GEM MCP Server</div>
+      <div class="bento-desc">Control semiconductor equipment with natural language via Claude Code. 10 tools.</div>
+      <div class="bento-tags"><span class="bento-tag">Python</span><span class="bento-tag">MCP</span></div>
+    </div>
+
+    <!-- AI English Tutor -->
+    <div class="bento-item" style="border-left: 3px solid var(--cat-learning);">
+      <span class="bento-year">2026</span>
+      <div class="bento-cat" style="color: var(--cat-learning);">Learning</div>
+      <div class="bento-title">AI English Tutor</div>
+      <div class="bento-desc">Voice-first English speaking practice. 27 questions, AI grammar correction, PWA.</div>
+      <div class="bento-tags"><span class="bento-tag">Vue 3</span><span class="bento-tag">Web Speech</span></div>
+    </div>
+
+    <!-- Claude Code Skills -->
+    <div class="bento-item bento-wide" style="border-left: 3px solid var(--cat-devtools);">
+      <span class="bento-year">2026</span>
+      <div class="bento-cat" style="color: var(--cat-devtools);">DevTools</div>
+      <div class="bento-title">Claude Code Skill Pack</div>
+      <div class="bento-desc">7 reusable skills: OpenSpec spec-driven dev, build error resolver, security review, dead code cleanup, architecture audit, FastAPI patterns, Angular+PrimeNG patterns.</div>
+      <div class="bento-tags"><span class="bento-tag">Claude</span><span class="bento-tag">Bash</span></div>
+    </div>
+  </div>
+
+  <section class="tech">
+    <h2>Tech Stack</h2>
+    <div class="tech-grid">
+      <div class="tech-pill">Vue 3 <span class="count">9</span></div>
+      <div class="tech-pill">TypeScript <span class="count">8</span></div>
+      <div class="tech-pill">FastAPI <span class="count">8</span></div>
+      <div class="tech-pill">Go <span class="count">5</span></div>
+      <div class="tech-pill">Python <span class="count">5</span></div>
+      <div class="tech-pill">Claude AI <span class="count">5</span></div>
+      <div class="tech-pill">Vercel <span class="count">5</span></div>
+      <div class="tech-pill">Render <span class="count">4</span></div>
+      <div class="tech-pill">PrimeVue <span class="count">4</span></div>
+      <div class="tech-pill">SECS/GEM <span class="count">3</span></div>
+      <div class="tech-pill">Neon PostgreSQL <span class="count">3</span></div>
+      <div class="tech-pill">React <span class="count">2</span></div>
+      <div class="tech-pill">Angular <span class="count">1</span></div>
+      <div class="tech-pill">YOLO11 <span class="count">1</span></div>
+      <div class="tech-pill">Docker <span class="count">1</span></div>
+    </div>
+  </section>
+
+  <footer>
+    Dash<b>AI</b> &middot; 2026 &middot; <a href="https://github.com/seikaikyo">GitHub</a> &middot; <a href="https://linkedin.com/in/seikaikyo">LinkedIn</a>
+  </footer>
+</div>
+
+</body>
+</html>

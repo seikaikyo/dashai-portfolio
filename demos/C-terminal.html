@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DashAI Portfolio — Design C: Terminal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0c0c0c; --bg-card: #141414; --bg-card-hover: #1a1a1a;
+    --border: #1e1e1e; --border-hover: #333;
+    --text: #d4d4d4; --text-secondary: #808080; --text-muted: #555;
+    --green: #4ec9b0; --cyan: #9cdcfe; --yellow: #dcdcaa; --orange: #ce9178;
+    --blue: #569cd6; --purple: #c586c0; --red: #f44747;
+    --brand: #4ec9b0;
+  }
+  html { color-scheme: dark; }
+  body { font-family: 'JetBrains Mono', monospace; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; font-size: 14px; }
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+  /* Terminal chrome */
+  .terminal-bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: #1e1e1e; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; }
+  .terminal-dot { width: 12px; height: 12px; border-radius: 50%; }
+  .terminal-dot.red { background: #ff5f57; }
+  .terminal-dot.yellow { background: #febc2e; }
+  .terminal-dot.green { background: #28c840; }
+  .terminal-title { margin-left: 12px; font-size: 12px; color: var(--text-muted); }
+  .terminal-lang { margin-left: auto; display: flex; gap: 4px; }
+  .terminal-lang button { background: none; border: 1px solid var(--border); color: var(--text-muted); padding: 2px 10px; font-family: inherit; font-size: 11px; cursor: pointer; border-radius: 3px; }
+  .terminal-lang button.active { color: var(--green); border-color: var(--green); }
+
+  /* Hero */
+  .hero { padding: 64px 0 48px; }
+  .hero-prompt { color: var(--text-muted); margin-bottom: 4px; }
+  .hero-prompt span { color: var(--green); }
+  .hero h1 { font-size: 2rem; font-weight: 700; color: var(--cyan); line-height: 1.3; }
+  .hero-output { margin-top: 20px; padding: 16px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; }
+  .hero-output .line { margin: 2px 0; }
+  .hero-output .key { color: var(--yellow); }
+  .hero-output .val { color: var(--orange); }
+  .hero-output .str { color: var(--green); }
+  .hero-output .num { color: var(--cyan); }
+  .hero-output .comment { color: var(--text-muted); font-style: italic; }
+
+  /* Stats as CLI output */
+  .stats { padding: 32px 0; border-bottom: 1px solid var(--border); }
+  .stats-cmd { color: var(--text-muted); margin-bottom: 12px; }
+  .stats-cmd span { color: var(--green); }
+  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .stats-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 20px; }
+  .stats-box .val { font-size: 2.5rem; font-weight: 800; color: var(--green); line-height: 1; }
+  .stats-box .label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+  /* Featured */
+  .featured { padding: 40px 0; border-bottom: 1px solid var(--border); }
+  .featured-cmd { color: var(--text-muted); margin-bottom: 16px; }
+  .featured-cmd span { color: var(--green); }
+  .featured-card { background: var(--bg-card); border: 1px solid var(--green); border-radius: 6px; padding: 24px; position: relative; }
+  .featured-card::before { content: "FEATURED"; position: absolute; top: -10px; left: 16px; background: var(--green); color: var(--bg); font-size: 10px; font-weight: 700; padding: 2px 10px; border-radius: 3px; letter-spacing: 1px; }
+  .featured-title { font-size: 1.5rem; font-weight: 700; color: var(--cyan); margin-bottom: 8px; }
+  .featured-desc { color: var(--text-secondary); font-family: 'Inter', sans-serif; font-size: 14px; line-height: 1.6; }
+  .featured-metrics { display: flex; gap: 32px; margin-top: 16px; }
+  .featured-metric .val { font-size: 1.5rem; font-weight: 700; color: var(--green); }
+  .featured-metric .label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; }
+  .featured-cta { display: inline-block; margin-top: 16px; padding: 8px 20px; border: 1px solid var(--green); color: var(--green); font-family: inherit; font-size: 13px; text-decoration: none; border-radius: 4px; transition: all 0.2s; }
+  .featured-cta:hover { background: var(--green); color: var(--bg); }
+
+  /* Filter */
+  .filter { padding: 32px 0 16px; }
+  .filter-cmd { color: var(--text-muted); margin-bottom: 12px; }
+  .filter-cmd span { color: var(--green); }
+  .filter-buttons { display: flex; gap: 4px; flex-wrap: wrap; }
+  .filter-buttons button { padding: 4px 14px; border: 1px solid var(--border); background: none; color: var(--text-muted); font-family: inherit; font-size: 12px; cursor: pointer; border-radius: 3px; transition: all 0.15s; }
+  .filter-buttons button.active { color: var(--green); border-color: var(--green); background: rgba(78,201,176,0.08); }
+  .filter-buttons button:hover:not(.active) { border-color: var(--border-hover); color: var(--text-secondary); }
+
+  /* Project list */
+  .projects { padding-bottom: 48px; }
+  .project { border: 1px solid var(--border); border-radius: 6px; margin-bottom: 8px; overflow: hidden; transition: all 0.2s; }
+  .project:hover { border-color: var(--border-hover); }
+  .project-header { display: flex; align-items: center; padding: 12px 16px; gap: 12px; cursor: pointer; }
+  .project-indicator { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .project-name { font-weight: 600; font-size: 13px; flex: 1; }
+  .project-name a { color: inherit; text-decoration: none; }
+  .project-name a:hover { color: var(--cyan); }
+  .project-year { font-size: 11px; color: var(--text-muted); }
+  .project-scale { font-size: 10px; padding: 1px 8px; border-radius: 3px; border: 1px solid var(--border); color: var(--text-muted); }
+  .project-body { padding: 0 16px 14px; border-top: 1px solid var(--border); }
+  .project-desc { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text-secondary); margin-top: 10px; line-height: 1.6; }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+  .project-tag { font-size: 11px; padding: 1px 8px; border-radius: 3px; background: rgba(78,201,176,0.08); color: var(--green); border: 1px solid rgba(78,201,176,0.15); }
+
+  /* Tech */
+  .tech { padding: 40px 0; border-top: 1px solid var(--border); }
+  .tech-cmd { color: var(--text-muted); margin-bottom: 16px; }
+  .tech-cmd span { color: var(--green); }
+  .tech-table { width: 100%; border-collapse: collapse; }
+  .tech-table th { text-align: left; font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; padding: 6px 12px; border-bottom: 1px solid var(--border); font-weight: 600; }
+  .tech-table td { padding: 5px 12px; font-size: 12px; border-bottom: 1px solid rgba(30,30,30,0.5); }
+  .tech-table td:first-child { color: var(--cyan); }
+  .tech-table td:last-child { color: var(--green); font-weight: 600; text-align: right; }
+  .tech-bar { background: rgba(78,201,176,0.1); height: 4px; border-radius: 2px; margin-top: 2px; }
+  .tech-bar-fill { background: var(--green); height: 100%; border-radius: 2px; }
+
+  /* Footer */
+  footer { padding: 24px 0; border-top: 1px solid var(--border); display: flex; justify-content: space-between; color: var(--text-muted); font-size: 12px; }
+  footer a { color: var(--text-muted); text-decoration: none; }
+  footer a:hover { color: var(--green); }
+  .footer-links { display: flex; gap: 16px; }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 1.3rem; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .featured-metrics { flex-wrap: wrap; gap: 16px; }
+    .project-header { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<div class="terminal-bar">
+  <div class="terminal-dot red"></div>
+  <div class="terminal-dot yellow"></div>
+  <div class="terminal-dot green"></div>
+  <div class="terminal-title">dashai-portfolio -- zsh</div>
+  <div class="terminal-lang">
+    <button class="active">EN</button>
+    <button>中</button>
+    <button>日</button>
+  </div>
+</div>
+
+<div class="container">
+  <section class="hero">
+    <div class="hero-prompt"><span>~/dashai</span> $ cat profile.json</div>
+    <div class="hero-output">
+      <div class="line">{</div>
+      <div class="line">&nbsp;&nbsp;<span class="key">"name"</span>: <span class="str">"SeiKai Kyo"</span>,</div>
+      <div class="line">&nbsp;&nbsp;<span class="key">"role"</span>: <span class="str">"Forward Deployed Engineer"</span>,</div>
+      <div class="line">&nbsp;&nbsp;<span class="key">"experience"</span>: <span class="str">"25 years in IT + manufacturing"</span>,</div>
+      <div class="line">&nbsp;&nbsp;<span class="key">"stack"</span>: [<span class="str">"Vue 3"</span>, <span class="str">"Angular"</span>, <span class="str">"React"</span>, <span class="str">"FastAPI"</span>, <span class="str">"Go"</span>],</div>
+      <div class="line">&nbsp;&nbsp;<span class="key">"systems_built"</span>: <span class="num">30</span>,&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// solo, no team</span></div>
+      <div class="line">&nbsp;&nbsp;<span class="key">"tsmc_fabs"</span>: [<span class="str">"14A"</span>, <span class="str">"14B"</span>, <span class="str">"18A"</span>, <span class="str">"18B"</span>],</div>
+      <div class="line">&nbsp;&nbsp;<span class="key">"tsmc_years"</span>: <span class="num">11</span></div>
+      <div class="line">}</div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stats-cmd"><span>~/dashai</span> $ dash stats</div>
+    <div class="stats-grid">
+      <div class="stats-box"><div class="val">26</div><div class="label">Projects</div></div>
+      <div class="stats-box"><div class="val">5</div><div class="label">Categories</div></div>
+      <div class="stats-box"><div class="val">49+</div><div class="label">Tech Stacks</div></div>
+    </div>
+  </section>
+
+  <section class="featured">
+    <div class="featured-cmd"><span>~/dashai</span> $ dash show --featured</div>
+    <div class="featured-card">
+      <div class="featured-title">Smart Factory Demo</div>
+      <div class="featured-desc">25 years of factory knowledge in one interactive system. 9 production stages, 54 subsystem CRUDs, 15 AI tools, BCM disaster simulation, 5-agent collaborative AI, 10 War Room dashboards. Trilingual.</div>
+      <div class="featured-metrics">
+        <div class="featured-metric"><div class="val">54</div><div class="label">CRUD APIs</div></div>
+        <div class="featured-metric"><div class="val">9</div><div class="label">Stages</div></div>
+        <div class="featured-metric"><div class="val">15</div><div class="label">AI Tools</div></div>
+        <div class="featured-metric"><div class="val">3</div><div class="label">Languages</div></div>
+      </div>
+      <a href="https://factory.dashai.dev" class="featured-cta">$ open factory.dashai.dev</a>
+    </div>
+  </section>
+
+  <section class="filter">
+    <div class="filter-cmd"><span>~/dashai</span> $ dash list --category=</div>
+    <div class="filter-buttons">
+      <button class="active">all</button>
+      <button>industry</button>
+      <button>trading</button>
+      <button>devtools</button>
+      <button>personal</button>
+      <button>learning</button>
+    </div>
+  </section>
+
+  <div class="projects">
+    <div class="project">
+      <div class="project-header">
+        <div class="project-indicator" style="background: var(--green);"></div>
+        <div class="project-name"><a href="https://github.com/seikaikyo/go-factory-io">Go Industrial Platform</a></div>
+        <div class="project-year">2026</div>
+        <div class="project-scale">personal</div>
+      </div>
+      <div class="project-body">
+        <div class="project-desc">4 repos: SECS/GEM driver (12 SEMI standards), edge gateway (HSMS/Modbus/MQTT plugins), OT security scanner (CVE + IEC 62443), shared Go API gateway. All single binaries, ARM64.</div>
+        <div class="project-tags"><span class="project-tag">Go</span><span class="project-tag">SECS/GEM</span><span class="project-tag">IEC 62443</span><span class="project-tag">Modbus</span></div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-indicator" style="background: var(--green);"></div>
+        <div class="project-name">Manufacturing Execution System (MES)</div>
+        <div class="project-year">2025</div>
+        <div class="project-scale">enterprise</div>
+      </div>
+      <div class="project-body">
+        <div class="project-desc">54 CRUD APIs, 9 production stages, 130+ RBAC permissions, 10 War Room dashboards. Angular 21 + PrimeNG + Neon PostgreSQL.</div>
+        <div class="project-tags"><span class="project-tag">Angular</span><span class="project-tag">PrimeNG</span><span class="project-tag">FastAPI</span></div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-indicator" style="background: var(--yellow);"></div>
+        <div class="project-name"><a href="https://shukuyo.dashai.dev">Shukuyodo</a></div>
+        <div class="project-year">2025</div>
+        <div class="project-scale">production</div>
+      </div>
+      <div class="project-body">
+        <div class="project-desc">1200-year-old sutra turned into software. 27 mansion compatibility, HR matching, headhunter mode. Rule-based, no LLM. Trilingual.</div>
+        <div class="project-tags"><span class="project-tag">Vue 3</span><span class="project-tag">PrimeVue</span><span class="project-tag">FastAPI</span><span class="project-tag">Logto</span></div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-indicator" style="background: var(--purple);"></div>
+        <div class="project-name"><a href="https://ai-red-team.dashai.dev">AI Red Team Toolkit</a></div>
+        <div class="project-year">2026</div>
+        <div class="project-scale">personal</div>
+      </div>
+      <div class="project-body">
+        <div class="project-desc">177 adversarial attack templates, 12 categories. RAG poisoning, tool use injection, hallucination, bias detection. Trilingual.</div>
+        <div class="project-tags"><span class="project-tag">Vue 3</span><span class="project-tag">TypeScript</span><span class="project-tag">Claude AI</span></div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-indicator" style="background: var(--orange);"></div>
+        <div class="project-name">DashTrade AI Technical Analysis</div>
+        <div class="project-year">2025</div>
+        <div class="project-scale">personal</div>
+      </div>
+      <div class="project-body">
+        <div class="project-desc">Multi-market (TW/US/JP). RSI/KD/MACD/Bollinger, dual-engine analysis, daily auto-prediction 80 stocks.</div>
+        <div class="project-tags"><span class="project-tag">Vue 3</span><span class="project-tag">FastAPI</span><span class="project-tag">Neon</span></div>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-indicator" style="background: var(--cyan);"></div>
+        <div class="project-name"><a href="https://english.dashai.dev">AI English Tutor</a></div>
+        <div class="project-year">2026</div>
+        <div class="project-scale">production</div>
+      </div>
+      <div class="project-body">
+        <div class="project-desc">Voice-first English interview practice. 27 questions, AI grammar correction, Claude API feedback, PWA offline.</div>
+        <div class="project-tags"><span class="project-tag">Vue 3</span><span class="project-tag">Claude AI</span><span class="project-tag">Web Speech</span><span class="project-tag">PWA</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="tech">
+    <div class="tech-cmd"><span>~/dashai</span> $ dash tech --sort=count</div>
+    <table class="tech-table">
+      <thead><tr><th>Technology</th><th>Usage</th><th>Count</th></tr></thead>
+      <tbody>
+        <tr><td>Vue 3</td><td><div class="tech-bar"><div class="tech-bar-fill" style="width: 100%;"></div></div></td><td>9</td></tr>
+        <tr><td>TypeScript</td><td><div class="tech-bar"><div class="tech-bar-fill" style="width: 89%;"></div></div></td><td>8</td></tr>
+        <tr><td>FastAPI</td><td><div class="tech-bar"><div class="tech-bar-fill" style="width: 89%;"></div></div></td><td>8</td></tr>
+        <tr><td>Go</td><td><div class="tech-bar"><div class="tech-bar-fill" style="width: 56%;"></div></div></td><td>5</td></tr>
+        <tr><td>Python</td><td><div class="tech-bar"><div class="tech-bar-fill" style="width: 56%;"></div></div></td><td>5</td></tr>
+        <tr><td>Claude AI</td><td><div class="tech-bar"><div class="tech-bar-fill" style="width: 56%;"></div></div></td><td>5</td></tr>
+        <tr><td>Vercel</td><td><div class="tech-bar"><div class="tech-bar-fill" style="width: 56%;"></div></div></td><td>5</td></tr>
+        <tr><td>SECS/GEM</td><td><div class="tech-bar"><div class="tech-bar-fill" style="width: 33%;"></div></div></td><td>3</td></tr>
+        <tr><td>Neon PostgreSQL</td><td><div class="tech-bar"><div class="tech-bar-fill" style="width: 33%;"></div></div></td><td>3</td></tr>
+        <tr><td>React</td><td><div class="tech-bar"><div class="tech-bar-fill" style="width: 22%;"></div></div></td><td>2</td></tr>
+        <tr><td>Angular</td><td><div class="tech-bar"><div class="tech-bar-fill" style="width: 11%;"></div></div></td><td>1</td></tr>
+        <tr><td>YOLO11</td><td><div class="tech-bar"><div class="tech-bar-fill" style="width: 11%;"></div></div></td><td>1</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <div>DashAI &middot; 2026</div>
+    <div class="footer-links">
+      <a href="https://github.com/seikaikyo">github</a>
+      <a href="https://linkedin.com/in/seikaikyo">linkedin</a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
