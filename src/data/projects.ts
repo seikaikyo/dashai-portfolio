@@ -1,0 +1,560 @@
+import type { Project } from './types'
+
+export const projects: Project[] = [
+  // === 旗艦作品 (featured) ===
+  {
+    id: 'smart-factory-demo',
+    name: {
+      'zh-TW': 'Smart Factory Demo - 智慧工廠全端展示',
+      en: 'Smart Factory Demo - Full-Stack Manufacturing Showcase',
+      ja: 'Smart Factory Demo - スマートファクトリー全スタック展示'
+    },
+    description: {
+      'zh-TW': '25 年工廠經驗做成的互動系統。9 階段 x 54 子系統 CRUD x DashAI 15 工具（即時 NCR 分診、訂單排程、風險評估）x BCM 災害模擬 x 5 Agent 協作 x OEE 設備即時監控（SECS/GEM）x 跨頁訂單高亮追蹤 x 10 War Room TV。三語介面',
+      en: '25 years of factory knowledge in one system. 9 stages x 54 subsystem CRUDs x DashAI with 15 tools (NCR triage, order scheduling, risk assessment) x BCM disaster simulation x 5-agent collaboration x OEE real-time equipment monitoring (SECS/GEM) x cross-page order highlighting x 10 War Room TVs. Trilingual.',
+      ja: '工場現場25年の経験を一つのシステムに。9段階 x 54サブシステムCRUD x DashAI 15ツール（NCRトリアージ、受注振り分け、リスク評価）x BCM災害シミュレーション x 5エージェント協調 x OEEリアルタイム設備監視（SECS/GEM）x ページ横断注文ハイライト x War Room TV 10画面。三言語'
+    },
+    category: 'industry',
+    tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'neon', 'claude', 'chartjs', 'vercel', 'render'],
+    year: 2026,
+    scale: 'production',
+    url: 'https://factory.dashai.dev',
+    screenshot: '/screenshots/smart-factory-demo.png',
+    video: { en: '/videos/smart-factory-intro.en.mp4', ja: '/videos/smart-factory-intro.ja.mp4' }
+  },
+
+  // === 產業經歷 (industry) ===
+  {
+    id: 'ind-mes',
+    name: {
+      'zh-TW': '製造執行系統 (MES)',
+      en: 'Manufacturing Execution System (MES)',
+      ja: '製造実行システム (MES)'
+    },
+    description: {
+      'zh-TW': '半導體廠 MES 全端開發，工單派工報工、設備程式管理、配方版控與 Golden Recipe 評分、簽核流程引擎、SPC 製程管制，涵蓋 8 個以上製程站點',
+      en: 'Full-stack MES for semiconductor fab: work order dispatch & reporting, equipment program management, recipe version control with Golden Recipe scoring, approval workflow engine, SPC process control across 8+ stations',
+      ja: '半導体工場向けMES全スタック開発、作業指示・実績報告、設備プログラム管理、レシピ版管理とGolden Recipeスコアリング、承認ワークフローエンジン、SPC工程管理、8+工程ステーション対応'
+    },
+    category: 'industry',
+    tags: ['angular', 'primeng', 'typescript', 'fastapi', 'neon', 'vue3', 'vite', 'gas'],
+    year: 2025,
+    scale: 'enterprise',
+    narrative: {
+      en: "The factory ran entirely on paper forms and disconnected Excel files. Tracking a batch required calling three departments. I spent time with each team -- dispatch, quality control, warehouse -- documented their actual workflows, then built a system that mirrors how they operate.",
+      'zh-TW': '工廠完全靠紙本表單和分散的 Excel 運作。追蹤一批貨要打三個部門的電話。我花時間跟著每個團隊，派工、品管、倉庫，記錄他們實際的工作流程，再做出一套對應真實運作方式的系統。',
+      ja: '工場は紙の帳票とバラバラのExcelだけで回っていました。バッチの追跡には3部門に電話する必要がありました。派遣、品管、倉庫、各チームと時間を過ごし、実際のワークフローを記録した上で、現場の運用に合わせたシステムを構築しました。',
+    }
+  },
+  {
+    id: 'ind-ai-vision',
+    name: {
+      'zh-TW': 'AI 視覺辨識系統',
+      en: 'AI Vision Recognition System',
+      ja: 'AI視覚認識システム'
+    },
+    description: {
+      'zh-TW': '工廠 AI 視覺辨識平台，VLM/YOLO 影像分析、製程影片自動分段與週期時間計算、廠區即時監控告警、人臉辨識異常偵測、8D 報告自動生成',
+      en: 'Factory AI vision platform: VLM/YOLO image analysis, process video auto-segmentation with cycle time calculation, real-time monitoring alerts, face recognition anomaly detection, automated 8D report generation',
+      ja: '工場AI視覚プラットフォーム、VLM/YOLO画像分析、製造動画自動分割＆サイクルタイム計算、リアルタイム監視アラート、顔認識異常検知、8Dレポート自動生成'
+    },
+    category: 'industry',
+    tags: ['yolo', 'python', 'opencv', 'vite', 'fastapi', 'gemini', 'streamlit'],
+    year: 2024,
+    scale: 'production'
+  },
+  {
+    id: 'ind-warehouse',
+    name: {
+      'zh-TW': '智慧倉儲物流系統',
+      en: 'Smart Warehouse Logistics',
+      ja: 'スマート倉庫物流システム'
+    },
+    description: {
+      'zh-TW': '自動搬運車調度模擬與路徑規劃、RFID 產品生命週期追蹤、標籤樣板視覺化編輯器、多種讀取模式互動展示',
+      en: 'AMR autonomous vehicle dispatch simulation & path planning, RFID product lifecycle tracking, label template visual editor, interactive multi-mode reader demo',
+      ja: 'AMR無人搬送車配車シミュレーション＆経路計画、RFID製品ライフサイクル追跡、ラベルテンプレートビジュアルエディタ、マルチモードリーダーインタラクティブデモ'
+    },
+    category: 'industry',
+    tags: ['vite', 'javascript', 'shoelace', 'vercel'],
+    year: 2024,
+    scale: 'production'
+  },
+  {
+    id: 'ind-quality',
+    name: {
+      'zh-TW': '品質管理系統',
+      en: 'Quality Management System',
+      ja: '品質管理システム'
+    },
+    description: {
+      'zh-TW': 'ISO 合規品質管理，8D 問題解決全流程（D0-D8）、SPC 統計製程管制與管制圖、AI 輔助分析填寫、AES 加密報表匯出',
+      en: 'Quality management following ISO principles: full 8D problem-solving workflow (D0-D8), SPC statistical process control with control charts, AI-assisted analysis, AES-encrypted report export',
+      ja: 'ISO準拠品質管理、8D問題解決フルワークフロー（D0-D8）、SPC統計的工程管理＆管理図、AI支援分析、AES暗号化レポートエクスポート'
+    },
+    category: 'industry',
+    tags: ['vite', 'javascript', 'python', 'streamlit', 'shoelace'],
+    year: 2024,
+    scale: 'production'
+  },
+  {
+    id: 'ind-platform',
+    name: {
+      'zh-TW': '企業平台與工具',
+      en: 'Enterprise Platform & Tools',
+      ja: '企業プラットフォーム＆ツール'
+    },
+    description: {
+      'zh-TW': 'SSO 統一認證（130+ 權限項目）、API 閘道與 OpenAPI 文件、承攬商門禁管理、自動化技術文件產生、資料庫備份排程、碳盤查計算、SSL 憑證管理',
+      en: 'SSO unified auth (130+ permission items), API gateway with OpenAPI docs, contractor access control, automated technical documentation, database backup scheduling, carbon inventory calculation, SSL certificate management',
+      ja: 'SSO統合認証（130+権限項目）、APIゲートウェイ＆OpenAPIドキュメント、請負業者入退管理、技術ドキュメント自動生成、DBバックアップスケジューリング、炭素インベントリ計算、SSL証明書管理'
+    },
+    category: 'industry',
+    tags: ['fastapi', 'neon', 'logto', 'vercel', 'render', 'python', 'javascript', 'prisma', 'github-actions'],
+    year: 2025,
+    scale: 'enterprise'
+  },
+
+  {
+    id: 'go-factory-io',
+    name: {
+      'zh-TW': 'go-factory-io - 開源 Go SECS/GEM Driver',
+      en: 'go-factory-io - Open-Source Go SECS/GEM Driver',
+      ja: 'go-factory-io - オープンソース Go SECS/GEM ドライバー'
+    },
+    description: {
+      'zh-TW': '開源 SECS/GEM 設備驅動，實作 12 項 SEMI 標準（E5/E30/E37/E87/E40/E90/E94/E116/E187/E191），整合 HSMS、OPC-UA、MQTT、Modbus TCP、gRPC 五種協定，實作 IEC 62443 SL4 安全控制。單一 static binary，可跨編譯至 ARM64。Simulator 驗證',
+      en: 'Open-source SECS/GEM equipment driver implementing 12 SEMI standards (E5/E30/E37/E87/E40/E90/E94/E116/E187/E191), integrating HSMS, OPC-UA, MQTT, Modbus TCP, and gRPC. Implements IEC 62443 SL4 security controls. Single static binary, cross-compiles to ARM64. Simulator-verified.',
+      ja: 'オープンソースSECS/GEM設備ドライバー、12のSEMI標準を実装（E5/E30/E37/E87/E40/E90/E94/E116/E187/E191）。HSMS、OPC-UA、MQTT、Modbus TCP、gRPCの5プロトコル統合。IEC 62443 SL4セキュリティコントロール実装。単一スタティックバイナリ、ARM64クロスコンパイル対応。シミュレーター検証済み'
+    },
+    category: 'industry',
+    tags: ['go', 'secs-gem', 'hsms', 'opcua', 'mqtt', 'modbus', 'grpc', 'iec62443', 'prometheus'],
+    year: 2026,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/go-factory-io',
+    video: { en: '/videos/go-factory-io-showcase.mp4' },
+    narrative: {
+      en: "Four repositories that form a complete industrial edge stack. The SECS/GEM driver implements 12 SEMI standards. The edge gateway bridges devices to MES through a plugin architecture. The OT security scanner maps compliance against IEC 62443 and NIST CSF 2.0. The API gateway ties them together. Each compiles to a single binary deployable on ARM64 hardware.",
+      'zh-TW': '四個 repo 組成完整的工業邊緣棧。SECS/GEM driver 實作 12 項 SEMI 標準。邊緣閘道器透過插件架構橋接設備到 MES。OT 資安掃描器對照 IEC 62443 和 NIST CSF 2.0 做合規檢查。API 閘道器把它們串起來。每個都編譯成單一 binary，可部署在 ARM64 硬體上。',
+      ja: '4つのリポジトリで完全な産業エッジスタックを構成。SECS/GEMドライバーは12のSEMI標準を実装。エッジゲートウェイはプラグインアーキテクチャでデバイスをMESに接続。OTセキュリティスキャナーはIEC 62443とNIST CSF 2.0のコンプライアンスを検証。APIゲートウェイがそれらを統合。各リポは単一バイナリにコンパイルされ、ARM64ハードウェアにデプロイ可能。',
+    }
+  },
+  {
+    id: 'secsgem-mcp-server',
+    name: {
+      'zh-TW': 'SECS/GEM MCP Server',
+      en: 'SECS/GEM MCP Server',
+      ja: 'SECS/GEM MCPサーバー'
+    },
+    description: {
+      'zh-TW': 'Claude Code MCP Server，用自然語言操作半導體設備。包裝 go-factory-io REST API，10 個工具涵蓋設備監控（SV/EC/告警/OEE）、遠端指令、FOUP 管理、製程工作控制、E191 資安狀態',
+      en: 'MCP Server for Claude Code -- control semiconductor equipment with natural language. Wraps go-factory-io REST API with 10 tools: equipment monitoring (SV/EC/alarms/OEE), remote commands, carrier management, process jobs, E191 security status.',
+      ja: 'Claude Code用MCPサーバー。自然言語で半導体装置を制御。go-factory-io REST APIをラップ、10ツール：設備監視（SV/EC/アラーム/OEE）、リモートコマンド、キャリア管理、プロセスジョブ、E191セキュリティ'
+    },
+    category: 'industry',
+    tags: ['python', 'fastmcp', 'secs-gem', 'claude', 'mcp'],
+    year: 2026,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/secsgem-mcp-server',
+    narrative: {
+      en: "An MCP Server that wraps go-factory-io, allowing Claude Code to interact with semiconductor equipment through natural language. Translates requests like reading sensor values or starting process jobs into proper SECS-II message sequences.",
+      'zh-TW': '包裝 go-factory-io 的 MCP Server，讓 Claude Code 可以用自然語言與半導體設備互動。將讀取感測器值或啟動製程等請求轉譯為正確的 SECS-II 訊息序列。',
+      ja: 'go-factory-ioをラップしたMCPサーバー。Claude Codeが自然言語で半導体装置と対話できるようにします。センサー値の読み取りやプロセスジョブの開始などのリクエストを、適切なSECS-IIメッセージシーケンスに変換。',
+    }
+  },
+
+  {
+    id: 'go-edge-gateway',
+    name: {
+      'zh-TW': 'go-edge-gateway - 工業邊緣閘道器',
+      en: 'go-edge-gateway - Industrial Edge Gateway',
+      ja: 'go-edge-gateway - 産業エッジゲートウェイ'
+    },
+    description: {
+      'zh-TW': '模組化邊緣閘道器，透過插件架構橋接工業設備到 MES/雲端。支援 SECS/GEM (HSMS)、Modbus TCP、MQTT 3.1.1/5.0，YAML 設定驅動，新增設備不需改程式碼。單一 Go binary，支援 Linux ARM64 現場部署',
+      en: 'Modular edge gateway bridging industrial devices to MES/cloud via plugin architecture. Supports SECS/GEM (HSMS), Modbus TCP, MQTT 3.1.1/5.0. YAML config-driven, no code change to add devices. Single Go binary for ARM64 field deployment.',
+      ja: 'プラグインアーキテクチャで産業機器をMES/クラウドに橋渡しするモジュラーエッジゲートウェイ。SECS/GEM (HSMS)、Modbus TCP、MQTT 3.1.1/5.0対応。YAML設定駆動、デバイス追加にコード変更不要。ARM64対応単一Goバイナリ'
+    },
+    category: 'industry',
+    tags: ['go', 'secs-gem', 'modbus', 'mqtt', 'hsms'],
+    year: 2026,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/go-edge-gateway'
+  },
+  {
+    id: 'go-ot-security',
+    name: {
+      'zh-TW': 'go-ot-security - OT/ICS 資安掃描平台',
+      en: 'go-ot-security - OT/ICS Security Scanner',
+      ja: 'go-ot-security - OT/ICSセキュリティスキャナー'
+    },
+    description: {
+      'zh-TW': 'OT/ICS 資安評估與監控平台。子網掃描（8 種工業協定 + 11 種 IT 服務）、CVE/弱密碼偵測、合規對照（IEC 62443、NIST CSF 2.0、ISO 27001、SEMI E187）、Modbus 組態漂移偵測、內嵌 React 儀表板。單一 Go binary，可部署至 Raspberry Pi',
+      en: 'OT/ICS security assessment platform. Subnet scanning (8 industrial protocols + 11 IT services), CVE/credential detection, compliance mapping (IEC 62443, NIST CSF 2.0, ISO 27001, SEMI E187), Modbus config drift detection, embedded React dashboard. Single Go binary for Raspberry Pi.',
+      ja: 'OT/ICSセキュリティ評価プラットフォーム。サブネットスキャン（8産業プロトコル+11 ITサービス）、CVE/認証情報検出、コンプライアンスマッピング（IEC 62443、NIST CSF 2.0、ISO 27001、SEMI E187）、Modbus設定ドリフト検出、React組込みダッシュボード。Raspberry Pi対応単一Goバイナリ'
+    },
+    category: 'industry',
+    tags: ['go', 'iec62443', 'nist', 'modbus', 'react'],
+    year: 2026,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/go-ot-security'
+  },
+  {
+    id: 'dashai-go',
+    name: {
+      'zh-TW': 'dashai-go - Go 共用後端閘道器',
+      en: 'dashai-go - Shared Go Backend Gateway',
+      ja: 'dashai-go - 共通Goバックエンドゲートウェイ'
+    },
+    description: {
+      'zh-TW': '共用 Go 後端閘道器，Chi 路由 + pgx (Neon PostgreSQL) + JWT (Logto) 認證。服務多個 AI 模組（宿曜道運勢/相性引擎、Modbus 掃描、資安掃描、邊緣協調器），Rate limiting + CORS + 內嵌 React 儀表板。Render 自動部署',
+      en: 'Shared Go backend gateway serving multiple AI modules. Chi router + pgx (Neon PostgreSQL) + JWT (Logto) auth. Serves Shukuyo fortune/compatibility engine, Modbus scanner, security scanner, edge coordinator. Rate limiting, CORS, embedded React dashboard. Auto-deployed on Render.',
+      ja: '複数AIモジュールを提供する共通Goバックエンドゲートウェイ。Chiルーター + pgx (Neon PostgreSQL) + JWT (Logto)認証。宿曜道運勢/相性エンジン、Modbusスキャナー、セキュリティスキャナー、エッジコーディネーターを提供。Renderデプロイ'
+    },
+    category: 'industry',
+    tags: ['go', 'chi', 'pgx', 'neon', 'jwt', 'render'],
+    year: 2026,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/dashai-go'
+  },
+
+  // === 交易金融 (trading) ===
+  {
+    id: 'sinoauto',
+    name: {
+      'zh-TW': 'SinoAuto 台股自動交易',
+      en: 'SinoAuto Taiwan Stock Auto Trading',
+      ja: 'SinoAuto 台湾株式自動売買'
+    },
+    description: {
+      'zh-TW': '永豐 Shioaji API 整合 Claude AI 決策引擎，整張交易、自動學習反思、策略調整、績效追蹤',
+      en: 'Sinopac Shioaji API with Claude AI decision engine: full-lot trading, auto-learning with reflection, strategy adjustment, performance tracking',
+      ja: '永豊Shioaji API＋Claude AI意思決定エンジン、単元株取引、自動学習＆反省、戦略調整、パフォーマンス追跡'
+    },
+    category: 'trading',
+    tags: ['vue3', 'primevue', 'fastapi', 'shioaji', 'claude', 'vercel', 'render'],
+    year: 2025,
+    scale: 'production'
+  },
+  {
+    id: 'dashtrade',
+    name: {
+      'zh-TW': 'DashTrade AI 技術分析',
+      en: 'DashTrade AI Technical Analysis',
+      ja: 'DashTrade AI テクニカル分析'
+    },
+    description: {
+      'zh-TW': '台股美股日股多市場支援，RSI/KD/MACD/布林通道、雙引擎分析、每日自動預測 80 支股票並隔日驗證',
+      en: 'Multi-market support (TW/US/JP stocks): RSI/KD/MACD/Bollinger Bands, dual-engine analysis, daily auto-prediction of 80 stocks with next-day validation',
+      ja: '台湾・米国・日本株マルチマーケット対応、RSI/KD/MACD/ボリンジャーバンド、デュアルエンジン分析、毎日80銘柄自動予測＆翌日検証'
+    },
+    category: 'trading',
+    tags: ['vue3', 'shoelace', 'fastapi', 'sqlmodel', 'neon', 'vercel', 'render'],
+    year: 2025,
+    scale: 'personal',
+    narrative: {
+      en: "Technical analysis across Taiwan, US, and Japan markets. Generates daily predictions for 80 stocks using RSI, KD, MACD, and Bollinger Bands, then validates against next-day results. A testing ground for evaluating whether pattern-based signals carry predictive weight in practice.",
+      'zh-TW': '台股、美股、日股的技術分析。每日用 RSI、KD、MACD、布林通道對 80 支股票產出預測，隔日驗證結果。用來測試型態訊號在實務上是否具有預測力。',
+      ja: '台湾・米国・日本市場のテクニカル分析。RSI、KD、MACD、ボリンジャーバンドで毎日80銘柄の予測を生成し、翌日の結果で検証。パターンベースのシグナルが実際に予測力を持つかを検証する場。',
+    }
+  },
+
+  // === 開發工具 (devtools) ===
+  {
+    id: 'dash-devtools',
+    name: {
+      'zh-TW': 'DashAI DevTools',
+      en: 'DashAI DevTools',
+      ja: 'DashAI DevTools'
+    },
+    description: {
+      'zh-TW': '開發工具集：E2E 測試、Gemini AI 視覺分析、程式碼品質檢查、OpenSpec 規格驅動、專案健康評分',
+      en: 'Developer toolkit: E2E testing, Gemini AI visual analysis, code quality checks, OpenSpec spec-driven workflow, project health scoring',
+      ja: '開発ツールキット：E2Eテスト、Gemini AI視覚分析、コード品質チェック、OpenSpec仕様駆動、プロジェクトヘルススコアリング'
+    },
+    category: 'devtools',
+    tags: ['python', 'gemini', 'bash'],
+    year: 2025,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/dash-devtools'
+  },
+  {
+    id: 'dash-skills',
+    name: {
+      'zh-TW': 'Claude Code Skills',
+      en: 'Claude Code Skills',
+      ja: 'Claude Code スキル'
+    },
+    description: {
+      'zh-TW': '自建 6 + 外部收錄 17 個 Claude Code 技能，涵蓋 OpenSpec、FastAPI、Angular、UI/UX 設計等模板',
+      en: '6 custom + 17 curated Claude Code skills covering OpenSpec, FastAPI, Angular, UI/UX design templates',
+      ja: '自作6＋外部キュレーション17のClaude Codeスキル、OpenSpec・FastAPI・Angular・UI/UXデザインテンプレート'
+    },
+    category: 'devtools',
+    tags: ['claude', 'bash'],
+    year: 2025,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/dash-skills'
+  },
+  {
+    id: 'claude-code-skills',
+    name: {
+      'zh-TW': 'Claude Code Skill Pack (公開版)',
+      en: 'Claude Code Skill Pack (Public)',
+      ja: 'Claude Code スキルパック (公開版)'
+    },
+    description: {
+      'zh-TW': '7 個可重用的 Claude Code 技能包：OpenSpec 規格驅動、建構錯誤修復、OWASP 安全審查、死碼清理、架構稽核、FastAPI 模式、Angular+PrimeNG 模式。一鍵安裝',
+      en: '7 reusable Claude Code skills: OpenSpec spec-driven dev, build error resolver, OWASP security review, dead code cleanup, architecture audit, FastAPI patterns, Angular+PrimeNG patterns. One-command install.',
+      ja: '再利用可能な7つのClaude Codeスキル：OpenSpec仕様駆動、ビルドエラー修復、OWASPセキュリティ審査、デッドコード削除、アーキテクチャ監査、FastAPIパターン、Angular+PrimeNGパターン。ワンコマンドインストール'
+    },
+    category: 'devtools',
+    tags: ['claude', 'bash'],
+    year: 2026,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/claude-code-skills',
+    narrative: {
+      en: "Seven development patterns extracted from repeated cross-project workflows: spec-driven development, build error resolution, OWASP security review, dead code cleanup, architecture audit, and framework-specific patterns for FastAPI and Angular. Packaged as installable Claude Code skills.",
+      'zh-TW': '從跨專案重複的工作流程中萃取出七個開發模式：規格驅動開發、建構錯誤修復、OWASP 安全審查、死碼清理、架構稽核，以及 FastAPI 和 Angular 的框架模式。打包為可安裝的 Claude Code 技能。',
+      ja: 'プロジェクト横断的に繰り返される7つの開発パターンを抽出：仕様駆動開発、ビルドエラー修復、OWASPセキュリティ審査、デッドコード削除、アーキテクチャ監査、FastAPIとAngularのフレームワークパターン。インストール可能なClaude Codeスキルとしてパッケージ化。',
+    }
+  },
+  {
+    id: 'git-security-hooks',
+    name: {
+      'zh-TW': 'Git Security Hooks',
+      en: 'Git Security Hooks',
+      ja: 'Git Security Hooks'
+    },
+    description: {
+      'zh-TW': 'gitleaks pre-commit hook，自動掃描 API Key / Token / 密碼，阻擋提交、支援全域設定',
+      en: 'Gitleaks pre-commit hook: auto-scan for API keys, tokens, passwords with commit blocking and global configuration support',
+      ja: 'gitleaks pre-commitフック、API Key/Token/パスワード自動スキャン、コミットブロック、グローバル設定対応'
+    },
+    category: 'devtools',
+    tags: ['bash', 'git'],
+    year: 2025,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/git-security-hooks'
+  },
+
+  {
+    id: 'ai-red-team',
+    name: {
+      'zh-TW': 'AI Red Team Toolkit',
+      en: 'AI Red Team Toolkit',
+      ja: 'AI Red Team Toolkit'
+    },
+    description: {
+      'zh-TW': 'LLM 對抗性安全測試工具，177 個攻擊模板涵蓋 12 類攻擊向量（含 RAG 污染、工具注入、幻覺誘導），支援三語介面與主流模型分群測試',
+      en: 'LLM adversarial safety testing toolkit: 177 attack templates across 12 categories (incl. RAG poisoning, tool use injection, hallucination), trilingual UI (EN/ZH/JA), multi-vendor model testing',
+      ja: 'LLM敵対的安全テストツール、177攻撃テンプレート12カテゴリ（RAGポイズニング・ツール注入・ハルシネーション含む）、三言語UI、マルチベンダーモデルテスト対応'
+    },
+    category: 'devtools',
+    tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'claude'],
+    year: 2026,
+    scale: 'personal',
+    url: 'https://ai-red-team.dashai.dev',
+    screenshot: '/screenshots/ai-red-team.png',
+    narrative: {
+      en: "A structured collection of 177 adversarial attack templates across 12 categories, covering prompt injection, RAG poisoning, tool use hijacking, and bias detection. Three languages. Built after observing that most teams deploying AI features had no systematic way to test adversarial robustness.",
+      'zh-TW': '177 個對抗性攻擊模板，涵蓋 12 類攻擊向量：prompt injection、RAG 污染、工具劫持、偏見偵測。三語支援。起因是觀察到多數部署 AI 功能的團隊缺乏系統性的對抗性測試方法。',
+      ja: '177のアドバーサリアル攻撃テンプレート、12カテゴリ。プロンプトインジェクション、RAGポイズニング、ツールハイジャック、バイアス検出を網羅。三言語対応。AI機能をデプロイするチームの多くが体系的な敵対的テスト手段を持っていないことがきっかけ。',
+    }
+  },
+
+  {
+    id: 'git-security-tools',
+    name: {
+      'zh-TW': 'GitGuard Sync',
+      en: 'GitGuard Sync',
+      ja: 'GitGuard Sync'
+    },
+    description: {
+      'zh-TW': 'GitLab/GitHub 雙平台倉庫安全同步，GitGuardian 整合機敏資料掃描，支援自架 GitLab、現代化 GUI 介面',
+      en: 'GitLab/GitHub dual-platform repo security sync with GitGuardian-integrated secret scanning, self-hosted GitLab support, modern GUI',
+      ja: 'GitLab/GitHubデュアルプラットフォームリポジトリ安全同期、GitGuardian統合機密スキャン、自己ホストGitLab対応、モダンGUI'
+    },
+    category: 'devtools',
+    tags: ['python', 'git', 'bash'],
+    year: 2025,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/gitguard_sync'
+  },
+  {
+    id: 'dash-doc-generator',
+    name: {
+      'zh-TW': '企業文件產生器',
+      en: 'Enterprise Document Generator',
+      ja: '企業ドキュメントジェネレーター'
+    },
+    description: {
+      'zh-TW': '17 種文件類型自動產生，對應 19+ 個系統，Word 輸出、自動掃描既有系統資訊填入',
+      en: 'Auto-generate 17 document types for 19+ systems: Word output with auto-scanning to populate system information',
+      ja: '17種ドキュメント自動生成、19+システム対応、Word出力＆自動スキャンによるシステム情報自動入力'
+    },
+    category: 'devtools',
+    tags: ['python', 'bash'],
+    year: 2025,
+    scale: 'internal'
+  },
+
+  // === 個人作品 (personal) ===
+  {
+    id: 'shukuyo',
+    name: {
+      'zh-TW': '宿曜道 - 運勢 / HR 選才 / 獵頭配對',
+      en: 'Shukuyodo - Fortune / HR Matching / Headhunter',
+      ja: '宿曜道 - 運勢・HR選考・ヘッドハント'
+    },
+    description: {
+      'zh-TW': '空海從唐朝帶回的宿曜經，做成現代分析平台。27 宿相性診斷（每筆結果追溯原典）、個人運勢、HR 選才、獵頭交叉矩陣。規則引擎，不用 LLM 推論，資料存瀏覽器。中日英三語',
+      en: 'Kukai brought this sutra from the Tang Dynasty in 806 AD. I turned it into software. 27 mansion compatibility (every result links to source text), personal fortune, HR talent matching, headhunter cross-matrix. Rule-based engine, no LLM. Trilingual.',
+      ja: '空海が唐から持ち帰った宿曜経をソフトウェアに。27宿相性診断（全結果に原典リンク）、個人運勢、HR適材適所、ヘッドハントクロス表。ルールベースエンジン、LLMなし。三言語対応'
+    },
+    category: 'personal',
+    tags: ['vue3', 'primevue', 'fastapi', 'neon', 'vercel', 'render', 'i18n'],
+    year: 2025,
+    scale: 'production',
+    url: 'https://shukuyo.dashai.dev',
+    screenshot: '/screenshots/shukuyo.png',
+    video: { en: '/videos/shukuyodo-intro.en.mp4', ja: '/videos/shukuyodo-intro.ja.mp4' },
+    narrative: {
+      en: "Based on the Sukuyodo sutra that Kukai brought from Tang Dynasty China in 806 AD. The original text from the Taisho canon (T21 No.1299) is translated into a rule-based engine covering 27 lunar mansions and six relationship types. Every result traces back to its source passage. No LLM inference involved. An HR compatibility module extends the same logic to team composition analysis.",
+      'zh-TW': '根據空海西元 806 年從唐朝帶回的宿曜經。以大正藏 T21 No.1299 原典為基礎，轉譯成規則引擎，涵蓋 27 宿和六種關係類型。每筆結果都可追溯到原文段落。不涉及 LLM 推論。HR 相性模組將同一套邏輯延伸到團隊組成分析。',
+      ja: '空海が806年に唐から持ち帰った宿曜経に基づくシステム。大正蔵 T21 No.1299 の原典をルールベースエンジンに変換し、27宿と6つの関係タイプを網羅。全結果は原典の該当箇所に遡及可能。LLM推論は使用していません。HR相性モジュールは同じロジックをチーム構成分析に拡張。',
+    }
+  },
+  {
+    id: 'job-crawler',
+    name: {
+      'zh-TW': '外包平台職缺爬蟲',
+      en: 'Freelance Job Platform Crawler',
+      ja: 'フリーランス求人クローラー'
+    },
+    description: {
+      'zh-TW': '日本 Lancers/CrowdWorks/Coconala + 美國 Upwork/Freelancer 多平台爬取，Claude API 雙語翻譯',
+      en: 'Multi-platform crawler for Japan (Lancers/CrowdWorks/Coconala) & US (Upwork/Freelancer) with Claude API bilingual translation',
+      ja: '日本（Lancers/CrowdWorks/Coconala）＋米国（Upwork/Freelancer）マルチプラットフォームクローラー、Claude API二言語翻訳'
+    },
+    category: 'personal',
+    tags: ['vue3', 'shoelace', 'fastapi', 'neon', 'claude'],
+    year: 2025,
+    scale: 'personal'
+  },
+  {
+    id: 'jinkochino',
+    name: {
+      'zh-TW': '人工知能股份有限公司官網 (已停運)',
+      en: 'Jinkochino Ltd. Official Website (Dissolved)',
+      ja: '人工知能株式会社公式サイト (解散済み)'
+    },
+    description: {
+      'zh-TW': '已解散公司官方網站，正體中文/English/日本語三語切換、深色淺色主題、響應式設計',
+      en: 'Dissolved company official website: Traditional Chinese/English/Japanese trilingual, dark/light theme, responsive design',
+      ja: '解散済み企業公式サイト、繁体中文/English/日本語トリリンガル、ダーク/ライトテーマ、レスポンシブデザイン'
+    },
+    category: 'personal',
+    tags: ['vite', 'shoelace', 'vercel'],
+    year: 2024,
+    scale: 'personal'
+  },
+  {
+    id: 'dashastro',
+    name: {
+      'zh-TW': 'DashAstro 占星工具平台',
+      en: 'DashAstro Astrology Platform',
+      ja: 'DashAstro 占星プラットフォーム'
+    },
+    description: {
+      'zh-TW': '融合宿曜道、西方占星、塔羅、日本吉日曆，Skyfield 行星計算 + Claude AI 解讀，9 組 API 路由',
+      en: 'Blending Sukuyodo, Western astrology, tarot, and Japanese auspicious calendar: Skyfield planetary calculations + Claude AI interpretation, 9 API routes',
+      ja: '宿曜道・西洋占星術・タロット・日本吉日暦を融合、Skyfield惑星計算＋Claude AI解読、9組APIルート'
+    },
+    category: 'personal',
+    tags: ['vue3', 'shoelace', 'fastapi', 'sqlmodel', 'neon', 'claude', 'vercel', 'render'],
+    year: 2025,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/DashAstro'
+  },
+  {
+    id: 'dashai-portfolio',
+    name: {
+      'zh-TW': 'DashAI Portfolio',
+      en: 'DashAI Portfolio',
+      ja: 'DashAI ポートフォリオ'
+    },
+    description: {
+      'zh-TW': '本作品集網站，Vue 3 + PrimeVue Aura 暗色主題，專案分類篩選與技術棧統計',
+      en: 'This portfolio site: Vue 3 + PrimeVue Aura dark theme, project category filtering and tech stack statistics',
+      ja: '本ポートフォリオサイト、Vue 3 + PrimeVue Auraダークテーマ、プロジェクトカテゴリフィルタリング＆技術スタック統計'
+    },
+    category: 'personal',
+    tags: ['vue3', 'primevue', 'typescript', 'vite', 'vercel'],
+    year: 2025,
+    scale: 'personal',
+    screenshot: '/screenshots/dashai-portfolio.png'
+  },
+
+  // === 學習專案 (learning) ===
+  {
+    id: 'jlpt-n1-learner',
+    name: {
+      'zh-TW': 'JLPT 學習系統',
+      en: 'JLPT Learning System',
+      ja: 'JLPT 学習システム'
+    },
+    description: {
+      'zh-TW': 'Claude AI 自適應學習，N5-N1 全級別支援、文法弱項追蹤、讀解練習、聽解男女聲切換、語速調整',
+      en: 'Claude AI adaptive learning: N5-N1 full level support, grammar weak point tracking, reading comprehension, listening with male/female voice toggle, speed adjustment',
+      ja: 'Claude AI適応学習、N5-N1全レベル対応、文法弱点追跡、読解練習、聴解男女音声切替、速度調整'
+    },
+    category: 'learning',
+    tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'claude'],
+    year: 2025,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/jlpt-n1-learner'
+  },
+  {
+    id: 'toeic-practice',
+    name: {
+      'zh-TW': 'TOEIC 刷題系統',
+      en: 'TOEIC Practice',
+      ja: 'TOEIC 練習システム'
+    },
+    description: {
+      'zh-TW': 'TOEIC Reading Part 5/6/7 獨立刷題 App，練習模式即時回饋、75 分鐘模擬考計時、成績趨勢追蹤與弱項分析，124 題離線題庫',
+      en: 'Standalone TOEIC Reading drill app: Part 5/6/7 practice with instant feedback, 75-min timed mock test, score trend tracking and weak category analysis, 124-question offline bank',
+      ja: 'TOEIC Reading Part 5/6/7 独立練習アプリ、即時フィードバック付き練習モード、75分模試タイマー、成績推移追跡＆弱点分析、124問オフライン問題集'
+    },
+    category: 'learning',
+    tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'chartjs'],
+    year: 2026,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/toeic-practice'
+  },
+  {
+    id: 'ai-english-tutor',
+    name: {
+      'zh-TW': 'AI 英語面試家教',
+      en: 'AI English Tutor',
+      ja: 'AI英語面接チューター'
+    },
+    description: {
+      'zh-TW': '英語面試口說練習平台。27 題面試題庫 + 離線即時計分、語音輸入/輸出（Web Speech API）、AI 文法修正與翻譯、Claude API 深度回饋、藍染設計系統、PWA 離線可用。企業級資安（CSP / Rate Limiting / DOMPurify）+ WCAG AA 無障礙合規',
+      en: 'English interview practice platform. 27-question bank with offline scoring, voice I/O (Web Speech API), AI grammar correction & translation, Claude API deep feedback, Aizome design system, PWA offline-ready. Enterprise security (CSP / rate limiting / DOMPurify) + WCAG AA accessibility',
+      ja: '英語面接練習プラットフォーム。27問の面接問題バンク＋オフライン即時採点、音声入出力（Web Speech API）、AI文法修正＆翻訳、Claude APIディープフィードバック、藍染デザインシステム、PWAオフライン対応。企業レベルセキュリティ＋WCAG AAアクセシビリティ'
+    },
+    category: 'learning',
+    tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'claude', 'vercel', 'render', 'web-speech', 'pwa'],
+    year: 2026,
+    scale: 'production',
+    url: 'https://english.dashai.dev',
+    screenshot: '/screenshots/ai-english-tutor.png',
+    narrative: {
+      en: "An English speaking practice platform designed around job interview scenarios. Voice input through Web Speech API, grammar analysis and feedback via Claude API. 27 interview questions with offline scoring. Available as a PWA for use without network connectivity.",
+      'zh-TW': '針對求職面試場景設計的英語口說練習平台。透過 Web Speech API 語音輸入，Claude API 做文法分析和回饋。27 題面試題，支援離線評分。可作為 PWA 在無網路環境下使用。',
+      ja: '就職面接を想定した英語スピーキング練習プラットフォーム。Web Speech APIによる音声入力、Claude APIによる文法分析とフィードバック。27の面接質問とオフライン採点に対応。PWAとしてネットワーク接続なしでも利用可能。',
+    }
+  }
+]
