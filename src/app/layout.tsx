@@ -24,15 +24,20 @@ const notoSerifJP = Noto_Serif_JP({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://portfolio.dashai.dev'),
   title: 'DashAI Portfolio',
-  description: 'I go where the users are, watch how they actually work, and write the system that fits.',
+  description: 'Solving problems at the point where people do the work. 26 projects across manufacturing, trading, developer tools, and more.',
   openGraph: {
     title: 'DashAI Portfolio',
-    description: 'I go where the users are, watch how they actually work, and write the system that fits.',
+    description: 'Solving problems at the point where people do the work. 26 projects across manufacturing, trading, developer tools, and more.',
     url: 'https://portfolio.dashai.dev',
     siteName: 'DashAI',
     images: ['/og-image.png'],
     type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 
