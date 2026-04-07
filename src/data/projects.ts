@@ -148,6 +148,61 @@ export const projects: Project[] = [
     url: 'https://github.com/seikaikyo/secsgem-mcp-server'
   },
 
+  {
+    id: 'go-edge-gateway',
+    name: {
+      'zh-TW': 'go-edge-gateway - 工業邊緣閘道器',
+      en: 'go-edge-gateway - Industrial Edge Gateway',
+      ja: 'go-edge-gateway - 産業エッジゲートウェイ'
+    },
+    description: {
+      'zh-TW': '模組化邊緣閘道器，透過插件架構橋接工業設備到 MES/雲端。支援 SECS/GEM (HSMS)、Modbus TCP、MQTT 3.1.1/5.0，YAML 設定驅動，新增設備不需改程式碼。單一 Go binary，支援 Linux ARM64 現場部署',
+      en: 'Modular edge gateway bridging industrial devices to MES/cloud via plugin architecture. Supports SECS/GEM (HSMS), Modbus TCP, MQTT 3.1.1/5.0. YAML config-driven, no code change to add devices. Single Go binary for ARM64 field deployment.',
+      ja: 'プラグインアーキテクチャで産業機器をMES/クラウドに橋渡しするモジュラーエッジゲートウェイ。SECS/GEM (HSMS)、Modbus TCP、MQTT 3.1.1/5.0対応。YAML設定駆動、デバイス追加にコード変更不要。ARM64対応単一Goバイナリ'
+    },
+    category: 'industry',
+    tags: ['go', 'secs-gem', 'modbus', 'mqtt', 'hsms'],
+    year: 2026,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/go-edge-gateway'
+  },
+  {
+    id: 'go-ot-security',
+    name: {
+      'zh-TW': 'go-ot-security - OT/ICS 資安掃描平台',
+      en: 'go-ot-security - OT/ICS Security Scanner',
+      ja: 'go-ot-security - OT/ICSセキュリティスキャナー'
+    },
+    description: {
+      'zh-TW': 'OT/ICS 資安評估與監控平台。子網掃描（8 種工業協定 + 11 種 IT 服務）、CVE/弱密碼偵測、合規對照（IEC 62443、NIST CSF 2.0、ISO 27001、SEMI E187）、Modbus 組態漂移偵測、內嵌 React 儀表板。單一 Go binary，可部署至 Raspberry Pi',
+      en: 'OT/ICS security assessment platform. Subnet scanning (8 industrial protocols + 11 IT services), CVE/credential detection, compliance mapping (IEC 62443, NIST CSF 2.0, ISO 27001, SEMI E187), Modbus config drift detection, embedded React dashboard. Single Go binary for Raspberry Pi.',
+      ja: 'OT/ICSセキュリティ評価プラットフォーム。サブネットスキャン（8産業プロトコル+11 ITサービス）、CVE/認証情報検出、コンプライアンスマッピング（IEC 62443、NIST CSF 2.0、ISO 27001、SEMI E187）、Modbus設定ドリフト検出、React組込みダッシュボード。Raspberry Pi対応単一Goバイナリ'
+    },
+    category: 'industry',
+    tags: ['go', 'iec62443', 'nist', 'modbus', 'react'],
+    year: 2026,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/go-ot-security'
+  },
+  {
+    id: 'dashai-go',
+    name: {
+      'zh-TW': 'dashai-go - Go 共用後端閘道器',
+      en: 'dashai-go - Shared Go Backend Gateway',
+      ja: 'dashai-go - 共通Goバックエンドゲートウェイ'
+    },
+    description: {
+      'zh-TW': '共用 Go 後端閘道器，Chi 路由 + pgx (Neon PostgreSQL) + JWT (Logto) 認證。服務多個 AI 模組（宿曜道運勢/相性引擎、Modbus 掃描、資安掃描、邊緣協調器），Rate limiting + CORS + 內嵌 React 儀表板。Render 自動部署',
+      en: 'Shared Go backend gateway serving multiple AI modules. Chi router + pgx (Neon PostgreSQL) + JWT (Logto) auth. Serves Shukuyo fortune/compatibility engine, Modbus scanner, security scanner, edge coordinator. Rate limiting, CORS, embedded React dashboard. Auto-deployed on Render.',
+      ja: '複数AIモジュールを提供する共通Goバックエンドゲートウェイ。Chiルーター + pgx (Neon PostgreSQL) + JWT (Logto)認証。宿曜道運勢/相性エンジン、Modbusスキャナー、セキュリティスキャナー、エッジコーディネーターを提供。Renderデプロイ'
+    },
+    category: 'industry',
+    tags: ['go', 'chi', 'pgx', 'neon', 'jwt', 'render'],
+    year: 2026,
+    scale: 'personal',
+    url: 'https://github.com/seikaikyo/dashai-go'
+  },
+
   // === 交易金融 (trading) ===
   {
     id: 'sinoauto',
