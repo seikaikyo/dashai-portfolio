@@ -413,7 +413,7 @@ export const projects: Project[] = [
       ja: '空海が唐から持ち帰った宿曜経をソフトウェアに。27宿相性診断（全結果に原典リンク）、個人運勢、HR適材適所、ヘッドハントクロス表。ルールベースエンジン、LLMなし。三言語対応'
     },
     category: 'personal',
-    tags: ['vue3', 'primevue', 'fastapi', 'neon', 'vercel', 'render', 'i18n'],
+    tags: ['nuxt3', 'vue3', 'primevue', 'go', 'fastapi', 'neon', 'vercel', 'render', 'i18n'],
     year: 2025,
     scale: 'production',
     url: 'https://shukuyo.dashai.dev',
