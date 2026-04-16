@@ -23,6 +23,26 @@ export const projects: Project[] = [
     video: { en: '/videos/smart-factory-intro.en.mp4', ja: '/videos/smart-factory-intro.ja.mp4' }
   },
 
+  {
+    id: 'gotech-demo',
+    name: {
+      'zh-TW': 'GoTech Demo - 企業架構互動展示',
+      en: 'GoTech Demo - Enterprise Architecture Showcase',
+      ja: 'GoTech Demo - エンタープライズアーキテクチャ展示'
+    },
+    description: {
+      'zh-TW': '10K-1M 使用者規模的即時互動 Demo。五個場景：高併發 Goroutine Pool + Singleflight、K8s HPA 自動伸縮 + 滾動更新 + OOMKilled、分散式監控 RED Metrics + Error Budget、資料庫連線池飽和視覺化、即時協作編輯 CRDT。Scale Slider 拉動即時縮放所有數字，三語切換（EN/JA/ZH）',
+      en: 'Interactive demos scaling from 10K to 1M users. Five scenarios: high concurrency goroutine pool + singleflight, K8s HPA autoscaling + rolling update + OOMKilled, distributed monitoring RED metrics + error budget, database connection pool saturation, real-time collaborative editing CRDT. Scale slider dynamically adjusts all metrics. Trilingual (EN/JA/ZH).',
+      ja: '1万〜100万ユーザー規模のインタラクティブデモ。5シナリオ：高並行処理Goroutine Pool + Singleflight、K8s HPAオートスケーリング + ローリングアップデート + OOMKilled、分散監視REDメトリクス + エラーバジェット、DBコネクションプール飽和、リアルタイム協調編集CRDT。スケールスライダーで全指標を動的調整。三言語対応（EN/JA/ZH）'
+    },
+    category: 'side-project',
+    tags: ['go', 'nextjs', 'react', 'typescript', 'tailwindcss', 'shadcn', 'kubernetes', 'websocket', 'vercel'],
+    year: 2026,
+    scale: 'prototype',
+    url: 'https://gotech.dashai.dev',
+    screenshot: '/screenshots/gotech-demo.png'
+  },
+
   // === 產業經歷 (industry) ===
   {
     id: 'ind-mes',
