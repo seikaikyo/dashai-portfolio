@@ -100,7 +100,12 @@ export const projects: Project[] = [
     category: 'industry',
     tags: ['yolo', 'python', 'opencv', 'vite', 'fastapi', 'gemini', 'streamlit'],
     year: 2024,
-    scale: 'production'
+    scale: 'production',
+    narrative: {
+      en: "Operator motion was hard to decompose and SOP compliance relied on supervisors watching the floor. I mounted Tapo webcams on workstations, ran YOLO11 with pose estimation, decomposed each action's timing automatically, and flagged SOP deviations on the spot for the IE team. AOI defect classification feeds into automated 8D report generation -- from detection to corrective report without manual handoff.",
+      'zh-TW': '操作員動作拆不開，SOP 遵循度只能靠主管現場看。我把 Tapo webcam 架上工作站，YOLO11 加姿勢推定跑起來，每個動作的時間自動拆出來，SOP 偏差當場標給 IE 團隊審。AOI 缺陷分類再串進 8D 報告自動生成，從判別到改善報告不用手動搬。',
+      ja: 'オペレーターの動作分解が難しく、SOP 遵守は現場監督の目視に頼っていました。作業ステーションに Tapo webcam を取り付け、YOLO11 + 姿勢推定を動かし、各動作のタイミングを自動分解、SOP 逸脱をその場で IE チームにフラグ。AOI 欠陥分類は 8D レポート自動生成にフィード -- 検出から改善レポートまで手動の受け渡しなし。',
+    }
   },
   {
     id: 'ind-warehouse',
@@ -117,7 +122,12 @@ export const projects: Project[] = [
     category: 'industry',
     tags: ['vite', 'javascript', 'shoelace', 'vercel'],
     year: 2024,
-    scale: 'production'
+    scale: 'production',
+    narrative: {
+      en: "Warehouse workflows were handwritten with manual transport, and batch misplacement was common. I built AMR dispatch simulation with A* pathfinding to preview conflict scenarios; RFID product lifecycle tracking wired into WMS so every stage from receiving to shipping has event records; a visual label template editor lets warehouse operators edit versions themselves instead of filing tickets.",
+      'zh-TW': '倉庫工作流手寫加人工搬運，批量錯置常見。我做了 AMR 調度模擬加 A* 路徑規劃，跑完排程預估衝突情境；RFID 產品生命週期追蹤接上 WMS，從入庫到出貨每階段都有事件記錄；標籤樣板視覺化編輯器讓倉管自己改版，不用再開 ticket。',
+      ja: '倉庫ワークフローは手書き+手搬送で、ロット誤配置が多発していました。A* 経路探索を用いた AMR 配車シミュレーションで競合シナリオを事前確認、RFID 製品ライフサイクル追跡を WMS に接続、入庫から出荷まで各段階にイベント記録、ラベルテンプレートのビジュアルエディタで倉庫オペレーター自身がバージョン編集可能、チケット起票不要に。',
+    }
   },
   {
     id: 'ind-quality',
@@ -134,7 +144,12 @@ export const projects: Project[] = [
     category: 'industry',
     tags: ['vite', 'javascript', 'python', 'streamlit', 'shoelace'],
     year: 2024,
-    scale: 'production'
+    scale: 'production',
+    narrative: {
+      en: "Quality was run on paper 8D forms and Excel SPC charts. I digitized the full 8D workflow D0 through D8 with structured fields and approvals at each step, added AI assistance for engineers filling in root-cause analysis, rendered SPC charts automatically, and exported reports AES-encrypted for customer delivery instead of manual packaging.",
+      'zh-TW': '品管原本靠紙本 8D 表單加 Excel SPC 管制圖。我把 8D 全流程 D0 到 D8 數位化，每一步有欄位與簽核，AI 輔助讓工程師填根因分析時有參考；SPC 圖表自動化產出，報表用 AES 加密匯出給客戶，不用再人工打包壓縮。',
+      ja: '品質管理は紙の 8D 帳票と Excel の SPC 管理図で回していました。8D フルワークフロー D0 から D8 までをデジタル化、各ステップに構造化フィールドと承認、AI が根本原因分析の記入を補助、SPC チャートは自動レンダリング、レポートは AES 暗号化で客先配信、手動パッケージング不要。',
+    }
   },
   {
     id: 'ind-platform',
@@ -151,7 +166,12 @@ export const projects: Project[] = [
     category: 'industry',
     tags: ['fastapi', 'neon', 'logto', 'vercel', 'render', 'python', 'javascript', 'prisma', 'github-actions'],
     year: 2025,
-    scale: 'enterprise'
+    scale: 'enterprise',
+    narrative: {
+      en: "Internal tools were scattered across a dozen systems -- logging into one meant typing a password five times. I built SSO unified auth with 130+ permission items organized into RBAC, an API gateway with OpenAPI docs so whoever takes over can read the interfaces, and handled cross-cutting utilities like contractor access control, DB backup scheduling, carbon inventory, and SSL certificate management as shared services instead of scattered tools.",
+      'zh-TW': '企業內部資訊散在十幾個工具裡，登入一個系統要輸五次密碼。我做了 SSO 統一認證，把 130+ 個權限項目整理成一套 RBAC；API 閘道器加 OpenAPI 文件讓後續接手的人看得懂介面；承攬商門禁、DB 備份、碳盤查、SSL 憑證管理這類橫向需求當共用服務一次處理，不再是零散工具。',
+      ja: '社内ツールが十数個に分散、一つログインするだけでパスワードを 5 回入力する状況。130+ の権限を RBAC に整理した SSO 統合認証を構築、OpenAPI ドキュメント付き API ゲートウェイで後任が仕様を読めるように、請負業者入退管理、DB バックアップ、炭素インベントリ、SSL 証明書管理を横断共通サービスとして一括整備、散在ツールから脱却。',
+    }
   },
 
   {
@@ -271,7 +291,7 @@ export const projects: Project[] = [
       ja: '永豊Shioaji API＋Claude AI意思決定エンジン、単元株取引、自動学習＆反省、戦略調整、パフォーマンス追跡'
     },
     category: 'trading',
-    tags: ['vue3', 'primevue', 'fastapi', 'shioaji', 'claude', 'vercel', 'render'],
+    tags: ['vue3', 'primevue', 'fastapi', 'shioaji', 'claude', 'render'],
     year: 2025,
     scale: 'production'
   },
@@ -511,7 +531,7 @@ export const projects: Project[] = [
       ja: '宿曜道・西洋占星術・タロット・日本吉日暦を融合、Skyfield惑星計算＋Claude AI解読、9組APIルート'
     },
     category: 'personal',
-    tags: ['vue3', 'shoelace', 'fastapi', 'sqlmodel', 'neon', 'claude', 'vercel', 'render'],
+    tags: ['vue3', 'shoelace', 'fastapi', 'sqlmodel', 'neon', 'claude', 'render'],
     year: 2025,
     scale: 'personal',
     url: 'https://github.com/seikaikyo/DashAstro'
