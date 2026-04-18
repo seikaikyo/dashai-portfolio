@@ -24,6 +24,25 @@ export const projects: Project[] = [
   },
 
   {
+    id: 'amc-analytics',
+    name: {
+      'zh-TW': 'AMC Analytics Demo - AMC 濾網資料科學方法論',
+      en: 'AMC Analytics Demo - AMC Filter Data Science Methodology',
+      ja: 'AMC Analytics Demo - AMC フィルター・データサイエンス手法'
+    },
+    description: {
+      'zh-TW': '用公開資料重現鈺祥 NDA 限制下做的 AMC 濾網分析方法論。三個模型：Thomas 破過曲線 + XGBoost（R² 0.84）、LSTM + CatBoost 週期衰減（MAE 0.46）、Isolation Forest 批次異常（F1 0.84）。完整 MLOps：PSI + KS drift、週排程 retrain、BigQuery 指標歷史、drift 儀表板。Next.js 16 + FastAPI + BigQuery + GCP',
+      en: 'Public-data reproduction of the AMC filter analytics methodology I ran at Yesiang under NDA. Three models: Thomas breakthrough + XGBoost (R² 0.84), LSTM + CatBoost cycle degradation (MAE 0.46), Isolation Forest batch QC (F1 0.84). Full MLOps loop: PSI + KS drift, weekly scheduled retrain, BigQuery metric history, drift dashboard. Next.js 16 + FastAPI + BigQuery + GCP',
+      ja: '鈺祥で NDA の制約下に実施した AMC フィルター分析の手法を公開データで再現。3 モデル：Thomas 破過曲線 + XGBoost（R² 0.84）、LSTM + CatBoost サイクル劣化（MAE 0.46）、Isolation Forest バッチ QC（F1 0.84）。MLOps フルループ：PSI + KS ドリフト、週次再学習、BigQuery メトリクス履歴、ドリフトダッシュボード。Next.js 16 + FastAPI + BigQuery + GCP'
+    },
+    category: 'side-project',
+    tags: ['nextjs', 'react', 'typescript', 'tailwindcss', 'shadcn', 'fastapi', 'xgboost', 'catboost', 'pytorch', 'bigquery', 'gcp', 'vercel', 'render'],
+    year: 2026,
+    scale: 'prototype',
+    url: 'https://amc-analytics.dashai.dev',
+  },
+
+  {
     id: 'gotech-demo',
     name: {
       'zh-TW': 'GoTech Demo - 企業架構互動展示',

@@ -50,6 +50,16 @@ export const techTags: TechTag[] = [
   { id: 'github-actions', label: 'GitHub Actions' },
   { id: 'web-speech', label: 'Web Speech API' },
   { id: 'pwa', label: 'PWA' },
+  { id: 'nextjs', label: 'Next.js' },
+  { id: 'tailwindcss', label: 'Tailwind CSS' },
+  { id: 'shadcn', label: 'shadcn/ui' },
+  { id: 'kubernetes', label: 'Kubernetes' },
+  { id: 'websocket', label: 'WebSocket' },
+  { id: 'xgboost', label: 'XGBoost' },
+  { id: 'catboost', label: 'CatBoost' },
+  { id: 'pytorch', label: 'PyTorch' },
+  { id: 'bigquery', label: 'BigQuery' },
+  { id: 'gcp', label: 'Google Cloud' },
 ]
 
 export const techTagMap = Object.fromEntries(
