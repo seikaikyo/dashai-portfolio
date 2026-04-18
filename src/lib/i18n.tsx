@@ -7,7 +7,7 @@ export type Locale = 'zh-TW' | 'en' | 'ja'
 const messages: Record<Locale, Record<string, Record<string, string>>> = {
   en: {
     hero: {
-      tagline: 'Forward Deployed Engineer | Vue 3 / Angular / React / FastAPI / Go',
+      tagline: 'Manufacturing AI Engineer | FDE Track | React / Vue / Angular / FastAPI / Go',
     },
     featured: {
       eyebrow: 'Featured',
@@ -36,7 +36,7 @@ const messages: Record<Locale, Record<string, Record<string, string>>> = {
   },
   'zh-TW': {
     hero: {
-      tagline: 'Forward Deployed Engineer | Vue 3 / Angular / React / FastAPI / Go',
+      tagline: 'Manufacturing AI Engineer | FDE Track | React / Vue / Angular / FastAPI / Go',
     },
     featured: {
       eyebrow: '代表作品',
@@ -65,7 +65,7 @@ const messages: Record<Locale, Record<string, Record<string, string>>> = {
   },
   ja: {
     hero: {
-      tagline: 'Forward Deployed Engineer | Vue 3 / Angular / React / FastAPI / Go',
+      tagline: 'Manufacturing AI Engineer | FDE Track | React / Vue / Angular / FastAPI / Go',
     },
     featured: {
       eyebrow: '代表作品',
