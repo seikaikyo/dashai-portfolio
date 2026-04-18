@@ -26,10 +26,10 @@ const notoSerifJP = Noto_Serif_JP({
 export const metadata: Metadata = {
   metadataBase: new URL('https://portfolio.dashai.dev'),
   title: 'DashAI Portfolio',
-  description: 'Solving problems at the point where people do the work. 26 projects across manufacturing, trading, developer tools, and more.',
+  description: 'SeiKai Kyo — Manufacturing AI Engineer. 25 years hands-on from TSMC fabs to AMC filter lines. 26 live projects across manufacturing systems, industrial IoT, AI tooling, and developer platforms.',
   openGraph: {
     title: 'DashAI Portfolio',
-    description: 'Solving problems at the point where people do the work. 26 projects across manufacturing, trading, developer tools, and more.',
+    description: 'SeiKai Kyo — Manufacturing AI Engineer. 25 years hands-on from TSMC fabs to AMC filter lines. 26 live projects across manufacturing systems, industrial IoT, AI tooling, and developer platforms.',
     url: 'https://portfolio.dashai.dev',
     siteName: 'DashAI',
     images: ['/og-image.png'],

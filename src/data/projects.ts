@@ -409,9 +409,9 @@ export const projects: Project[] = [
       ja: '企業ドキュメントジェネレーター'
     },
     description: {
-      'zh-TW': '17 種文件類型自動產生，對應 19+ 個系統，Word 輸出、自動掃描既有系統資訊填入',
-      en: 'Auto-generate 17 document types for 19+ systems: Word output with auto-scanning to populate system information',
-      ja: '17種ドキュメント自動生成、19+システム対応、Word出力＆自動スキャンによるシステム情報自動入力'
+      'zh-TW': 'Python + Claude API 自動產生 17 種技術文件類型，對應 19+ 系統。在前公司內部採用，產出 300+ 份技術文件',
+      en: 'Python + Claude API auto-generates 17 technical document types across 19+ systems. Adopted for internal use at a previous employer, produced 300+ documents',
+      ja: 'Python + Claude API による自動ドキュメント生成。17 種×19+ システム対応、前職内部で採用し 300 件以上の技術文書を生成'
     },
     category: 'devtools',
     tags: ['python', 'bash'],
