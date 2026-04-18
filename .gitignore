@@ -32,3 +32,6 @@ out/
 openspec/
 .vercel
 .env*.local
+.env.local
+.env.production
+.env.development
