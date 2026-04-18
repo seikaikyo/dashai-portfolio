@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   title: 'DashAI Portfolio',
   description: 'SeiKai Kyo — Manufacturing AI Engineer. 25 years hands-on from TSMC fabs to AMC filter lines. 26 live projects across manufacturing systems, industrial IoT, AI tooling, and developer platforms.',
   openGraph: {
-    title: 'DashAI Portfolio',
+    title: 'SeiKai Kyo — Manufacturing AI Engineer | DashAI Portfolio',
     description: 'SeiKai Kyo — Manufacturing AI Engineer. 25 years hands-on from TSMC fabs to AMC filter lines. 26 live projects across manufacturing systems, industrial IoT, AI tooling, and developer platforms.',
     url: 'https://portfolio.dashai.dev',
     siteName: 'DashAI',
