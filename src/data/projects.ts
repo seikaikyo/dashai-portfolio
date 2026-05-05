@@ -223,6 +223,25 @@ export const projects: Project[] = [
   },
 
   {
+    id: 'shopfloor',
+    name: {
+      'zh-TW': 'shopfloor - 祥圃實業生產表單數位化雛形',
+      en: 'shopfloor - Shop Floor Control Prototype for nicegarden',
+      ja: 'shopfloor - 祥圃実業 生産現場管理システム試作版'
+    },
+    description: {
+      'zh-TW': '祥圃實業生產表單數位化雛形（Shop Floor Control / SFC）。平板優先 PWA，朝可在祥圃內部跑走，非 demo。Phase 1 範圍：屠體秤重 OCR（glm-ocr 紅漆豬號辨識）+ 加工課工時表 + 線性簽核 + 電子磅秤 PoC',
+      en: 'Shop Floor Control prototype for nicegarden (祥圃實業) meat processing facility. Tablet-first PWA, on-prem deployment target rather than demo. Phase 1: carcass weight OCR (glm-ocr for handwritten pig ID) + processing department timesheet + linear approval workflow + electronic scale PoC',
+      ja: '祥圃実業（nicegarden）食肉加工工場向け生産現場管理システム（Shop Floor Control）試作版。タブレット優先 PWA、デモではなくオンプレミス導入を視野に入れた設計。Phase 1：屠体重量 OCR（glm-ocr による手書き個体番号認識）+ 加工課工数記録 + 線形承認フロー + 電子計量器 PoC'
+    },
+    category: 'industry',
+    tags: ['nextjs', 'react', 'typescript', 'tailwindcss', 'shadcn', 'fastapi', 'sqlmodel', 'neon', 'logto', 'ocr', 'pwa', 'iot'],
+    year: 2026,
+    scale: 'prototype',
+    url: 'https://github.com/seikaikyo/shopfloor'
+  },
+
+  {
     id: 'go-edge-gateway',
     name: {
       'zh-TW': 'go-edge-gateway - 工業邊緣閘道器',
