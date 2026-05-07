@@ -8,5 +8,19 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://seikai.dev/$1",
+      "permanent": true,
+      "has": [{ "type": "host", "value": "dashai.dev" }]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://seikai.dev/$1",
+      "permanent": true,
+      "has": [{ "type": "host", "value": "www.dashai.dev" }]
+    }
   ]
 }
