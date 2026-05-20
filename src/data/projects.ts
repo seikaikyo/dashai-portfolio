@@ -346,9 +346,9 @@ export const projects: Project[] = [
       ja: 'DashAI DevTools'
     },
     description: {
-      'zh-TW': '開發工具集：E2E 測試、Gemini AI 視覺分析、程式碼品質檢查、OpenSpec 規格驅動、專案健康評分',
-      en: 'Developer toolkit: E2E testing, Gemini AI visual analysis, code quality checks, OpenSpec spec-driven workflow, project health scoring',
-      ja: '開発ツールキット：E2Eテスト、Gemini AI視覚分析、コード品質チェック、OpenSpec仕様駆動、プロジェクトヘルススコアリング'
+      'zh-TW': '開發工具集：E2E 測試、Gemini AI 視覺分析、程式碼品質檢查、語意層驗證（Next.js/i18n/a11y）、OpenSpec 規格驅動、專案健康評分；已發佈於 PyPI（pip install dash-devtools）',
+      en: 'Developer toolkit: E2E testing, Gemini AI visual analysis, code quality checks, semantic-layer validation (Next.js/i18n/a11y), OpenSpec spec-driven workflow, project health scoring; published on PyPI (pip install dash-devtools)',
+      ja: '開発ツールキット：E2Eテスト、Gemini AI視覚分析、コード品質チェック、セマンティック層検証（Next.js/i18n/a11y）、OpenSpec仕様駆動、プロジェクトヘルススコアリング；PyPIに公開（pip install dash-devtools）'
     },
     category: 'devtools',
     tags: ['python', 'gemini', 'bash'],
