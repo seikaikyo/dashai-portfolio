@@ -34,7 +34,7 @@ export function Hero() {
     <header className="pt-24 pb-16">
       <nav className="flex justify-between items-center mb-14" aria-label="Site navigation">
         <div className="text-sm font-medium tracking-[4px] uppercase text-muted-foreground">
-          Dash<span className="text-primary">AI</span>
+          SeiKai <span className="text-primary">Kyo</span>
         </div>
         <div className="flex gap-0.5" role="group" aria-label="Language">
           {locales.map(l => (
@@ -67,7 +67,7 @@ export function Hero() {
 
       <div className="mt-8 flex gap-7">
         {[
-          { label: 'Live Demo', href: 'https://factory.dashai.dev' },
+          { label: 'Live Demo', href: 'https://factory.seikai.dev' },
           { label: 'GitHub', href: 'https://github.com/seikaikyo' },
           { label: 'LinkedIn', href: 'https://linkedin.com/in/seikaikyo' },
         ].map(link => (

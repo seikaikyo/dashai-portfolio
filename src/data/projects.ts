@@ -18,7 +18,7 @@ export const projects: Project[] = [
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'neon', 'claude', 'chartjs', 'vercel', 'render'],
     year: 2026,
     scale: 'production',
-    url: 'https://factory.dashai.dev',
+    url: 'https://factory.seikai.dev',
     screenshot: '/screenshots/smart-factory-demo.png',
     video: { en: '/videos/smart-factory-intro.en.mp4', ja: '/videos/smart-factory-intro.ja.mp4' }
   },
@@ -39,7 +39,26 @@ export const projects: Project[] = [
     tags: ['nextjs', 'react', 'typescript', 'tailwindcss', 'shadcn', 'fastapi', 'xgboost', 'catboost', 'pytorch', 'bigquery', 'gcp', 'vercel', 'render'],
     year: 2026,
     scale: 'prototype',
-    url: 'https://amc-analytics.dashai.dev',
+    url: 'https://amc-analytics.seikai.dev',
+  },
+
+  {
+    id: 'fab-analytics',
+    name: {
+      'zh-TW': 'Fab Analytics - 半導體前段資料科學展示',
+      en: 'Fab Analytics - Semiconductor Front-End Data Science Showcase',
+      ja: 'Fab Analytics - 半導体前工程データサイエンス展示'
+    },
+    description: {
+      'zh-TW': '用模擬資料展示半導體前段（wafer / lot / 設備 / 感測器 / 缺陷，製程節點 N3-N14）的端到端資料科學能力。BigQuery ETL、XGBoost / CatBoost 模型訓練、Isolation Forest 異常偵測、特徵重要度、資料治理模式。資料全為模擬，不取自任何公司。Next.js + FastAPI + BigQuery + GCP',
+      en: 'End-to-end fab front-end data science on simulated data (wafers / lots / equipment / sensors / defects, nodes N3-N14). BigQuery ETL, XGBoost / CatBoost training, Isolation Forest anomaly detection, feature importance, data governance patterns. All data simulated, not derived from any company. Next.js + FastAPI + BigQuery + GCP',
+      ja: 'シミュレーションデータで半導体前工程（wafer / lot / 設備 / センサー / 欠陥、プロセスノード N3-N14）のエンドツーエンドデータサイエンスを展示。BigQuery ETL、XGBoost / CatBoost 学習、Isolation Forest 異常検知、特徴量重要度、データガバナンス。データは全てシミュレーション、特定企業由来ではありません。Next.js + FastAPI + BigQuery + GCP'
+    },
+    category: 'side-project',
+    tags: ['nextjs', 'react', 'typescript', 'tailwindcss', 'shadcn', 'fastapi', 'xgboost', 'catboost', 'bigquery', 'gcp', 'vercel', 'render'],
+    year: 2026,
+    scale: 'prototype',
+    url: 'https://fab-analytics.seikai.dev',
   },
 
   {
@@ -58,8 +77,27 @@ export const projects: Project[] = [
     tags: ['go', 'nextjs', 'react', 'typescript', 'tailwindcss', 'shadcn', 'kubernetes', 'websocket', 'vercel'],
     year: 2026,
     scale: 'prototype',
-    url: 'https://gotech.dashai.dev',
+    url: 'https://gotech.seikai.dev',
     screenshot: '/screenshots/gotech-demo.png'
+  },
+
+  {
+    id: 'trace-demo',
+    name: {
+      'zh-TW': 'Trace Demo - 七層分散式追蹤與根因歸因',
+      en: 'Trace Demo - 7-Layer Distributed Tracing with Root Cause Attribution',
+      ja: 'Trace Demo - 7層分散トレーシングと根本原因特定'
+    },
+    description: {
+      'zh-TW': '用統一 trace ID 串起 7 個 layer（ISP / Host / VM / 應用 / 服務 / 資料庫 / 備援）的 timing 與 status，自動做根因歸因，把使用者反映、技術解析、建議 action 三段直接寫到 dashboard。內建拓樸設計器可編輯節點與連線，四種視覺風格。Next.js + shadcn + Sentry',
+      en: 'Unified trace ID stitching timing and status across 7 layers (ISP / Host / VM / Application / Service / Database / Backup), with automatic root cause attribution that surfaces user-reported symptom, technical analysis, and suggested action on the dashboard. Built-in topology designer for editing nodes and edges. Four visual styles. Next.js + shadcn + Sentry',
+      ja: '統一 trace ID で 7 層（ISP / Host / VM / アプリ / サービス / DB / バックアップ）の timing と status を連結し、自動で根本原因を特定。ユーザー報告・技術解析・推奨アクションをダッシュボードに表示。トポロジーデザイナーでノードとエッジを編集可能。4つのビジュアルスタイル。Next.js + shadcn + Sentry'
+    },
+    category: 'side-project',
+    tags: ['nextjs', 'react', 'typescript', 'tailwindcss', 'shadcn', 'vercel'],
+    year: 2026,
+    scale: 'prototype',
+    url: 'https://trace-demo.seikai.dev',
   },
 
   // === 產業經歷 (industry) ===
@@ -239,6 +277,25 @@ export const projects: Project[] = [
     year: 2026,
     scale: 'prototype',
     url: 'https://github.com/seikaikyo/shopfloor'
+  },
+
+  {
+    id: 'factory-designer',
+    name: {
+      'zh-TW': 'Factory Designer - MES 低代碼流程 / 表單設計器',
+      en: 'Factory Designer - MES Low-Code Workflow / Form Designer',
+      ja: 'Factory Designer - MES ローコード ワークフロー / フォームデザイナー'
+    },
+    description: {
+      'zh-TW': '製造執行系統的低代碼設定層：拖放式流程設計器與表單設計器，讓線上主管不用寫 JSON 就能設定簽核流程與現場表單。三欄式（元件 / 畫布 / 屬性）介面、節點圖自動排版加 SVG 連線、欄位型別系統。純前端，定義存 localStorage 並可匯出 JSON。通用、不含特定客戶領域。Next.js + React 19 + Tailwind v4',
+      en: 'Low-code configuration layer for MES: drag-and-drop workflow designer and form designer that let line supervisors configure approval flows and shop-floor forms without writing JSON. Three-pane palette / canvas / properties layout, node-graph auto-layout with SVG edge routing, field-type system. Client-only, definitions persist to localStorage and export as JSON. Generic, domain-neutral. Next.js + React 19 + Tailwind v4',
+      ja: 'MES のローコード設定層：ドラッグ＆ドロップのワークフローデザイナーとフォームデザイナー。ライン監督者が JSON を書かずに承認フローと現場フォームを設定可能。三ペイン（パレット / キャンバス / プロパティ）、ノードグラフ自動レイアウト＋SVG エッジルーティング、フィールド型システム。クライアントのみ、定義は localStorage 保存＆JSON エクスポート。汎用・ドメイン非依存。Next.js + React 19 + Tailwind v4'
+    },
+    category: 'industry',
+    tags: ['nextjs', 'react', 'typescript', 'tailwindcss', 'vercel'],
+    year: 2026,
+    scale: 'prototype',
+    url: 'https://designer.seikai.dev',
   },
 
   {
@@ -432,7 +489,7 @@ export const projects: Project[] = [
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'claude'],
     year: 2026,
     scale: 'personal',
-    url: 'https://ai-red-team.dashai.dev',
+    url: 'https://ai-red-team.seikai.dev',
     screenshot: '/screenshots/ai-red-team.png',
     narrative: {
       en: "A structured collection of 177 adversarial attack templates across 12 categories, covering prompt injection, RAG poisoning, tool use hijacking, and bias detection. Three languages. Built after observing that most teams deploying AI features had no systematic way to test adversarial robustness.",
@@ -494,7 +551,7 @@ export const projects: Project[] = [
     tags: ['nuxt3', 'vue3', 'primevue', 'go', 'fastapi', 'neon', 'vercel', 'render', 'i18n'],
     year: 2025,
     scale: 'production',
-    url: 'https://shukuyo.dashai.dev',
+    url: 'https://shukuyo.seikai.dev',
     screenshot: '/screenshots/shukuyo.png',
     video: { en: '/videos/shukuyodo-intro.en.mp4', ja: '/videos/shukuyodo-intro.ja.mp4' },
     narrative: {
@@ -627,7 +684,7 @@ export const projects: Project[] = [
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'claude', 'vercel', 'render', 'web-speech', 'pwa'],
     year: 2026,
     scale: 'production',
-    url: 'https://english.dashai.dev',
+    url: 'https://english.seikai.dev',
     screenshot: '/screenshots/ai-english-tutor.png',
     narrative: {
       en: "An English speaking practice platform designed around job interview scenarios. Voice input through Web Speech API, grammar analysis and feedback via Claude API. 27 interview questions with offline scoring. Available as a PWA for use without network connectivity.",

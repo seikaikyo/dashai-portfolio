@@ -26,13 +26,13 @@ const notoSerifJP = Noto_Serif_JP({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://portfolio.dashai.dev'),
-  title: 'DashAI Portfolio',
-  description: 'SeiKai Kyo — Manufacturing AI Engineer. 25 years hands-on from TSMC fabs to AMC filter lines. 26 live projects across manufacturing systems, industrial IoT, AI tooling, and developer platforms.',
+  title: 'SeiKai Kyo',
+  description: 'SeiKai Kyo: Manufacturing AI Engineer. 25 years hands-on from TSMC fabs to AMC filter lines. 34 live projects across manufacturing systems, industrial IoT, AI tooling, and developer platforms.',
   openGraph: {
-    title: 'SeiKai Kyo — Manufacturing AI Engineer | DashAI Portfolio',
-    description: 'SeiKai Kyo — Manufacturing AI Engineer. 25 years hands-on from TSMC fabs to AMC filter lines. 26 live projects across manufacturing systems, industrial IoT, AI tooling, and developer platforms.',
+    title: 'SeiKai Kyo | Manufacturing AI Engineer',
+    description: 'SeiKai Kyo: Manufacturing AI Engineer. 25 years hands-on from TSMC fabs to AMC filter lines. 34 live projects across manufacturing systems, industrial IoT, AI tooling, and developer platforms.',
     url: 'https://portfolio.dashai.dev',
-    siteName: 'DashAI',
+    siteName: 'SeiKai Kyo',
     images: ['/og-image.png'],
     type: 'website',
   },
