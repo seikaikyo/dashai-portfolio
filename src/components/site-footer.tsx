@@ -2,7 +2,7 @@ export function SiteFooter() {
   return (
     <footer className="py-10 flex justify-between items-center">
       <div className="text-[0.75rem] text-muted-foreground tracking-[2px]">
-        Dash<span className="text-primary">AI</span> &middot; {new Date().getFullYear()}
+        SeiKai <span className="text-primary">Kyo</span> &middot; {new Date().getFullYear()}
       </div>
       <div className="flex gap-5">
         {[
