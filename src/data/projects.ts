@@ -100,6 +100,25 @@ export const projects: Project[] = [
     url: 'https://trace-demo.seikai.dev',
   },
 
+  {
+    id: 'motion-study',
+    name: {
+      'zh-TW': 'Motion Study - 動作對照分析',
+      en: 'Motion Study - Operator Motion Comparison',
+      ja: 'Motion Study - 動作対照分析'
+    },
+    description: {
+      'zh-TW': '把老手的標準作業與待改善的對象作業並排，逐動素對齊時間軸、量化差異。標準工時（觀測時間 × 評比 × (1+寬放)）、動素分類佔比（有效/輔助/無效）、逐動素對照報告附 ECRS 對策，勾選對策即時重算改善後週期。兩個場景：電子桌面組裝、豬肉分切。三語介面、全 client-only、合成示範資料。Next.js 16 + React 19 + Tailwind v4',
+      en: 'Places an expert\'s standard operation next to a target operation, aligns them element by element, and quantifies the gap. Standard time (observed time × rating × (1 + allowance)), motion-class breakdown (effective / auxiliary / ineffective), and an element-by-element report with ECRS countermeasures that recompute the improved cycle live when toggled. Two scenarios: electronics bench assembly, pork portioning. Trilingual, client-only, synthetic demo data. Next.js 16 + React 19 + Tailwind v4',
+      ja: '熟練者の標準作業と改善対象の作業を並べ、動素単位で時間軸を揃えて差を定量化。標準時間（観測時間 × 評価係数 × (1 + 余裕率)）、動素分類比率（有効 / 補助 / 無効）、ECRS 改善策付きの動素別対照レポート（チェックで改善後サイクルを即時再計算）。2 シナリオ：電子機器の卓上組立、豚肉のカット。三言語・クライアントのみ・合成デモデータ。Next.js 16 + React 19 + Tailwind v4'
+    },
+    category: 'side-project',
+    tags: ['nextjs', 'react', 'typescript', 'tailwindcss', 'vercel'],
+    year: 2026,
+    scale: 'prototype',
+    url: 'https://motion.seikai.dev',
+  },
+
   // === 產業經歷 (industry) ===
   {
     id: 'ind-mes',
