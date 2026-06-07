@@ -1,6 +1,6 @@
 # DashAI Portfolio
 
-**[https://portfolio.dashai.dev](https://portfolio.dashai.dev)**
+**[https://portfolio.seikai.dev](https://portfolio.seikai.dev)**
 
 Professional portfolio showcasing 26 projects across enterprise systems, AI security, trading, developer tools, and language learning.
 

@@ -31,9 +31,9 @@ export const projects: Project[] = [
       ja: 'AMC Analytics Demo - AMC フィルター・データサイエンス手法'
     },
     description: {
-      'zh-TW': '用公開資料重現鈺祥 NDA 限制下做的 AMC 濾網分析方法論。三個模型：Thomas 破過曲線 + XGBoost（R² 0.84）、LSTM + CatBoost 週期衰減（MAE 0.46）、Isolation Forest 批次異常（F1 0.84）。完整 MLOps：PSI + KS drift、週排程 retrain、BigQuery 指標歷史、drift 儀表板。Next.js 16 + FastAPI + BigQuery + GCP',
-      en: 'Public-data reproduction of the AMC filter analytics methodology I ran at Yesiang under NDA. Three models: Thomas breakthrough + XGBoost (R² 0.84), LSTM + CatBoost cycle degradation (MAE 0.46), Isolation Forest batch QC (F1 0.84). Full MLOps loop: PSI + KS drift, weekly scheduled retrain, BigQuery metric history, drift dashboard. Next.js 16 + FastAPI + BigQuery + GCP',
-      ja: '鈺祥で NDA の制約下に実施した AMC フィルター分析の手法を公開データで再現。3 モデル：Thomas 破過曲線 + XGBoost（R² 0.84）、LSTM + CatBoost サイクル劣化（MAE 0.46）、Isolation Forest バッチ QC（F1 0.84）。MLOps フルループ：PSI + KS ドリフト、週次再学習、BigQuery メトリクス履歴、ドリフトダッシュボード。Next.js 16 + FastAPI + BigQuery + GCP'
+      'zh-TW': '用公開資料重現前公司 NDA 限制下做的 AMC 濾網分析方法論。三個模型：Thomas 破過曲線 + XGBoost（R² 0.84）、LSTM + CatBoost 週期衰減（MAE 0.46）、Isolation Forest 批次異常（F1 0.84）。完整 MLOps：PSI + KS drift、週排程 retrain、BigQuery 指標歷史、drift 儀表板。Next.js 16 + FastAPI + BigQuery + GCP',
+      en: 'Public-data reproduction of the AMC filter analytics methodology I ran at a previous employer under NDA. Three models: Thomas breakthrough + XGBoost (R² 0.84), LSTM + CatBoost cycle degradation (MAE 0.46), Isolation Forest batch QC (F1 0.84). Full MLOps loop: PSI + KS drift, weekly scheduled retrain, BigQuery metric history, drift dashboard. Next.js 16 + FastAPI + BigQuery + GCP',
+      ja: '前職で NDA の制約下に実施した AMC フィルター分析の手法を公開データで再現。3 モデル：Thomas 破過曲線 + XGBoost（R² 0.84）、LSTM + CatBoost サイクル劣化（MAE 0.46）、Isolation Forest バッチ QC（F1 0.84）。MLOps フルループ：PSI + KS ドリフト、週次再学習、BigQuery メトリクス履歴、ドリフトダッシュボード。Next.js 16 + FastAPI + BigQuery + GCP'
     },
     category: 'side-project',
     tags: ['nextjs', 'react', 'typescript', 'tailwindcss', 'shadcn', 'fastapi', 'xgboost', 'catboost', 'pytorch', 'bigquery', 'gcp', 'vercel', 'render'],
@@ -282,14 +282,14 @@ export const projects: Project[] = [
   {
     id: 'shopfloor',
     name: {
-      'zh-TW': 'shopfloor - 祥圃實業生產表單數位化雛形',
-      en: 'shopfloor - Shop Floor Control Prototype for nicegarden',
-      ja: 'shopfloor - 祥圃実業 生産現場管理システム試作版'
+      'zh-TW': 'shopfloor - 某食品集團生產表單數位化雛形',
+      en: 'shopfloor - Shop Floor Control Prototype for a Food-Industry Group',
+      ja: 'shopfloor - 某食品グループ 生産現場管理システム試作版'
     },
     description: {
-      'zh-TW': '祥圃實業生產表單數位化雛形（Shop Floor Control / SFC）。平板優先 PWA，朝可在祥圃內部跑走，非 demo。Phase 1 範圍：屠體秤重 OCR（glm-ocr 紅漆豬號辨識）+ 加工課工時表 + 線性簽核 + 電子磅秤 PoC',
-      en: 'Shop Floor Control prototype for nicegarden (祥圃實業) meat processing facility. Tablet-first PWA, on-prem deployment target rather than demo. Phase 1: carcass weight OCR (glm-ocr for handwritten pig ID) + processing department timesheet + linear approval workflow + electronic scale PoC',
-      ja: '祥圃実業（nicegarden）食肉加工工場向け生産現場管理システム（Shop Floor Control）試作版。タブレット優先 PWA、デモではなくオンプレミス導入を視野に入れた設計。Phase 1：屠体重量 OCR（glm-ocr による手書き個体番号認識）+ 加工課工数記録 + 線形承認フロー + 電子計量器 PoC'
+      'zh-TW': '某食品集團生產表單數位化雛形（Shop Floor Control / SFC）。平板優先 PWA，以該集團內部實際導入上線為目標，非 demo 展示。Phase 1 範圍：屠體秤重 OCR（glm-ocr 紅漆豬號辨識）+ 加工課工時表 + 線性簽核 + 電子磅秤 PoC',
+      en: 'Shop Floor Control prototype for a food-industry group meat processing facility. Tablet-first PWA, on-prem deployment target rather than demo. Phase 1: carcass weight OCR (glm-ocr for handwritten pig ID) + processing department timesheet + linear approval workflow + electronic scale PoC',
+      ja: '某食品グループの食肉加工工場向け生産現場管理システム（Shop Floor Control）試作版。タブレット優先 PWA、デモではなくオンプレミス導入を視野に入れた設計。Phase 1：屠体重量 OCR（glm-ocr による手書き個体番号認識）+ 加工課工数記録 + 線形承認フロー + 電子計量器 PoC'
     },
     category: 'industry',
     tags: ['nextjs', 'react', 'typescript', 'tailwindcss', 'shadcn', 'fastapi', 'sqlmodel', 'neon', 'logto', 'ocr', 'pwa', 'iot'],
