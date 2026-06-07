@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio.dashai.dev/sitemap.xml
+Sitemap: https://portfolio.seikai.dev/sitemap.xml
