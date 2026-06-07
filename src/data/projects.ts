@@ -301,12 +301,12 @@ export const projects: Project[] = [
   {
     id: 'factory-designer',
     name: {
-      'zh-TW': 'Factory Designer - MES 低代碼流程 / 表單設計器',
+      'zh-TW': 'Factory Designer - MES 低程式碼流程 / 表單設計器',
       en: 'Factory Designer - MES Low-Code Workflow / Form Designer',
       ja: 'Factory Designer - MES ローコード ワークフロー / フォームデザイナー'
     },
     description: {
-      'zh-TW': '製造執行系統的低代碼設定層：拖放式流程設計器與表單設計器，讓線上主管不用寫 JSON 就能設定簽核流程與現場表單。三欄式（元件 / 畫布 / 屬性）介面、節點圖自動排版加 SVG 連線、欄位型別系統。純前端，定義存 localStorage 並可匯出 JSON。通用、不含特定客戶領域。Next.js + React 19 + Tailwind v4',
+      'zh-TW': '製造執行系統的低程式碼設定層：拖放式流程設計器與表單設計器，讓線上主管不用寫 JSON 就能設定簽核流程與現場表單。三欄式（元件 / 畫布 / 屬性）介面、節點圖自動排版加 SVG 連線、欄位型別系統。純前端，定義存 localStorage 並可匯出 JSON。通用、不含特定客戶領域。Next.js + React 19 + Tailwind v4',
       en: 'Low-code configuration layer for MES: drag-and-drop workflow designer and form designer that let line supervisors configure approval flows and shop-floor forms without writing JSON. Three-pane palette / canvas / properties layout, node-graph auto-layout with SVG edge routing, field-type system. Client-only, definitions persist to localStorage and export as JSON. Generic, domain-neutral. Next.js + React 19 + Tailwind v4',
       ja: 'MES のローコード設定層：ドラッグ＆ドロップのワークフローデザイナーとフォームデザイナー。ライン監督者が JSON を書かずに承認フローと現場フォームを設定可能。三ペイン（パレット / キャンバス / プロパティ）、ノードグラフ自動レイアウト＋SVG エッジルーティング、フィールド型システム。クライアントのみ、定義は localStorage 保存＆JSON エクスポート。汎用・ドメイン非依存。Next.js + React 19 + Tailwind v4'
     },
