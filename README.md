@@ -2,7 +2,7 @@
 
 **[https://portfolio.seikai.dev](https://portfolio.seikai.dev)**
 
-Professional portfolio showcasing 26 projects across enterprise systems, AI security, trading, developer tools, and language learning.
+Professional portfolio showcasing 35 projects across manufacturing systems, AI security, industrial IoT, trading, developer tools, and language learning.
 
 ![Portfolio Home](public/screenshots/portfolio-home.png)
 
@@ -12,22 +12,23 @@ Professional portfolio showcasing 26 projects across enterprise systems, AI secu
 
 - Trilingual UI (Traditional Chinese / English / Japanese) with auto-detection
 - Category filtering and full-text search
-- 33 technology tags with usage statistics
-- Responsive dark theme (PrimeVue Aura)
+- Technology tag filtering with usage statistics
+- Responsive dark theme (Tailwind + shadcn/ui)
 
 ## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
-| Frontend | Vue 3 + TypeScript + PrimeVue 4 (Aura) |
-| Build | Vite |
+| Framework | Next.js (App Router) + React 19 + TypeScript |
+| UI | shadcn/ui + Tailwind CSS + lucide-react |
+| Analytics | Vercel Analytics + Speed Insights |
 | Deployment | Vercel |
 
 ## Local Development
 
 ```bash
 npm install
-npm run dev
+npm run dev          # http://localhost:5174
 ```
 
 ## License
