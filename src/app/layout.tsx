@@ -27,10 +27,10 @@ const notoSerifJP = Noto_Serif_JP({
 export const metadata: Metadata = {
   metadataBase: new URL('https://portfolio.seikai.dev'),
   title: 'SeiKai Kyo',
-  description: 'SeiKai Kyo: Manufacturing AI Engineer. 25 years hands-on from TSMC fabs to AMC filter lines. 35 live projects across manufacturing systems, industrial IoT, AI tooling, and developer platforms.',
+  description: 'SeiKai Kyo: Manufacturing AI Engineer. 25 years hands-on from TSMC fabs to AMC filter lines. 35 projects across manufacturing systems, industrial IoT, AI tooling, and developer platforms.',
   openGraph: {
     title: 'SeiKai Kyo | Manufacturing AI Engineer',
-    description: 'SeiKai Kyo: Manufacturing AI Engineer. 25 years hands-on from TSMC fabs to AMC filter lines. 35 live projects across manufacturing systems, industrial IoT, AI tooling, and developer platforms.',
+    description: 'SeiKai Kyo: Manufacturing AI Engineer. 25 years hands-on from TSMC fabs to AMC filter lines. 35 projects across manufacturing systems, industrial IoT, AI tooling, and developer platforms.',
     url: 'https://portfolio.seikai.dev',
     siteName: 'SeiKai Kyo',
     images: ['/og-image.png'],
