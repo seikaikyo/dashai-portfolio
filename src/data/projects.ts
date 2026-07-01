@@ -69,9 +69,9 @@ export const projects: Project[] = [
       ja: 'GoTech Demo - エンタープライズアーキテクチャ展示'
     },
     description: {
-      'zh-TW': '10K-1M 使用者規模的即時互動 Demo。五個場景：高併發 Goroutine Pool + Singleflight、K8s HPA 自動伸縮 + 滾動更新 + OOMKilled、分散式監控 RED Metrics + Error Budget、資料庫連線池飽和視覺化、即時協作編輯 CRDT。Scale Slider 拉動即時縮放所有數字，三語切換（EN/JA/ZH）',
-      en: 'Interactive demos scaling from 10K to 1M users. Five scenarios: high concurrency goroutine pool + singleflight, K8s HPA autoscaling + rolling update + OOMKilled, distributed monitoring RED metrics + error budget, database connection pool saturation, real-time collaborative editing CRDT. Scale slider dynamically adjusts all metrics. Trilingual (EN/JA/ZH).',
-      ja: '1万〜100万ユーザー規模のインタラクティブデモ。5シナリオ：高並行処理Goroutine Pool + Singleflight、K8s HPAオートスケーリング + ローリングアップデート + OOMKilled、分散監視REDメトリクス + エラーバジェット、DBコネクションプール飽和、リアルタイム協調編集CRDT。スケールスライダーで全指標を動的調整。三言語対応（EN/JA/ZH）'
+      'zh-TW': '10K-1M 使用者規模的即時互動 Demo。五個場景：高併發 Goroutine Pool + Singleflight、K8s HPA 自動伸縮 + 滾動更新 + OOMKilled、分散式監控 RED Metrics + Error Budget、資料庫連線池飽和視覺化、即時協作編輯 CRDT。Scale Slider 拉動即時縮放所有數字（全場景為視覺化模擬，非真實壓測），三語切換（EN/JA/ZH）',
+      en: 'Interactive demos scaling from 10K to 1M users. Five scenarios: high concurrency goroutine pool + singleflight, K8s HPA autoscaling + rolling update + OOMKilled, distributed monitoring RED metrics + error budget, database connection pool saturation, real-time collaborative editing CRDT. Scale slider dynamically adjusts all metrics. All scenarios are visual simulations, not real load tests. Trilingual (EN/JA/ZH).',
+      ja: '1万〜100万ユーザー規模のインタラクティブデモ。5シナリオ：高並行処理Goroutine Pool + Singleflight、K8s HPAオートスケーリング + ローリングアップデート + OOMKilled、分散監視REDメトリクス + エラーバジェット、DBコネクションプール飽和、リアルタイム協調編集CRDT。スケールスライダーで全指標を動的調整（全シナリオは視覚化シミュレーションであり実負荷試験ではない）。三言語対応（EN/JA/ZH）'
     },
     category: 'side-project',
     tags: ['go', 'nextjs', 'react', 'typescript', 'tailwindcss', 'shadcn', 'kubernetes', 'websocket', 'vercel'],
@@ -239,9 +239,9 @@ export const projects: Project[] = [
       ja: 'go-factory-io - オープンソース Go SECS/GEM ドライバー'
     },
     description: {
-      'zh-TW': '開源 SECS/GEM 設備驅動，實作 12 項 SEMI 標準（E5/E30/E37/E87/E40/E90/E94/E116/E187/E191），整合 HSMS、OPC-UA、MQTT、Modbus TCP、gRPC 五種協定，實作 IEC 62443 SL4 安全控制。單一 static binary，可跨編譯至 ARM64。Simulator 驗證',
-      en: 'Open-source SECS/GEM equipment driver implementing 12 SEMI standards (E5/E30/E37/E87/E40/E90/E94/E116/E187/E191), integrating HSMS, OPC-UA, MQTT, Modbus TCP, and gRPC. Implements IEC 62443 SL4 security controls. Single static binary, cross-compiles to ARM64. Simulator-verified.',
-      ja: 'オープンソースSECS/GEM設備ドライバー、12のSEMI標準を実装（E5/E30/E37/E87/E40/E90/E94/E116/E187/E191）。HSMS、OPC-UA、MQTT、Modbus TCP、gRPCの5プロトコル統合。IEC 62443 SL4セキュリティコントロール実装。単一スタティックバイナリ、ARM64クロスコンパイル対応。シミュレーター検証済み'
+      'zh-TW': '開源 SECS/GEM 設備驅動，E5/E30/E37 完整實作，其餘（E87/E40/E90/E94/E116/E187/E191）部分實作，整合 HSMS、OPC-UA、MQTT、Modbus TCP、gRPC 五種協定，參考 IEC 62443 SL4 設計原則（未取得認證，simulator 驗證）。單一 static binary，可跨編譯至 ARM64',
+      en: 'Open-source SECS/GEM equipment driver: E5/E30/E37 fully implemented, others (E87/E40/E90/E94/E116/E187/E191) partially implemented, integrating HSMS, OPC-UA, MQTT, Modbus TCP, and gRPC. References IEC 62443 SL4 design principles (not certified, simulator-verified). Single static binary, cross-compiles to ARM64.',
+      ja: 'オープンソースSECS/GEM設備ドライバー、E5/E30/E37を完全実装、その他（E87/E40/E90/E94/E116/E187/E191）は部分実装。HSMS、OPC-UA、MQTT、Modbus TCP、gRPCの5プロトコル統合。IEC 62443 SL4の設計原則を参考（認証取得なし、シミュレーター検証）。単一スタティックバイナリ、ARM64クロスコンパイル対応'
     },
     category: 'industry',
     tags: ['go', 'secs-gem', 'hsms', 'opcua', 'mqtt', 'modbus', 'grpc', 'iec62443', 'prometheus'],
@@ -250,9 +250,9 @@ export const projects: Project[] = [
     url: 'https://github.com/seikaikyo/go-factory-io',
     video: { en: '/videos/go-factory-io-showcase.mp4' },
     narrative: {
-      en: "Four repositories that form a complete industrial edge stack. The SECS/GEM driver implements 12 SEMI standards. The edge gateway bridges devices to MES through a plugin architecture. The OT security scanner maps compliance against IEC 62443 and NIST CSF 2.0. The API gateway ties them together. Each compiles to a single binary deployable on ARM64 hardware.",
-      'zh-TW': '四個 repo 組成完整的工業邊緣棧。SECS/GEM driver 實作 12 項 SEMI 標準。邊緣閘道器透過插件架構橋接設備到 MES。OT 資安掃描器對照 IEC 62443 和 NIST CSF 2.0 做合規檢查。API 閘道器把它們串起來。每個都編譯成單一 binary，可部署在 ARM64 硬體上。',
-      ja: '4つのリポジトリで完全な産業エッジスタックを構成。SECS/GEMドライバーは12のSEMI標準を実装。エッジゲートウェイはプラグインアーキテクチャでデバイスをMESに接続。OTセキュリティスキャナーはIEC 62443とNIST CSF 2.0のコンプライアンスを検証。APIゲートウェイがそれらを統合。各リポは単一バイナリにコンパイルされ、ARM64ハードウェアにデプロイ可能。',
+      en: "Four repositories that form a complete industrial edge stack. The SECS/GEM driver fully implements SEMI E5/E30/E37, with partial support for others (E87/E40/E90/E94/E116/E187/E191). The edge gateway bridges devices to MES through a plugin architecture. The OT security scanner maps compliance against IEC 62443 and NIST CSF 2.0. The API gateway ties them together. Each compiles to a single binary deployable on ARM64 hardware.",
+      'zh-TW': '四個 repo 組成完整的工業邊緣棧。SECS/GEM driver 完整實作 SEMI E5/E30/E37，其餘（E87/E40/E90/E94/E116/E187/E191）部分實作。邊緣閘道器透過插件架構橋接設備到 MES。OT 資安掃描器對照 IEC 62443 和 NIST CSF 2.0 做合規檢查。API 閘道器把它們串起來。每個都編譯成單一 binary，可部署在 ARM64 硬體上。',
+      ja: '4つのリポジトリで完全な産業エッジスタックを構成。SECS/GEMドライバーは SEMI E5/E30/E37 を完全実装、その他（E87/E40/E90/E94/E116/E187/E191）は部分実装。エッジゲートウェイはプラグインアーキテクチャでデバイスをMESに接続。OTセキュリティスキャナーはIEC 62443とNIST CSF 2.0のコンプライアンスを検証。APIゲートウェイがそれらを統合。各リポは単一バイナリにコンパイルされ、ARM64ハードウェアにデプロイ可能。',
     }
   },
   {
@@ -295,7 +295,6 @@ export const projects: Project[] = [
     tags: ['nextjs', 'react', 'typescript', 'tailwindcss', 'shadcn', 'fastapi', 'sqlmodel', 'neon', 'logto', 'ocr', 'pwa', 'iot'],
     year: 2026,
     scale: 'prototype',
-    url: 'https://github.com/seikaikyo/shopfloor'
   },
 
   {
@@ -369,7 +368,6 @@ export const projects: Project[] = [
     tags: ['go', 'chi', 'pgx', 'neon', 'jwt', 'render'],
     year: 2026,
     scale: 'personal',
-    url: 'https://github.com/seikaikyo/dashai-go'
   },
 
   // === 交易金融 (trading) ===
@@ -381,14 +379,14 @@ export const projects: Project[] = [
       ja: 'SinoAuto 台湾株式自動売買'
     },
     description: {
-      'zh-TW': '永豐 Shioaji API 整合 Claude AI 決策引擎，整張交易、自動學習反思、策略調整、績效追蹤',
-      en: 'Sinopac Shioaji API with Claude AI decision engine: full-lot trading, auto-learning with reflection, strategy adjustment, performance tracking',
-      ja: '永豊Shioaji API＋Claude AI意思決定エンジン、単元株取引、自動学習＆反省、戦略調整、パフォーマンス追跡'
+      'zh-TW': '永豐 Shioaji API 整合 Claude AI 決策引擎，整張模擬交易（未接真實下單）、自動學習反思、策略調整、績效追蹤',
+      en: 'Sinopac Shioaji API with Claude AI decision engine: full-lot paper trading (simulation, live order routing not connected), auto-learning with reflection, strategy adjustment, performance tracking',
+      ja: '永豊Shioaji API＋Claude AI意思決定エンジン、単元株シミュレーション取引（実発注は未接続）、自動学習＆反省、戦略調整、パフォーマンス追跡'
     },
     category: 'trading',
     tags: ['vue3', 'primevue', 'fastapi', 'shioaji', 'claude', 'render'],
     year: 2025,
-    scale: 'production'
+    scale: 'prototype'
   },
   {
     id: 'dashtrade',
@@ -440,9 +438,9 @@ export const projects: Project[] = [
       ja: 'Claude Code スキル'
     },
     description: {
-      'zh-TW': '自建 6 + 外部收錄 17 個 Claude Code 技能，涵蓋 OpenSpec、FastAPI、Angular、UI/UX 設計等模板',
-      en: '6 custom + 17 curated Claude Code skills covering OpenSpec, FastAPI, Angular, UI/UX design templates',
-      ja: '自作6＋外部キュレーション17のClaude Codeスキル、OpenSpec・FastAPI・Angular・UI/UXデザインテンプレート'
+      'zh-TW': '自建 9 + 外部收錄 45 個 Claude Code 技能，涵蓋 OpenSpec、FastAPI、Angular、UI/UX 設計等模板',
+      en: '9 custom + 45 curated Claude Code skills covering OpenSpec, FastAPI, Angular, UI/UX design templates',
+      ja: '自作9＋外部キュレーション45のClaude Codeスキル、OpenSpec・FastAPI・Angular・UI/UXデザインテンプレート'
     },
     category: 'devtools',
     tags: ['claude', 'bash'],
@@ -543,9 +541,9 @@ export const projects: Project[] = [
       ja: '企業ドキュメントジェネレーター'
     },
     description: {
-      'zh-TW': 'Python + Claude API 自動產生 17 種技術文件類型，對應 19+ 系統。在前公司內部採用，產出 300+ 份技術文件',
-      en: 'Python + Claude API auto-generates 17 technical document types across 19+ systems. Adopted for internal use at a previous employer, produced 300+ documents',
-      ja: 'Python + Claude API による自動ドキュメント生成。17 種×19+ システム対応、前職内部で採用し 300 件以上の技術文書を生成'
+      'zh-TW': 'Python + Claude API 自動產生 17 種技術文件類型，對應 16 系統。在前公司內部採用，產出 240 份技術文件',
+      en: 'Python + Claude API auto-generates 17 technical document types across 16 systems. Adopted for internal use at a previous employer, produced 240 documents',
+      ja: 'Python + Claude API による自動ドキュメント生成。17 種×16 システム対応、前職内部で採用し 240 件の技術文書を生成'
     },
     category: 'devtools',
     tags: ['python', 'bash'],
@@ -639,12 +637,12 @@ export const projects: Project[] = [
       ja: 'DashAI ポートフォリオ'
     },
     description: {
-      'zh-TW': '本作品集網站，Vue 3 + PrimeVue Aura 暗色主題，專案分類篩選與技術棧統計',
-      en: 'This portfolio site: Vue 3 + PrimeVue Aura dark theme, project category filtering and tech stack statistics',
-      ja: '本ポートフォリオサイト、Vue 3 + PrimeVue Auraダークテーマ、プロジェクトカテゴリフィルタリング＆技術スタック統計'
+      'zh-TW': '本作品集網站，Next.js 16 + React 19 + shadcn/ui 暗色主題，專案分類篩選與技術棧統計',
+      en: 'This portfolio site: Next.js 16 + React 19 + shadcn/ui dark theme, project category filtering and tech stack statistics',
+      ja: '本ポートフォリオサイト、Next.js 16 + React 19 + shadcn/ui ダークテーマ、プロジェクトカテゴリフィルタリング＆技術スタック統計'
     },
     category: 'personal',
-    tags: ['vue3', 'primevue', 'typescript', 'vite', 'vercel'],
+    tags: ['nextjs', 'react', 'typescript', 'shadcn', 'vercel'],
     year: 2025,
     scale: 'personal',
     screenshot: '/screenshots/dashai-portfolio.png'
@@ -667,7 +665,6 @@ export const projects: Project[] = [
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'claude'],
     year: 2025,
     scale: 'personal',
-    url: 'https://github.com/seikaikyo/jlpt-n1-learner'
   },
   {
     id: 'toeic-practice',
