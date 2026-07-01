@@ -21,6 +21,12 @@
       "destination": "https://seikai.dev/$1",
       "permanent": true,
       "has": [{ "type": "host", "value": "www.dashai.dev" }]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://portfolio.seikai.dev/$1",
+      "permanent": true,
+      "has": [{ "type": "host", "value": "portfolio.dashai.dev" }]
     }
   ]
 }
