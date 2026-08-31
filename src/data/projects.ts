@@ -516,24 +516,6 @@ export const projects: Project[] = [
   },
 
   {
-    id: 'git-security-tools',
-    name: {
-      'zh-TW': 'GitGuard Sync',
-      en: 'GitGuard Sync',
-      ja: 'GitGuard Sync'
-    },
-    description: {
-      'zh-TW': 'GitLab/GitHub 雙平台倉庫安全同步，GitGuardian 整合機敏資料掃描，支援自架 GitLab、現代化 GUI 介面',
-      en: 'GitLab/GitHub dual-platform repo security sync with GitGuardian-integrated secret scanning, self-hosted GitLab support, modern GUI',
-      ja: 'GitLab/GitHubデュアルプラットフォームリポジトリ安全同期、GitGuardian統合機密スキャン、自己ホストGitLab対応、モダンGUI'
-    },
-    category: 'devtools',
-    tags: ['python', 'git', 'bash'],
-    year: 2025,
-    scale: 'personal',
-    url: 'https://github.com/seikaikyo/gitguard_sync'
-  },
-  {
     id: 'dash-doc-generator',
     name: {
       'zh-TW': '企業文件產生器',
