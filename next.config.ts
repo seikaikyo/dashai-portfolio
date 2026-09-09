@@ -2,7 +2,7 @@ import type { NextConfig } from 'next'
 
 // Content-Security-Policy: only the origins this site actually talks to.
 // The site is a static portfolio with no API routes and no backend calls, so
-// connect-src holds only 'self' plus the Vercel telemetry hosts:
+// connect-src holds 'self', the Vercel telemetry hosts and the Sentry ingest host:
 // - va.vercel-scripts.com: @vercel/analytics + @vercel/speed-insights loader
 // - vitals.vercel-insights.com: Speed Insights reporting endpoint
 // Outbound links to GitHub, LinkedIn and the seikai.dev sites are plain
@@ -19,7 +19,7 @@ const csp = [
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
   "media-src 'self'",
-  "connect-src 'self' https://va.vercel-scripts.com https://vitals.vercel-insights.com",
+  "connect-src 'self' https://va.vercel-scripts.com https://vitals.vercel-insights.com https://*.ingest.us.sentry.io",
   "worker-src 'self' blob:",
   "frame-ancestors 'none'",
   "base-uri 'self'",
