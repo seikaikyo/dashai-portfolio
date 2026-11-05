@@ -58,7 +58,6 @@ export const projects: Project[] = [
     tags: ['nextjs', 'react', 'typescript', 'tailwindcss', 'shadcn', 'fastapi', 'xgboost', 'catboost', 'bigquery', 'gcp', 'vercel', 'render'],
     year: 2026,
     scale: 'prototype',
-    url: 'https://fab-analytics.seikai.dev',
   },
 
   {
