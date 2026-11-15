@@ -359,9 +359,9 @@ export const projects: Project[] = [
       ja: 'dashai-go - 共通Goバックエンドゲートウェイ'
     },
     description: {
-      'zh-TW': '共用 Go 後端閘道器，Chi 路由 + pgx (Neon PostgreSQL) + JWT (Logto) 認證。服務多個模組（宿曜道運勢/相性引擎、資安報告彙整、邊緣協調器），Rate limiting + CORS + 內嵌 React 監控儀表板。go-common 共用模組統一 response/middleware/auth。Render 自動部署',
-      en: 'Shared Go backend gateway. Chi router + pgx (Neon PostgreSQL) + JWT (Logto) auth. Serves Shukuyo fortune/compatibility engine, security report aggregation, edge coordinator. Embedded React monitoring dashboard. Unified go-common modules for response/middleware/auth. Auto-deployed on Render.',
-      ja: '共通Goバックエンドゲートウェイ。Chiルーター + pgx (Neon PostgreSQL) + JWT (Logto)認証。宿曜道運勢/相性エンジン、セキュリティレポート集約、エッジコーディネーターを提供。React組込み監視ダッシュボード。go-common共通モジュールで統一。Renderデプロイ'
+      'zh-TW': '共用 Go 後端閘道器，Chi 路由 + pgx (Neon PostgreSQL) + JWT (Logto) 認證。服務多個模組（宿曜道運勢/相性引擎、資安報告彙整、邊緣協調器），Rate limiting + CORS。go-common 共用模組統一 response/middleware/auth。Render 自動部署',
+      en: 'Shared Go backend gateway. Chi router + pgx (Neon PostgreSQL) + JWT (Logto) auth. Serves Shukuyo fortune/compatibility engine, security report aggregation, edge coordinator. Rate limiting + CORS. Unified go-common modules for response/middleware/auth. Auto-deployed on Render.',
+      ja: '共通Goバックエンドゲートウェイ。Chiルーター + pgx (Neon PostgreSQL) + JWT (Logto)認証。宿曜道運勢/相性エンジン、セキュリティレポート集約、エッジコーディネーターを提供。Rate limiting + CORS。go-common共通モジュールで統一。Renderデプロイ'
     },
     category: 'industry',
     tags: ['go', 'chi', 'pgx', 'neon', 'jwt', 'render'],
