@@ -492,9 +492,9 @@ export const projects: Project[] = [
   {
     id: 'ai-red-team',
     name: {
-      'zh-TW': 'AI Red Team Toolkit',
-      en: 'AI Red Team Toolkit',
-      ja: 'AI Red Team Toolkit'
+      'zh-TW': 'AI Red Team Toolkit (暫停中)',
+      en: 'AI Red Team Toolkit (Paused)',
+      ja: 'AI Red Team Toolkit (一時停止中)'
     },
     description: {
       'zh-TW': 'LLM 對抗性安全測試工具，177 個攻擊模板涵蓋 12 類攻擊向量（含 RAG 污染、工具注入、幻覺誘導），支援三語介面與主流模型分群測試',
@@ -505,7 +505,6 @@ export const projects: Project[] = [
     tags: ['vue3', 'primevue', 'typescript', 'fastapi', 'sqlmodel', 'claude'],
     year: 2026,
     scale: 'personal',
-    url: 'https://ai-red-team.seikai.dev',
     screenshot: '/screenshots/ai-red-team.png',
     narrative: {
       en: "A structured collection of 177 adversarial attack templates across 12 categories, covering prompt injection, RAG poisoning, tool use hijacking, and bias detection. Three languages. Built after observing that most teams deploying AI features had no systematic way to test adversarial robustness.",
