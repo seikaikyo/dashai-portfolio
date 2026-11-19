@@ -45,9 +45,9 @@ export const projects: Project[] = [
   {
     id: 'fab-analytics',
     name: {
-      'zh-TW': 'Fab Analytics - 半導體前段資料科學展示',
-      en: 'Fab Analytics - Semiconductor Front-End Data Science Showcase',
-      ja: 'Fab Analytics - 半導体前工程データサイエンス展示'
+      'zh-TW': 'Fab Analytics - 半導體前段資料科學展示 (暫停中)',
+      en: 'Fab Analytics - Semiconductor Front-End Data Science Showcase (Paused)',
+      ja: 'Fab Analytics - 半導体前工程データサイエンス展示 (一時停止中)'
     },
     description: {
       'zh-TW': '用模擬資料展示半導體前段（wafer / lot / 設備 / 感測器 / 缺陷，製程節點 N3-N14）的端到端資料科學能力。BigQuery ETL、XGBoost / CatBoost 模型訓練、Isolation Forest 異常偵測、特徵重要度、資料治理模式。資料全為模擬，不取自任何公司。Next.js + FastAPI + BigQuery + GCP',
@@ -281,9 +281,9 @@ export const projects: Project[] = [
   {
     id: 'shopfloor',
     name: {
-      'zh-TW': 'shopfloor - 某食品集團生產表單數位化雛形',
-      en: 'shopfloor - Shop Floor Control Prototype for a Food-Industry Group',
-      ja: 'shopfloor - 某食品グループ 生産現場管理システム試作版'
+      'zh-TW': 'shopfloor - 某食品集團生產表單數位化雛形 (暫停中)',
+      en: 'shopfloor - Shop Floor Control Prototype for a Food-Industry Group (Paused)',
+      ja: 'shopfloor - 某食品グループ 生産現場管理システム試作版 (一時停止中)'
     },
     description: {
       'zh-TW': '某食品集團生產表單數位化雛形（Shop Floor Control / SFC）。平板優先 PWA，以該集團內部實際導入上線為目標，非 demo 展示。Phase 1 範圍：屠體秤重 OCR（glm-ocr 紅漆豬號辨識）+ 加工課工時表 + 線性簽核 + 電子磅秤 PoC',
